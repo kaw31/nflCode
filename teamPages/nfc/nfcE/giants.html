@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Giants</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/giants.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcEast/nyGiants/logo/giantsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Giants were one of five teams that joined the NFL in 1925, and is the only one of that group still existing, as well as the league's longest-established team in the Northeastern United States. The team has also acquired several nicknames, including "Big Blue", the "G-Men", and the "Jints". Additionally, the team as a whole is occasionally referred to as the "Big Blue Wrecking Crew", even though this moniker primarily and originally refers to the Giants defensive unit during the 80s and early 90s. The team's heated rivalry with the Philadelphia Eagles is the oldest of the NFC East rivalries, dating all the way back to 1933, and has been called the best rivalry in the NFL in the 21st century.
+            <br>
+            <br>Last season Ben McAdoo replaced legendary hothead coach Tom Coughlin. The Giants turned it around in 2016, ending their five-year playoff drought, but later losing to the Packers in the wildcard round. In his second year as head coach, McAdoo will be under immense pressure to imrpove. This team has all the talent in place to win it all again. The G-Men should be a force this season.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Ben McAdoo</h3>
+                    <p>The Giants' preseason effort has been less than stellar, yet this team is still loaded with potential after making the playoffs last season. Fears of Eli Manning regressing are legit, yet the quarterback has enough talent around him to post strong numbers. Brandon Marshall, Evan Engram, Odell Beckham Jr and Sterling Shepard make a formidable quartet in the passing game as long as the offensive line holds strong. The defense ranked second overall in points allowed per game last season with a ferocious front attacking opposing quarterbacks.  </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>On paper this group looks insane. They have arguably the best receiving corps in the entire NFL. Beckham Jr is a superstar. Brandon Marshall, although at the end of his career, is still a star. Sterling Shepard is on course to become a star. And rookie tight end Evan Engram should be a big time target. Opposing defences are going to have nightmares trying to cover all those weapons. So all the pressure falls on aging QB Eli Manning. At age 35 he does seem to be in decline, but the Giants will be hoping he has enough in the tank to get them over the line. </p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>This defence went from bad to great in one season. Last year the Giants overhauled the entire defence, and boy did it pay off. Olivier Vernon and Jason Pierre-Paul are constantly putting the quarterback under duress. Janoris Jenkins and Landon Collins are two of the best cover men in the secondary. Especially Collins who has emerged as a top saftey in the league. The G-Men finished in the top 3 for rush defence and even better for points allowed. If the offence clicks on all cylinders, then all this unit has to do is keep teams at bay. Look out NFL.  
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Odell Beckham Jr, WR</h3>
+                        <p>Odell Beckham Jr, aka OBJ, is probably the biggest superstar in the NFL today. He shot to fame in his rookie season in 2014 when he made what many consider to be the greatest catch of all time. Making a one handed grab whilst leaping backwards into the endzone for a touchdown. It was insane, and if you haven't seen it, go check it out now.
+                        <br><br>Since then all OBJ has done is shred up opposing defences and entertain the crowds. He's a huge personality, although that's rubbed some people the wrong way by labelling him as 'cocky' or even being a 'diva'. Beckham seems to love the limelight, and with his ridiculous ability and records he's earnt it. He probably has the best hands in the game, making insane one handed catches on a regular basis. The 3 times pro bowler is headed for greatness.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcEast/nyGiants/players/odell2.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>QB - Eli Manning. WR - Brandon Marshall. WR - Sterling Shepard. DE - Jason Pierre-Paul. DT - Damon Harrison. OLB - Olivier Vernon. CB - Janoris Jenkins. S - Landon Collins.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcEast/nyGiants/unis/gaintHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcEast/nyGiants/unis/gaintHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcEast/nyGiants/unis/gaintAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcEast/nyGiants/unis/gaintAwJers.png">
+                </div>
+            </div>
+            <p>To get your Giants gear, <a href="http://shop.giants.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>MetLife Stadium</h2>
+            </div>
+                <p>MetLife Stadium was opened in 2010, and is located in East Rutherford, New Jersey, 11 miles northwest of New York City. It's also home to the New York Jets.  <br><br>Capacity: 82,500 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcEast/nyJets/stadium/metLifeCO.png">
+                <p class="stadLink">To find out more about MetLife Stadium and upcoming events, <a href="http://www.metlifestadium.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>New York City</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: New York</h4>
+                    <h4>Population: 8,537,673</h4>
+                    <p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcEast/nyGiants/map/giantsMap.png">
+                </div>
+                <p class="cityLink">To find out more about New York, <a href="https://www.nycgo.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1986<br>(XXI)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1990<br>(XXV)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2007<br>(XLII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2011<br>(XLVI)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <h4 class="champHead">NFL Eastern - 6</h4>
+                            <p class="postDates">1956, 1958, 1959, 1961, 1962, 1963</p>
+                        <h4 class="champHead">NFC Champions - 5</h4>
+                            <p class="postDates">1986, 1990, 2000, 2007, 2011</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">NFL East - 8</h4>
+                            <p class="postDates">1933, 1934, 1935, 1938, 1939, 1941, 1944, 1946</p>
+                        <h4 class="champHead">NFC East - 8</h4>
+                            <p class="postDates">1986, 1989, 1990, 1997, 2000, 2005, 2008, 2011</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 32</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1933, 1934, 1935, 1938, 1939, 1941, 1943, 1944, 1946, 1950, 1956, 1958, 1959, 1961, 1962, 1963, 1981, 1984, 1985, 1986, 1989, 1990, 1993, 1997, 2000, 2002, 2005, 2006, 2007, 2008, 2011, 2016</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 684 Losses: 572 Ties: 33 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 24 Losses: 25 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 708 Losses: 597 Ties: 33 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 19</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Tim Mara, Founder/Owner <em> - Class of 1963</em></p>
+                                <p>Mel Hein, C <em> - Class of 1963</em></p>
+                                <p>Steve Owen, Coach/T <em> - Class of 1966</em></p>
+                                <p>Ken Strong, HB <em> - Class of 1967</em></p>
+                                <p>Emlen Tunner, S <em> - Class of 1967</em></p>
+                                <p>Y.A. Tittle, QB <em> - Class of 1971</em></p>
+                                <p>Andy Robustelli, DE <em> - Class of 1971</em></p>
+                                <p>Roosevelt Brown, T <em> - Class of 1975</em></p>
+                                <p>Frank Gifford, HB/F <em> - Class of 1977</em></p>
+                                <p>Alphonse Leemans, HB/FB <em> - Class of 1978</em></p>
+                                <p>Morris Badgro, E <em> - Class of 1981</em></p>
+                                <p>Sam Huff, LB <em> - Class of 1982</em></p>
+                                <p>Fran Tarkenton, QB <em> - Class of 1986</em></p>
+                                <p>Wellington Mara, Owner <em> - Class of 1997</em></p>
+                                <p>Lawrence Taylor, LB <em> - Class of 1999</em></p>
+                                <p>Benny Friedman, QB<em> - Class of 2005</em></p>
+                                <p>Harry Carson, LB <em> - Class of 2006</em></p>
+                                <p>Bill Parcells, Coach <em> - Class of 2013</em></p>
+                                <p>Michael Strahan, DE <em> - Class of 2014</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC EAST</h2></li>
+                <!--COWBOYS-->
+                <li><a id="cowboys" class="divLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <!--GIANTS-->
+                <li><a id="giants" class="divLogos" href="#">New York Giants</a></li>
+                <!--EAGLES-->
+                <li><a id="eagles" class="divLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <!--REDSKINS-->
+                <li><a id="skins" class="divLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Texans &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.giants.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcEast/nyGiants/logo/giantsLogo.svg.png"></a>
+                        <a href="http://www.giants.com/" target="_blank">New York Giants Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/New_York_Giants_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/New_York_Giants_Gear" target="_blank">NFL Shop - Giants</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/new-york-giants/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/new-york-giants/" target="_blank">Pro Football Hall of Fame - Giants</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/newyorkgiants/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/newyorkgiants/" target="_blank">Facebook - Giants</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/giants" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/giants" target="_blank">Twitter - Giants</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/nygiants/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/nygiants/" target="_blank">Instagram - Giants</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

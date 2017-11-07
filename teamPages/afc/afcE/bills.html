@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Bills</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/bills.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcEast/bufBills/logo/billsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Buffalo Bills are based in the Buffalo-Niagara falls area, and are actually the only NFL team to play within the state of New York (both the Giants and the Jets actually play their games in New Jersey). The Bills were founded in 1960, and were an original franchise of the AFL, before joining the NFL in the 1970 AFL/NFL merger. The Bills are the only team to win four consecutive conference championships, but sadly also the only team to then lose four consecutive Super Bowl games.
+            <br>
+            <br>The rise of the division rival New England Patriots under Tom Brady, along with numerous failed attempts at rebuilding in the 2000s and 2010s, have prevented the Bills from reaching the playoffs since 1999, a 17-year drought that is the longest active playoff drought in all major professional sports. Bills fans will be hoping that new Coach Sean McDermott can finally lead them back to the post season.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Sean McDermott</h3>
+                    <p>The goal remains the same in Buffalo today as it's been since the turn of the millennium: The Bills desperately want to make the playoffs. But this team is far from being contenders. The organisation experienced a face lift with the hirings of new general manager Brandon Beane and head coach Sean McDermott. The defense underwent a schematic and personnel overhaul, while the offense lacks any type of threat in the passing game. Being able to replicate last year's record would be quite a feat.</p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>If the Bills are going to be able to make a run at the division title, they're going to be heavily relying on their run game. Last season the Bills ranked 1st in the league in rushing, but only 30th with their pass attack. Star running back LeSean 'Shady' McCoy will have to be magnificent once again for the team to shine. A lot of pressure will be on QB Tyrod Taylor this season, with many fans and experts still waiting to see if he's the man to lead this franchise forward.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>The Bills ranked 19th in total defence last year, but had one of the better secondaries in the league and finished 6th in pass defence. The loss of star CB Stephon Gilmore to rivals the Patriots could hurt the secondary, so a lot of pressure will be on 1st round pick Tre'Davious White to fill Gilmore's boots. The Bills must improve on their run defence, having only ranked 29th in stopping the run. There is enough talent on the defence though, with star men Jerry Hughes, Lorenzo Alexander and Micah Hyde having to lead this unit.</p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>LeSean McCoy, RB</h3>
+                        <p>Known around the league as 'Shady' McCoy, due to his shify and elusive running style, LeSean McCoy has become the Bill's star man and is a threat everytime he touches the ball. The Bill's ranked number 1 in rushing last year thanks largely to McCoy's amazing production of 1,267 rushing yards, plus another 13 rushings TDs to go along.
+                        <br><br>McCoy is in the prime of his career now at age 29. The former Eagle has been one of the most consistent running threats since entering the league, and Bills fans will be hoping he can carry the team with his juking runs back to the playoffs.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcEast/bufBills/players/mccoy.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>QB - Tyrod Taylor. TE - Charles Clay. DE - Jerry Hughes. DT - Kyle Williams. OLB - Lorenzo Alexander. CB - Tre'Davious White. S - Micah Hyde.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcEast/bufBills/unis/billsHome.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcEast/bufBills/unis/billsHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcEast/bufBills/unis/billsAway.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcEast/bufBills/unis/billsAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcEast/bufBills/unis/billsAlt.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcEast/bufBills/unis/billsAltJers.png">
+                </div>
+            </div>
+            <p>To get your Bills gear, <a href="https://www.shopthebills.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>New Era Field</h2>
+            </div>
+                <p>New Era Field was opened in 1973, and is located south of Buffalo. It's had a few name changes over the years: originally Rich Stadium and later Ralph Wilson Stadium.<br><br>Capacity: 71,608</p>
+                <img id="stadCO" src="../../../img/teams/afc/afcEast/bufBills/stadium/billsStadCO2.png">
+                <p class="stadLink">To find out more about New Era Field and upcoming events, <a href="http://www.buffalobills.com/stadium/index.html" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Buffalo</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: New York</h4>
+                    <h4>Population: 256,902</h4>
+                    <p>Known as "The Queen City", "The Nickel City" and "The City of Good Neighbors", Buffalo is located on the shores of Lake Erie, at the head of the Niagara River in upstate New York. Its fine neoclassical, beaux arts and art deco architecture speaks to its history as an industrial capital in the early 20th century. Its landmarks include the 398-ft art deco City Hall, the Frank Lloyd Wright–designed Darwin D. Martin House and the Albright-Knox Art Gallery. The Niagara Falls is also not too far north from Buffalo, and brings in a lot of tourism.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcEast/bufBills/map/billsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Buffalo, <a href="http://www.visitbuffaloniagara.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcChamp.png">
+                        <h4 class="champHead">AFC Champions - 4</h4>
+                            <p class="postDates">1990, 1991, 1992, 1993</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">AFL East - 3</h4>
+                            <p class="postDates">1964, 1965, 1966</p>
+                        <h4 class="champHead">AFC East - 7</h4>
+                            <p class="postDates">1980, 1988, 1989, 1990, 1991, 1993, 1995</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 17</h3>
+<!--                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">-->
+                        <h4 class="champHead">AFL</h4>
+                            <p class="postDates">1963, 1964, 1965, 1966</p>
+                        <h4 class="champHead">NFL</h4>
+                            <p class="postDates">1974, 1980, 1981, 1988, 1989, 1990, 1991, 1992, 1993, 1995, 1996, 1998, 1999</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 400 Losses: 460 Ties: 8 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 14 Losses: 15 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 414 Losses: 475 Ties: 8 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 10</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>O.J. Simpson, RB <em> - Class of 1985</em></p>
+                                <p>Billy Shaw, G <em> - Class of 1999</em></p>
+                                <p>Marv Levy, Coach <em> - Class of 2001</em></p>
+                                <p>Jim Kelly, QB <em> - Class of 2002</em></p>
+                                <p>Joe Delamielleure, G <em> - Class of 2003</em></p>
+                                <p>Thurmon Thomas, RB <em> - Class of 2007</em></p>
+                                <p>Bruce Smith, DE <em> - Class of 2009</em></p>
+                                <p>Ralph Wilson Jr., Owner <em> - Class of 2009</em></p>
+                                <p>Andre Reed, WR <em> - Class of 2014</em></p>
+                                <p>Bill Polian, Contributor <em> - Class of 2015</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC EAST</h2></li>
+                <!--BILLS-->
+                <li><a id="bills" class="divLogos" href="#">Buffalo Bills</a></li>
+                <!--DOLPHINS-->
+                <li><a id="dolph" class="divLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <!--PATRIOTS-->
+                <li><a id="pats" class="divLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <!--JETS-->
+                <li><a id="jets" class="divLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Bills &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.buffalobills.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcEast/bufBills/logo/billsLogo.svg.png"></a>
+                        <a href="http://www.buffalobills.com/" target="_blank">Buffalo Bills Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Buffalo_Bills_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Buffalo_Bills_Gear" target="_blank">NFL Shop - Bills</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/buffalo-bills/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/buffalo-bills/" target="_blank">Pro Football Hall of Fame - Bills</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/BuffaloBills/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/BuffaloBills/" target="_blank">Facebook - Bills</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/buffalobills" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/buffalobills" target="_blank">Twitter - Bills</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/buffalobills/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/buffalobills/" target="_blank">Instagram - Bills</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

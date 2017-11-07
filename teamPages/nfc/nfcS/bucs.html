@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Buccaneers</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/bucs.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcSouth/tbBuccaneers/logo/bucsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Tampa Bay Buccaneers (usually shortened as the Bucs) are based in Tampa, Florida. Along with the Seattle Seahawks, the team joined the NFL in 1976 as an expansion team. The Bucs played their first season in the AFC West division as part of the 1976 expansion plan, whereby each new franchise would play every other franchise over the first two years. After the season, the club switched conferences with the Seahawks and became a member of the NFC Central division. During the 2002 league realignment, the Bucs joined three former NFC West teams to form the NFC South.
+            <br>
+            <br>The Bucs may have the leagues most disgusting uniforms, but their play was anything but disgusting last year. The team finished with a 9-7 record, and only narrowly missed out on the playoffs. The Bucs have one of the better young crop of players coming through, and will be hoping this generation of players led by second year Head Coach Dirk Koetter can get tham back to their first Super Bowl since their only other appearance and victory in 2002.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Dirk Koetter</h3>
+                    <p>The NFC South is one of the league's strongest divisions. Each team has a legitimate chance to claim the title. The Buccaneers appear most ready to make a move and usurp the crown. Jameis Winston enters his third year after becoming the first quarterback in NFL history to throw for 4,000 or more yards in his first two seasons. The organisation signed DeSean Jackson in free agency to complement the already-dangerous Mike Evans. And the Bucs defence played as well as any unit during the second half of last season. Everything is trending in Tampa Bay's direction. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>The Buc's offence was only average last year based on where they finished in all offensive categroies. However, this young group is getting better every season, with young QB Jameis Winston developing nicely into one of the game's most promising players. This time he'll  have even more toys to play with, with the addition of speedster DeSean Jackson. Add in superstar WR Mike Evans, and this could be one of the more exciting teams when it comes to the pass attack. Doug Martin and the offensive line need to improve in the running game to add more balance to this team.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>Tampa finished around 22nd in every defensive category in terms of yards allowed. However, they did a better job with points allowed, finishing 15th. The Bucs have a few nice pieces to build their defence around. Gerald McCoy is one of the best defensive tackles in the game. Kwon Alexander is a rising star at linebacker, alongside other star LB LaVonte David. And Vernon Hargreaves III should be looking to build on a decent rookie season. Having veteran corner Brent Grimes on the other side of him should help a lot. 
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Jameis Winston, QB</h3>
+                        <p>Famous Jameis Winston was his nickname coming out of college in 2015, after he'd led Florida State to the National Championship. It made him the no.1 overall pick in the draft, and so far he's lived up to expectations, having been named rookie of the year and also making the pro bowl in his rookie season. At just 23 years old he already has plenty of experience for someone so young.
+                        <br><br>He often gets compared to fellow QB Marcus Mariota. Mariota was selected with 2nd overall pick, after Winston. Both young QBs have quickly shown the league that they belong on this level. Winston has all the attributes you look for in a franchise QB. Some of Winston's best plays have come when he improvises. Bucs fans can rest assured that they have their franchise in safe hands for the foreseeable future. </p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcSouth/tbBuccaneers/players/jameis.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>RB - Doug Martin. WR - Mike Evans. WR - DeSean Jackson. DT - Gerald McCoy. LB - LaVonte David. LB - Kwon Alexander. CB - Brent Grimes. CB - Vernon Hargreaves III.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcSouth/tbBuccaneers/unis/bucsHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcSouth/tbBuccaneers/unis/bucsHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcSouth/tbBuccaneers/unis/bucsAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcSouth/tbBuccaneers/unis/bucsAwJers.png">
+                </div>
+            </div>
+            <p>To get your Buccaneers gear, <a href="http://shop.buccaneers.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Raymond James Stadium</h2>
+            </div>
+                <p>Raymond James Stadium, also known as the "Ray Jay", was opened in 1998 and is located in Tampa, Florida. One of the most recognisable features of the stadium is a 103-foot replica pirate ship, which fires replica cannons each time the Bucs score points or enter the other team's red zone. <br><br>Capacity: 65,890 </p>
+                <img id="stadCO" src="../../../img/teams/nfc/nfcSouth/tbBuccaneers/stadium/rayCO.png">
+                <p class="stadLink">To find out more about Raymond James Stadium and upcoming events, <a href="http://raymondjamesstadium.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Tampa</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Florida</h4>
+                    <h4>Population: 377,165</h4>
+                    <p>Tampa is a city on Tampa Bay, along Florida’s Gulf Coast. A major business center, it’s also known for its museums and other cultural offerings. Busch Gardens is an African-themed amusement park with thrill rides and animal-viewing areas. The historic Ybor City neighborhood, developed by Cuban and Spanish cigar-factory workers at the turn of the 20th century, is a dining and nightlife destination.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcSouth/tbBuccaneers/map/bucsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Tampa, <a href="https://www.visittampabay.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2002<br>(XXXVII)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/nfcChamp.png">
+                        <h4 class="champHead">NFC Champions - 1</h4>
+                            <p class="postDates">2002</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">NFC Central- 3</h4>
+                            <p class="postDates">1979, 1981, 1999</p>
+                        <h4 class="champHead">NFC South - 3</h4>
+                            <p class="postDates">2002, 2005, 2007</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 10</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1979, 1981, 1982, 1997, 1999, 2000, 2001, 2002, 2005, 2007</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 250 Losses: 393 Ties: 1 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 6 Losses: 9 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 256 Losses: 402 Ties: 1 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 4</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Lee Roy Selmon, DE <em> - Class of 1995</em></p>
+                                <p>Warren Sapp, DT <em> - Class of 2013</em></p>
+                                <p>Derrick Brooks, LB <em> - Class of 2014</em></p>
+                                <p>Tony Dungy, Coach <em> - Class of 2016</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC SOUTH</h2></li>
+                <!--FALCONS-->
+                <li><a id="falc" class="divLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <!--PANTHERS-->
+                <li><a id="panth" class="divLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <!--SAINTS-->
+                <li><a id="saints" class="divLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <!--BUCS-->
+                <li><a id="bucs" class="divLogos" href="#">Tampa Bay Buccaneers</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Buccaneers &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.buccaneers.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcSouth/tbBuccaneers/logo/bucsLogo.svg.png"></a>
+                        <a href="http://www.buccaneers.com/" target="_blank">Tampa Bay Buccaneers Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Tampa_Bay_Buccaneers_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Tampa_Bay_Buccaneers_Gear" target="_blank">NFL Shop - Buccaneers</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/tampa-bay-buccaneers/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/tampa-bay-buccaneers/" target="_blank">Pro Football Hall of Fame - Buccaneers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/tampabaybuccaneers/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/tampabaybuccaneers/" target="_blank">Facebook - Buccaneers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/TBBuccaneers" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/TBBuccaneers" target="_blank">Twitter - Buccaneers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/tbbuccaneers/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/tbbuccaneers/" target="_blank">Instagram - Buccaneers</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

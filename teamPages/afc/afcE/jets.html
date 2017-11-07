@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Jets</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/jets.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcEast/nyJets/logo/jetsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The New York Jets are based in the New York metropolitan area, and represent New York, even though their headquarters and stadium are actually based in nearby New Jersey. The team was founded in 1959 as the Titans of New York, an original member of the American Football League (AFL); later, the franchise joined the NFL in the AFL–NFL merger in 1970.
+            <br>
+            <br>The Jets have some of the most loyal fans in the league, with their chant of "J-E-T-S!" becoming synonymous with the team. Sadly for their fans, they haven't had too much success to shout about in recent years, with division rivals the Patriots, and inner-city rivals the New York Giants, having won several Super Bowls in the last few years. The team is currently rebuilding under the guidance of young Head Coach Todd Bowles, and hopefully for their fans success isn't too far away.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Todd Bowles</h3>
+                    <p>The Jets roster is poor, especially on offence, and the organisation needs an overhaul. Talented individuals such as Leonard Williams, Muhammad Wilkerson and Jamal Adams are on the roster, but they're not enough. Instead, the best-case scenario is losing as many games as possible to "earn" the No. 1 overall pick in the 2018 draft and give the franchise an opportunity to secure a franchise quarterback prospect. Whilst many around the league respect Head Coach Todd Bowles, it will be interesting to see how much time ownership is willing to allow him to build a competitive team.</p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>The Jets don't have a franchise quarteback, and haven't for years. And until they do, it's hard to see this offence putting up many points or wins this season. This year they are putting their faith into veteran journeyman QB Josh McCown, as backups Christian Hackenberg or Bryce Petty haven't really set the world on fire. The Jets finished near the bottom in pretty much every category on offence except rushing. Experienced vet Matt Forte will be expected to lead the rush attack, but one has to wonder how much more is left in the tank for the former Bear's star at this stage in his career.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>On the other side of the ball, the Jets' have a much better defence. Whilst not elite yet, it's fair to say it's still better than most units in the NFL. The team will have to rely on it's defense to keep opponents out of the end-zone, and then try to win low scoring games. The issue is that the biggest problem the defence had last year was stopping opposing teams scoring, as they ranked 28th in points allowed. However, there is enough young talent coming through, with the likes of Leonard Williams, and emerging rookie safeties Jamal Adams and Marcus Maye offering hope for the future.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Leonard Williams, DE</h3>
+                        <p>On a team lacking much offensive firepower, the star man for the last couple of years has been standout defensive lineman Leonard Williams. Williams combines rare size, strength and speed at the position, and is exactly the kind of young talent that the Jets need to build around.
+                        <br><br>Although he's only been in the league for 2 years, he has quickjly established himself as one of the better defensive ends in the league, managing to get his first Pro Bowl nod last season at just 22 years old. Now 23, and with his best yet to come, the Jets faithful will be hoping for yet another breakout year from their young defensive stud.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcEast/nyJets/players/will.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>Rob Gronkowski, TE. Julian Edelman, WR. Brandin Cooks, WR. Dont'a Hightower, LB. Malcolm Butler, CB. Stephon Gilmore, CB. Devin McCourty.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcEast/nyJets/unis/jetsHm.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcEast/nyJets/unis/jetsHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcEast/nyJets/unis/jetsAw.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcEast/nyJets/unis/jetsAwJers.png">
+                </div>
+            </div>
+            <p>To get your Jets gear, <a href="http://www.jetsshop.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>MetLife Stadium</h2>
+            </div>
+                <p>MetLife Stadium was opened in 2010, and is located in East Rutherford, New Jersey, 11 miles northwest of New York City. It's also home to the New York Giants. <br><br>Capacity: 82,500 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcEast/nyJets/stadium/metLifeCO.png">
+                <p class="stadLink">To find out more about Gilette Stadium and upcoming events, <a href="http://www.metlifestadium.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>New York City</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: New York</h4>
+                    <h4>Population: 8,537,673</h4>
+                    <p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcEast/nyJets/map/jetsMap.png">
+                </div>
+                <p class="cityLink">To find out more about New York, <a href="https://www.nycgo.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1968<br>(III)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">AFL East - 2</h4>
+                            <p class="postDates">1968, 1969</p>
+                        <h4 class="champHead">AFC East - 2</h4>
+                            <p class="postDates">1998, 2002</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 14</h3>
+<!--                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">-->
+                        <h4 class="champHead">AFL</h4>
+                            <p class="postDates">1968, 1969</p>
+                        <h4 class="champHead">NFL</h4>
+                        <p class="postDates">1981, 1982, 1985, 1986, 1991, 1998, 2001, 2002, 2004, 2006, 2009, 2010</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 392 Losses: 468 Ties: 8 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 12 Losses: 13 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 404 Losses: 481 Ties: 8 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 5</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                    <p>Weeb Ewbank, Coach <em> - Class of 1978</em></p>
+                                    <p>Joe Namath, QB <em> - Class of 1985</em></p>
+                                    <p>Don Maynard, WR <em> - Class of 1987</em></p>
+                                    <p>John Riggins, RB <em> - Class of 1992</em></p>
+                                    <p>Curtis Martin, RB <em> - Class of 2012</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC EAST</h2></li>
+                <!--BILLS-->
+                <li><a id="bills" class="divLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <!--DOLPHINS-->
+                <li><a id="dolph" class="divLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <!--PATRIOTS-->
+                <li><a id="pats" class="divLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <!--JETS-->
+                <li><a id="jets" class="divLogos" href="#">New York Jets</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Jets &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.newyorkjets.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcEast/nyJets/logo/jetsLogo.svg.png"></a>
+                        <a href="http://www.newyorkjets.com/" target="_blank">New York Jets Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/New_York_Jets_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/New_York_Jets_Gear" target="_blank">NFL Shop - Jets</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/new-england-patriots/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/new-england-patriots/" target="_blank">Pro Football Hall of Fame - Jets</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/Jets/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/Jets/" target="_blank">Facebook - Jets</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/nyjets" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/nyjets" target="_blank">Twitter - Jets</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/nyjets/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/nyjets/" target="_blank">Instagram - Jets</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

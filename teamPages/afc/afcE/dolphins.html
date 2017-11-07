@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Dolphins</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/phins.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcEast/miaDolphins/logo/dolphinsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Dolphins are Florida's oldest professional sports team, having been founded in 1966 based in the Miami area. The team joined the NFL in the 1970 merger. In 1972 the Dolphins completed the NFL's only ever perfect season culminating in a Super Bowl win, winning all 14 of their regular-season games, both of their NFL playoff games, and also Super Bowl VII.
+            <br>
+            <br>Last season the Dolphins managed to make thier first playoff appearance since 2008. It's alway a tough ask to make the playoffs when you play in the same division as Tom Brady's Patriots. On paper the Dolphins are the second strongest team in the division, and it will be intriguing to see if they can replicate last season's form.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Adam Gase</h3>
+                    <p>Head coach Adam Gase didn't need much of an acclimation period to make the Dolphins into a playoff team. Miami surprised with a 10-6 record and the team's first postseason appearance since the 2008 campaign. None of this will matter if it regresses in Gase's second season. All of the same components are in place with one glaring exception. Ryan Tannehill's season-ending injury gave way to Jay Culter's signing. An argument can be made the Dolphins are better with Cutler. His experience and ever-present arm talent have the potential to make Miami's offense more explosive.</p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>The Dolphin's offence was run-first, pass-second last season, with Jay Ajayi being the main ball carrier for the team as they finished 9th in rushing. However their pass attack must improve, and with the injury to QB Ryan Tannehill, Miami will be hoping newly acquired gunslinger Jay Cutler will be able to sling the ball around with greater success to their star receivers Jarvis Landry and Kenny Stills. Miami needs a much better aerial attack, havinf finished only 26th in pass yards last time around.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>Defensively Miami must improve. They had one of the worst defences when it came to giving up yards, finishing 29th in the league. Most of this was down to a poor run defence that allowed the third most rushing yards in the NFL. There is enough star power to turn things around, especially on the defensive line, with Ndamukong Suh and Cameron Wake causing problems all day for opposing Quarterbacks. Linebacker Kiko Alonso and Safety Reshad Jones are another two leaders that need to step up for a unit looking for improvements this year. 
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Ndamukong Suh, DT</h3>
+                        <p>There aren't many other players in the NFL who strike as much fear into an opponent as Ndamukong Suh. The 6ft 4" 305lb beast has wrecked havoc since entering the league in 2010. Many consider Suh to be one of the most disruptive defensive tackles since Hall of Famer Warren Sapp.
+                        <br><br>One negative to Suh's game is that some believe he crosses the line a few too many times, and this has got him a bit of a reputation as a 'dirty' player. To Suh's credit, these dirty days were more common during his early career with the Detroit Lions. Miami fans will be hoping Suh can channel all his aggression to turn the Dolphin's defence into a formidable force.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcEast/miaDolphins/players/suh2.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>Ryan Tannehill, QB. Jay Ajayi, RB. Jarvis Landry, WR. Cameron Wake, DE.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcEast/miaDolphins/unis/phinsHm.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcEast/miaDolphins/unis/phinsHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcEast/miaDolphins/unis/phinsAw.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcEast/miaDolphins/unis/phinsAwJers.png">
+                </div>
+            </div>
+            <p>To get your Miami gear, <a href="http://shop.miamidolphins.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Hard Rock Stadium</h2>
+            </div>
+                <p>Hard Rock Stadium originally opened in 1987 as Joe Robbie Stadium, but has been completely revamped and reconstructed since 2014, becoming a state-of-the-art modern canopy stadium. <br><br>Capacity: 65,326 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcEast/miaDolphins/stadium/hardrockCO.png">
+                <p class="stadLink">To find out more about Hard Rock Stadium and upcoming events, <a href="http://hardrockstadium.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Miami</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Florida</h4>
+                    <h4>Population: 453,579</h4>
+                    <p>Miami is an international city at Florida's southeastern tip. Its Cuban influence is reflected in the cafes and cigar shops that line Calle Ocho in Little Havana. On barrier islands across the turquoise waters of Biscayne Bay is Miami Beach, home to South Beach. This glamorous neighborhood is famed for its colorful art deco buildings, white sand, surfside hotels and trendsetting nightclubs.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcEast/miaDolphins/map/dolphinsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Miami, <a href="http://www.visitflorida.com/en-us/cities/miami.html" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1972<br>(VII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1973<br>(VIII)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcChamp.png">
+                        <h4 class="champHead">AFC Champions - 5</h4>
+                            <p class="postDates">1971, 1972, 1973, 1982, 1984</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcEastLogo.png">
+                        <h4 class="champHead">AFC East - 13</h4>
+                            <p class="postDates">1971, 1972, 1973, 1974, 1979, 1981, 1983, 1984, 1985, 1992, 1994, 2000, 2008</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 23</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1970, 1971, 1972, 1973, 1974, 1978, 1979, 1981, 1982, 1983, 1984, 1985, 1990, 1992, 1994, 1995, 1997, 1998, 1999, 2000, 2001, 2008, 2016</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 439 Losses: 341 Ties: 4 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 41 Losses: 20 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 460 Losses: 363 Ties: 4 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 10</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Paul Warfield, WR <em> - Class of 1983</em></p>
+                                <p>Larry Csonka, FB <em> - Class of 1987</em></p>
+                                <p>Jim Langer, C <em> - Class of 1987</em></p>
+                                <p>Larry Little, G <em> - Class of 1993</em></p>
+                                <p>Bob Griese, QB <em> - Class of 1990</em></p>
+                                <p>Don Shula, Coach <em> - Class of 1997</em></p>
+                                <p>Dwight Stevenson, C <em> - Class of 1998</em></p>
+                                <p>Nick Buoniconti, LB <em> - Class of 2001</em></p>
+                                <p>Dan Marino, QB <em> - Class of 2005</em></p>
+                                <p>Jason Taylor, DE <em> - Class of 2017</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC EAST</h2></li>
+                <!--BILLS-->
+                <li><a id="bills" class="divLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <!--DOLPHINS-->
+                <li><a id="dolph" class="divLogos" href="#">Miami Dolphins</a></li>
+                <!--PATRIOTS-->
+                <li><a id="pats" class="divLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <!--JETS-->
+                <li><a id="jets" class="divLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Dolphins &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.miamidolphins.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcEast/miaDolphins/logo/dolphinsLogo.svg.png"></a>
+                        <a href="http://www.miamidolphins.com/" target="_blank">Miami Dolphins Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Miami_Dolphins_Gear/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Miami_Dolphins_Gear/" target="_blank">NFL Shop - Dolphins</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/miami-dolphins/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/miami-dolphins/" target="_blank">Pro Football Hall of Fame - Dolphins</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/MiamiDolphins/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/MiamiDolphins/" target="_blank">Facebook - Dolphins</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/MiamiDolphins" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/MiamiDolphins" target="_blank">Twitter - Dolphins</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/miamidolphins/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/miamidolphins/" target="_blank">Instagram - Dolphins</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

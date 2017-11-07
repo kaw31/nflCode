@@ -1,0 +1,182 @@
+body {
+    background: #c9243f; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#c9243f, #c9243f, #c8aa76); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#c9243f, #c9243f, #c8aa76); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#c9243f, #c9243f, #c8aa76); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#c9243f, #c9243f, #c8aa76); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ========= ROSTER ========== */
+
+.rosterBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/sf49ers/players/kyle2.jpg);
+    background-position: top;
+}
+
+/* ========= OFFENCE ========== */
+
+.offenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/sf49ers/players/hyde1.jpeg);
+    background-position: center;
+}
+
+/* ========= DEFENCE ========== */
+
+.defenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/sf49ers/players/reid1.jpg);
+    background-position: top;
+}
+
+/* ========= MVP ========== */
+
+.mvpBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/sf49ers/players/buck2.jpg);
+    background-position: top;
+}
+
+/* ========= UNIFORM ========== */
+
+.uniBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/sf49ers/players/def2.jpeg);
+    background-position: center;
+}
+
+/* ========= UNIS BUTTON ========== */
+
+.homeUniBtn {
+    border-radius: 10px 0 0 10px;
+}
+
+.awayUniBtn {
+    border-radius: 0 10px 10px 0;
+}
+
+/* ========= STADIUM ========== */
+
+.stadBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/sf49ers/stadium/levi2.jpg);
+    background-position: center;
+}
+
+/* ========= CITY ========== */
+
+.cityBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/sf49ers/city/sf2.jpg);
+    background-position: top;
+}
+
+/* ========= RECORDS ========== */
+
+.supBowls {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.trophy {
+    height: 80px;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.playFlex h4 {
+    margin: 20px 0 0;
+}
+
+/* ========= HEADINGS BG ========== */
+
+.rosterBg, .offenceBg, .defenceBg, .mvpBg, .uniBg, .stadBg, .cityBg {
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.headBgImgs {
+    height: 300px;
+}
+
+/* ========= DIV TEAM BG LOGOS ========== */
+
+#cards {
+    background-image: url(../../../../img/teams/nfc/nfcWest/ariCardinals/logo/cardsLogo.svg.png);
+}
+
+#rams {
+    background-image: url(../../../../img/teams/nfc/nfcWest/laRams/logo/ramsLogo.svg.png);
+}
+
+#niners {
+    background-image: url(../../../../img/teams/nfc/nfcWest/sf49ers/logo/49ersLogo.svg.png);
+}
+
+#hawks {
+    background-image: url(../../../../img/teams/nfc/nfcWest/seaSeahawks/logo/seahawksLogo.svg.png);
+}
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================ LARGE MOBILES ================== */
+
+@media only screen 
+and (min-width : 480px) 
+/*and (max-width : 1024px)  */
+{
+
+/* ========= REC ========== */
+    
+    .supBowls {
+        max-width: 100%;
+    }   
+    
+    .trophy {
+        height: 120px;
+        margin: 20px 0 0;
+    }
+    
+}
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+    
+    .headBgImgs {
+        background-position: center;
+    }
+    
+     .mvpBg {
+        height: 500px;
+        flex: 1;
+        border-right: 2px solid white;
+    }
+    
+    .cityBg {
+        flex: 1;
+        height: 550px;
+        margin: 0;
+        background-position: left;
+        border-right: 2px solid white;
+    }
+    
+}
+

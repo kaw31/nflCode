@@ -1,0 +1,158 @@
+body {
+    background: #002d5f; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#002d5f, #002d5f, #ffffff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#002d5f, #002d5f, #ffffff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#002d5f, #002d5f, #ffffff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#002d5f, #002d5f, #ffffff); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ========= ROSTER ========== */
+
+.rosterBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcSouth/indColts/players/chuck4.jpg);
+    background-position: top;
+}
+
+/* ========= OFFENCE ========== */
+
+.offenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcSouth/indColts/players/ty2.jpg);
+    background-position: center;
+}
+
+/* ========= DEFENCE ========== */
+
+.defenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcSouth/indColts/players/davis2.jpg);
+    background-position: top;
+}
+
+/* ========= MVP ========== */
+
+.mvpBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcSouth/indColts/players/luck1.jpg);
+    background-position: top;
+}
+
+/* ========= UNIFORM ========== */
+
+.uniBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcSouth/indColts/players/off2.jpg);
+    background-position: center;
+}
+
+/* ========= UNIS BUTTON ========== */
+
+.homeUniBtn {
+    border-radius: 10px 0 0 10px;
+}
+
+.awayUniBtn {
+    border-radius: 0 10px 10px 0;
+}
+
+/* ========= STADIUM ========== */
+
+.stadBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcSouth/indColts/stadium/lucas5.jpg);
+    background-position: center;
+}
+
+/* ========= CITY ========== */
+
+.cityBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcSouth/indColts/city/indy1.jpg);
+    background-position: center;
+}
+
+/* ========= RECORDS ========== */
+
+.divFlex h4 {
+    margin: 25px 0 0;
+}
+
+/* ========= HEADINGS BG ========== */
+
+.rosterBg, .offenceBg, .defenceBg, .mvpBg, .uniBg, .stadBg, .cityBg {
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.headBgImgs {
+    height: 300px;
+}
+
+/* ========= DIV TEAM BG LOGOS ========== */
+
+#tex {
+    background-image: url(../../../../img/teams/afc/afcSouth/houTexans/logo/texansLogo.svg.png);
+}
+
+#colts {
+    background-image: url(../../../../img/teams/afc/afcSouth/indColts/logo/coltsLogo.svg.png);
+}
+
+#jags {
+    background-image: url(../../../../img/teams/afc/afcSouth/jaxJaguars/logo/jaguarsLogo.svg.png);
+}
+
+#titan {
+    background-image: url(../../../../img/teams/afc/afcSouth/tenTitans/logo/titansLogo.svg.png);
+}
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+    
+    .headBgImgs {
+        background-position: center;
+    }
+    
+     .mvpBg {
+        height: 500px;
+        flex: 1;
+        border-right: 2px solid white;
+    }
+    
+    .cityBg {
+        flex: 1;
+        height: 550px;
+        margin: 0;
+        border-right: 2px solid white;
+    }
+    
+    .divFlex  {
+        max-width: 1000px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    
+}
+

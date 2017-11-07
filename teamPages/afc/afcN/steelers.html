@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Steelers</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/steel.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcNorth/pitSteelers/logo/steelersTitle.png">    
+  
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>Founded in 1933, the Steelers are the oldest franchise in the AFC. In contrast with their status as perennial also-rans in the pre-merger NFL, where they were the oldest team never to win a league championship, the Steelers of the post-merger (modern) era are one of the most successful NFL franchises. Pittsburgh has won more Super Bowl titles (6) and both played in (16) and hosted more conference championship games (11) than any other NFL team.
+            <br>
+            <br>Through the 2016 season, Head Coach Mike Tomlin's record is 111–63, including playoffs. He is the first Pittsburgh coach without a losing season. The 2013–2017 seasons were noted for record performances from the "Killer B's" - the nickname for the deadly trio of Antonio Brown, Ben Roethlisberger and Le'Veon Bell. If these 3 players are on top of their game, there aren't many teams in the NFL capable of stopping the Steelers.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Mike Tomlin</h3>
+                    <p>A Super Bowl appearance is well within the Steelers' reach. Pittsburgh fell short of the New England Patriots in last year's AFC Championship Game, but Ben Roethlisberger and Co. will look quite a bit different this season. Martavis Bryant is back from suspension. Cameron Heyward is healthy. The team added pass-rusher T.J. Watt in the draft. Plus, the continued maturation of Artie Burns and Sean Davis should make the secondary better. A lot of pressure will be put on the defence. It's no secret that the Steelers possess one of the deadliest offences the league has to offer, and if the defence can manage to slow opponents down then this could be yet another Super Bowl year for the Steelers. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>This offence revolves around the "Killer B's". "Killer B" no.1 - 'Big Ben' Roethlisberger has been lighting up the league since 2004, and shows no signs of slowing down any time soon. His favourite target is "Killer B" no.2 - Antonio Brown. Arguably the best receiver in the game. To round off this deadly trio is "Killer B" no.3 - Le'Veon Bell. Many consider Bell to be the best running back in the league. His unique running style of waiting patiently for the perfect opening before striking is unlike any back in the league. Pittsburgh finished in or around the top ten for all offensive categories last year, and will be hoping to emulate that again this time around.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>The Steelers have an above average defensive unit if last season is anything to go by. They finished around half-way in most defensive stats last year. They're still a fairly young group, so you'd think they can only improve this year. Linebacker is the Steelers' strongest positional group, having studs such as Ryan Shazier, Bud Dupree and new rookie T.J. Watt flying all over the place. If Watt can be even a fraction of the player his older brother J.J. is down in Houston, then Steelers fans will be over the moon. The secondary should be better too, with the recent trade for Browns long-time star cornerback Joe Hayden.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Antonio Brown, WR</h3>
+                        <p>Many think Antonio Brown has been the best wide receiver in the league for the last few seasons. Which is amazing if you consider just how many superstar receivers there are throughout the NFL. Although Brown is not the tallest or strongest, his attitude, catching, route running and just general play is second to none. 
+                        <br><br>Antonio is in his prime now at age 29. Not only is he a great receiver, but he's also an excellent return man. Brown is a threat every time the ball is in his hands. Even though most teams know Big Ben is throwing his way, it's easier said than done when trying to stop him. Few receivers possess as much talent as Brown, and the Steelers will be hoping his heroics can lead them back to the promised land.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcNorth/pitSteelers/players/brown.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>QB - Ben Roethlisberger. RB - Le'Veon Bell. DE - Cameron Heyward. LB - Ryan Shazier. OLB - Bud Dupree. OLB - T.J. Watt (R). CB- Joe Hayden.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcNorth/pitSteelers/unis/steelHome.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcNorth/pitSteelers/unis/steelHomeJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcNorth/pitSteelers/unis/steelAw.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcNorth/pitSteelers/unis/steelAwJers.png">
+                </div>
+            </div>
+            <p>To get your Steelers gear, <a href="https://shop.steelers.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Heinz Field</h2>
+            </div>
+                <p>Heinz Field was opened in 2001, and is located in the North Shore neighborhood of Pittsburgh. The stadium has sold out for every Steelers home game, a streak which dates back to 1972. Fun fact - this was the stadium used in the iconic scene where the pitch collapses in the blockbuster film "The Dark Knight Rises" (2012). <br><br>Capacity: 68,400 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcNorth/pitSteelers/stadium/heinzCO.png">
+                <p class="stadLink">To find out more about Heinz Field and upcoming events, <a href="http://heinzfield.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Pittsburgh</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Pennsylvania</h4>
+                    <h4>Population: 303,625</h4>
+                    <p>Known as the 'Steel City', Pittsburgh is located in western Pennsylvania at the junction of 3 rivers. Its Gilded Age sites, including the Carnegie Museum of Natural History, the Carnegie Museum of Art and the Phipps Conservatory and Botanical Gardens, speak to its history as an early-20th-century industrial capital. In the North Shore neighborhood are the modern Andy Warhol Museum, Heinz Field football stadium and PNC Park baseball stadium.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcNorth/pitSteelers/map/steelMap.png">
+                </div>
+                <p class="cityLink">To find out more about Pittsburgh, <a href="https://www.visitpittsburgh.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1974<br>(IX)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1975<br>(X)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1978<br>(XIII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1979<br>(XIV)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2005<br>(XL)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2008<br>(XLIII)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcChamp.png">
+                        <h4 class="champHead">AFC Champions - 8</h4>
+                            <p class="postDates">1974, 1975, 1978, 1979, 1995, 2005, 2008, 2010</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">AFC Central - 15</h4>
+                            <p class="postDates">1972, 1974, 1975, 1976, 1977, 1978, 1979, 1983, 1984, 1992, 1994, 1995, 1996, 1997, 2001</p>
+                        <h4 class="champHead">AFC North - 7</h4>
+                            <p class="postDates">2002, 2004, 2007, 2008, 2010, 2014, 2016</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 30</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1947, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1982, 1983, 1984, 1989, 1992, 1993, 1994, 1995, 1996, 1997, 2001, 2002, 2004, 2005, 2007, 2008, 2010, 2011, 2014, 2015, 2016</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 606 Losses: 549 Ties: 21 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 36 Losses: 24 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 642 Losses: 573 Ties: 21 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 21</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                    <p>Art Rooney, Founder <em> - Class of 1964</em></p>
+                                    <p>Bill Dudley, HB <em> - Class of 1966</em></p>
+                                    <p>Walt Kiesling, G/Coach <em> - Class of 1966</em></p>
+                                    <p>Bobby Lane, QB <em> - Class of 1967</em></p>
+                                    <p>Ernie Stautner, DT <em> - Class of 1969</em></p>
+                                    <p>Joe Greene, DT <em> - Class of 1987</em></p>
+                                    <p>John Henry Johnson, FB <em> - Class of 1987</em></p>
+                                    <p>Jack Ham, LB <em> - Class of 1988</em></p>
+                                    <p>Terry Bradshaw, QB <em> - Class of 1989</em></p>
+                                    <p>Mel Blount, CB <em> - Class of 1989</em></p>
+                                    <p>Franco Harris, RB <em> - Class of 1990</em></p>
+                                    <p>Jack Lambert, LB <em> - Class of 1990</em></p>
+                                    <p>Chuck Noll, Coach <em> - Class of 1993</em></p>
+                                    <p>Mike Webster, C <em> - Class of 1997</em></p>
+                                    <p>Dan Rooney, Admin/Owner <em> - Class of 2000</em></p>
+                                    <p>Lynn Swann, WR <em> - Class of 2001</em></p>
+                                    <p>John Stallworth, WR <em> - Class of 2002</em></p>
+                                    <p>Rod Woodson, CB/S <em> - Class of 2009</em></p>
+                                    <p>Jack Butler, CB <em> - Class of 2012</em></p>
+                                    <p>Dermontti Dawson, C <em> - Class of 2012</em></p>
+                                    <p>Jerome Bettis, RB <em> - Class of 2015</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC NORTH</h2></li>
+                <!--RAVENS-->
+                <li><a id="ravs" class="divLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <!--BENGALS-->
+                <li><a id="bengals" class="divLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <!--BROWNS-->
+                <li><a id="browns" class="divLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <!--STEELERS-->
+                <li><a id="steel" class="divLogos" href="#">Pittsburgh Steelers</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Steelers &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.steelers.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcNorth/pitSteelers/logo/steelersLogo.svg.png"></a>
+                        <a href="http://www.steelers.com/" target="_blank">Pittsburgh Steelers Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Pittsburgh_Steelers_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Pittsburgh_Steelers_Gear" target="_blank">NFL Shop - Steelers</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/pittsburgh-steelers/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/pittsburgh-steelers/" target="_blank">Pro Football Hall of Fame - Steelers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/steelers/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/steelers/" target="_blank">Facebook - Steelers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/steelers" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/steelers" target="_blank">Twitter - Steelers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/steelers/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/steelers/" target="_blank">Instagram - Steelers</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

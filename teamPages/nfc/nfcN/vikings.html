@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Vikings</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/vikings.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcNorth/minVikings/logo/vikesTitle.png">    
+  
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Minnesota Vikings are based in Minneapolis, Minnesota. The Vikings joined the NFL as an expansion team in 1960, and first took the field for the 1961 season. Between 1969 and 1976 the Vikes made it to four Super Bowls, but sadly lost every single one. They've never made it back to the big game.
+            <br>
+            <br>Last year the Vikes did ok going .500 with an 8-8 record. But considering the team's starting QB Teddy Bridgewater went down with a horrific leg injury before the season even started (and still hasn't receovered), there wasn't much time for new incomer Sam Bradford to learn the offence. Under the circumstances the Vikings had a pretty good year, especially their defence who played lights out. </p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Mike Zimmer</h3>
+                    <p>Quarterback Sam Bradford exceeded every expectation last season, but the Vikings still fell apart after a 5-0 start. Though Bradford broke the NFL single-season accuracy record, he barely offset the issues along the offensive line. This should change with the additions of Riley Reiff, Mike Remmers and Pat Elflein. The defense ranked third overall and only has a few changes. As long as Ben Gedeon, Trae Waynes and Tom Johnson can effectively take over for Chad Greenway, Terence Newman and Sharrif Floyd, the unit should remain among the league's best.</p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>If the newly formed offensive line can hold together and do a better job, then the Vikings could have a sneakily good attack this year. There are some nice pieces for Sam Bradford to play with. Stefon Diggs has emerged as one of the brighter receivers, and Adam Thielin has become a little local hero, who has a knack for making a big play. Throw Kyle Rudolph into the mix, and Bradford should have more than enough targets to aim at. Minnesota finished dead last in rushing last year, but new rookie Dalvin Cook should help fill in departing legend Adrian Peterson's boots.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>The Vikes defence balled out last year. They were incredible throughout the year, but especially in the first half of the season, flying all over the place and swarming around the ball carrier. They finished in the top 6 in every category except run dfence, so it's going to be interesting to see if they can replicate it this year. There are great players on this unit. Linval Joseph, Danielle Hunter and Everson Griffen all dominate on the defensive line. The linebackers are led by Eric Kendricks and Anthony Barr. Finally, the secondary have upcoming corner Xavier Rhodes and stud safety Harrison Smith.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Harrison Smith, S</h3>
+                        <p>For the longest time the Vikings' face of the franchise used to be superstar running back Adrian Peterson, but he left in the summer. The team is very much just that now, a team. So it's not that easy to identify the team's top player. But considering how good the defence is, it has to be their star man Harrison 'the hitman' Smith.
+                        <br><br>Smith has established himself as one of the best safeties in the league over the last few years. He's made the pro bowl in each of his last two seasons, and it's easy to see why. The Hitman plays without any fear, and is one of the smartest and ferocious players in the league. Smith always seems to be in the right place at the right time. At 28 years old, the best is still to come, and Vikings fans can't wait to see their superstar continue to blossom. </p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcNorth/minVikings/players/smith.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>QB - Sam Bradford. RB - Dalvin Cook (R). WR - Stefon Diggs. TE - Kyle Rudolph. DE - Danielle Hunter. DE - Everson Griffen. DT - Linval Joseph. OLB - Anthony Barr. MLB - Eric Kendricks. CB - Xavier Rhodes.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcNorth/minVikings/unis/vikesHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcNorth/minVikings/unis/vikesHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcNorth/minVikings/unis/vikesAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcNorth/minVikings/unis/vikesAwJers.png">
+                </div>
+            </div>
+            <p>To get your Vikings gear, <a href="https://www.vikingsfanshop.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>U.S. Bank Stadium</h2>
+            </div>
+                <p>U.S. Bank Stadium is a state-of-the-art indoor stadium located in Minneapolis, Minnesota. It's the second newest stadium in the NFL, having only opened in 2016. It's unique design and amazing facilities make it one of the best stadiums in the world. <br><br>Capacity: 66,655 </p>
+                <img id="stadCO" src="../../../img/teams/nfc/nfcNorth/minVikings/stadium/usbCO.png">
+                <p class="stadLink">To find out more about U.S. Bank Stadium and upcoming events, <a href="https://www.usbankstadium.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Minneapolis</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Minnesota</h4>
+                    <h4>Population: 413,651</h4>
+                    <p>Minneapolis is a major city in Minnesota that forms "Twin Cities" with the neighboring state capital of St. Paul. Bisected by the Mississippi River, it's known for its parks and lakes. Minneapolis is also home to many cultural landmarks like the Walker Art Center, a contemporary art museum, and the adjacent Minneapolis Sculpture Garden, famed for Claes Oldenburg's "Spoonbridge and Cherry" sculpture.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcNorth/minVikings/map/vikesMap.png">
+                </div>
+                <p class="cityLink">To find out more about Minneapolis, <a href="http://visit-twincities.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <h4 class="champHead">NFL Western - 1</h4>
+                            <p class="postDates">1969</p>
+                        <h4 class="champHead">NFC Champions - 3</h4>
+                            <p class="postDates">1973, 1974, 1976</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <div class="divFlex">
+                            <div>
+                                <h4 class="champHead">NFL Coastal - 2</h4>
+                                <p class="postDates">1968, 1969</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">NFC Central - 14</h4>
+                                <p class="postDates">1970, 1971, 1973, 1974, 1975, 1976, 1977, 1978, 1980, 1989, 1992, 1994, 1998, 2000</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">NFC North - 3</h4>
+                                <p class="postDates">2008, 2009, 2015</p>
+                            </div>
+                        </div>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 28</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1968, 1969, 1970, 1971, 1973, 1974, 1975, 1976, 1977, 1978, 1980, 1982, 1987, 1988, 1989, 1992, 1993, 1994, 1996, 1997, 1998, 1999, 2000, 2004, 2008, 2009, 2012, 2015</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 457 Losses: 387 Ties: 10 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 19 Losses: 28 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 476 Losses: 415 Ties: 10 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Fran Tarkenton, QB <em> - Class of 1986</em></p>
+                                <p>Alan Page, DT <em> - Class of 1988</em></p>
+                                <p>Bud Grant, Coach <em> - Class of 1994</em></p>
+                                <p>Jim Finks, Admin <em> - Class of 1995</em></p>
+                                <p>Paul Krause, S <em> - Class of 1998</em></p>
+                                <p>Ron Yary, T <em> - Class of 2001</em></p>
+                                <p>Carl Eller, DE <em> - Class of 2004</em></p>
+                                <p>Gary Zimmerman, T <em> - Class of 2008</em></p>
+                                <p>Randall McDaniel, G <em> - Class of 2009</em></p>
+                                <p>John Randle, DT <em> - Class of 2010</em></p>
+                                <p>Chris Doleman, DE/LB <em> - Class of 2012</em></p>
+                                <p>Chris Carter, WR <em> - Class of 2013</em></p>
+                                <p>Mike Tingelhoff, C<em> - Class of 2015</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC NORTH</h2></li>
+                <!--BEARS-->
+                <li><a id="bears" class="divLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <!--LIONS-->
+                <li><a id="lions" class="divLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <!--PACKERS-->
+                <li><a id="pack" class="divLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <!--VIKINGS-->
+                <li><a id="vikes" class="divLogos" href="#">Minnesota Vikings</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Vikings &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.vikings.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcNorth/minVikings/logo/vikingsLogo.svg.png"></a>
+                        <a href="http://www.vikings.com/" target="_blank">Minnesota Vikings Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Minnesota_Vikings_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Minnesota_Vikings_Gear" target="_blank">NFL Shop - Vikings</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/minnesota-vikings/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/minnesota-vikings/" target="_blank">Pro Football Hall of Fame - Vikings</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/minnesotavikings/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/minnesotavikings/" target="_blank">Facebook - Vikings</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/Vikings" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/Vikings" target="_blank">Twitter - Vikings</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/vikings/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/vikings/" target="_blank">Instagram - Vikings</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

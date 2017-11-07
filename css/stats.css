@@ -1,0 +1,595 @@
+body {
+    height: 100vh;
+    background: #05114a; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#05114a, #4872a7); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#05114a, #4872a7); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#05114a, #4872a7); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#05114a, #4872a7); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Cairo', sans-serif;
+    color: white;
+    width: 100%;
+    text-align: justify;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+    text-align: center;
+}
+
+/* ========= INTRO ========== */
+
+.homeIntro {
+    padding-top: 70px;
+    height: 300px;
+}
+
+.homeIntro h2 {
+    text-align: center;
+    font-weight: 100;
+    padding-bottom: 20px;
+}
+
+.homeIntro p {
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+/* ========= STICKY NAVBAR ========== */
+
+#navbar {
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#navbar button {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none; 
+    font-size: 0.9em; 
+    width: 70px;
+    height: 30px;
+    box-sizing: content-box;
+    border: none;
+    background-color: transparent;
+    font-family: 'Cairo', sans-serif;
+    text-transform: uppercase;
+}
+
+#navbar button:active {
+    box-shadow: inset 0 0 20px black;
+}
+
+#navbar button:not(:first-child) {
+    border-left: 2px solid white;
+}
+
+#navbar button:nth-child(7) {
+    border-right: 2px solid white;
+}
+
+#navbar button:hover {
+    background-color: rgba(255,255,255,0.9);
+    color: black; 
+    cursor: pointer;
+}
+
+.stickyNav {
+    margin: 60px auto 0;
+    position: fixed;
+    top: 0;
+}
+
+.stickyStats {
+    padding-top: 100px;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}
+
+/* ========= TABLE CONTENT ========== */
+
+#statCont {
+    box-shadow: -5px 3px 70px rgba(255,255,255,0.3);
+}
+
+#statTables {
+    background-color: rgba(0,0,0,0.3);
+    padding-bottom: 50px;
+}
+
+.tableIntros {
+/*    height: 320px;*/
+    padding-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.tableIntros h2 {
+    padding-bottom: 10px;
+}
+
+.tableIntros p {
+    text-align: justify;
+}
+
+select {
+    margin: 0 auto;
+    display: block;
+    font-family: 'Cairo', sans-serif;
+}
+
+.tabcontent h2 {
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+    word-spacing: 8px;
+}
+
+.tabcontent p {
+    margin: 20px;
+    font-size: 1em;
+}
+
+#extraInfo {
+    margin-top: 40px;
+}
+
+#extraInfo a {
+    text-decoration: none;
+    color: white;
+}
+
+#extraInfo a:hover {
+    font-weight: 700;
+}
+
+/* ========= TABLES ========== */
+
+.everyTable {
+    overflow-x: scroll;
+}
+
+table {
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+th {
+    cursor: pointer;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100px
+}
+
+th:hover {
+    background-color: rgba(255,255,255,0.9);
+    color: black;
+}
+
+tr {
+    height: 50px;
+    font-size: 1.1em;
+}
+
+td {
+    text-align: center;
+    min-width: 90px;
+    max-width: 90px;
+}
+
+/* ========= BACKGROUND LOGOS + COLOURS ========== */
+
+.teams {
+    min-width: 170px;
+    max-width: 170px;
+    text-align: left;
+    padding-left: 60px;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: 7px 7px;
+}
+
+.nfc td:nth-child(even), .afc td:nth-child(even) {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* ========= CARDINALS ========== */
+
+.cards {
+    background-color: rgba(176,6,58,0.9);
+}
+
+.cardBg {
+    background-image: url(../img/teams/nfc/nfcWest/ariCardinals/logo/cardsLogo.svg.png); 
+}
+
+/* ========= FALCONS ========== */
+
+.falcs {
+    background-color: rgba(167,25,48,0.9);
+}
+
+.falcBg {
+    background-image: url(../img/teams/nfc/nfcSouth/atlFalcons/logo/falconsLogo.svg.png); 
+}
+
+/* ========= RAVENS ========== */
+
+.ravs {
+    background-color: rgba(37,23,115,0.9);
+}
+
+.ravBg {
+    background-image: url(../img/teams/afc/afcNorth/balRavens/logo/ravensLogo.svg.png); 
+}
+
+/* ========= BILLS ========== */
+
+.bills {
+    background-color: rgba(0,51,140,0.9);
+}
+
+.billBg {
+    background-image: url(../img/teams/afc/afcEast/bufBills/logo/billsLogo.svg.png); 
+}
+
+/* ========= PANTHERS ========== */
+
+.panth {
+    background-color: rgba(0,154,218,0.9);
+}
+
+.panthBg {
+    background-image: url(../img/teams/nfc/nfcSouth/carPanthers/logo/panthersLogo.svg.png); 
+}
+
+/* ========= BEARS ========== */
+
+.bears {
+    background-color: rgba(28,61,84,0.9);
+}
+
+.bearBg {
+    background-image: url(../img/teams/nfc/nfcNorth/chiBears/logo/bearsLogo.svg.png); 
+}
+
+/* ========= BENGALS ========== */
+
+.beng {
+    background-color: rgba(241,78,36,0.9);
+}
+
+.bengBg {
+    background-image: url(../img/teams/afc/afcNorth/cinBengals/logo/bengalsLogo.svg.png); 
+}
+
+/* ========= BROWNS ========== */
+
+.browns {
+    background-color: rgba(255,61,0,0.9);
+}
+
+.brownBg {
+    background-image: url(../img/teams/afc/afcNorth/cleBrowns/logo/brownsLogo.svg.png); 
+}
+
+/* ========= COWBOYS ========== */
+
+.cows {
+    background-color: rgba(0,34,69,0.9);
+}
+
+.cowBg {
+    background-image: url(../img/teams/nfc/nfcEast/dalCowboys/logo/cowboysLogo.svg.png); 
+}
+
+/* ========= CARDS ========== */
+
+.cards {
+    background-color: rgba(176,6,58,0.9);
+}
+
+.cardBg {
+    background-image: url(../img/teams/nfc/nfcWest/ariCardinals/logo/cardsLogo.svg.png); 
+}
+
+/* ========= BRONCOS ========== */
+
+.bronc {
+    background-color: rgba(252,83,29,0.9);
+}
+
+.broncBg {
+    background-image: url(../img/teams/afc/afcWest/denBroncos/logo/broncosLogo.svg.png); 
+}
+
+/* ========= LIONS ========== */
+
+.lions {
+    background-color: rgba(0,118,182,0.9);
+}
+
+.lionBg {
+    background-image: url(../img/teams/nfc/nfcNorth/detLions/logo/lionsLogo.svg.png); 
+}
+
+/* ========= PACKERS ========== */
+
+.pack {
+    background-color: rgba(26,53,46,0.9);
+}
+
+.packBg {
+    background-image: url(../img/teams/nfc/nfcNorth/gbPackers/logo/packersLogo.svg.png); 
+}
+
+/* ========= TEXANS ========== */
+
+.tex {
+    background-color: rgba(2,33,48,0.9);
+}
+
+.texBg {
+    background-image: url(../img/teams/afc/afcSouth/houTexans/logo/texansLogo.svg.png); 
+}
+
+/* ========= COLTS ========== */
+
+.colts {
+    background-color: rgba(0,45,95,0.9);
+}
+
+.coltBg {
+    background-image: url(../img/teams/afc/afcSouth/indColts/logo/coltsLogo.svg.png); 
+}
+
+/* ========= JAGUARS ========== */
+
+.jags {
+    background-color: rgba(20,102,119,0.9);
+}
+
+.jagBg {
+    background-image: url(../img/teams/afc/afcSouth/jaxJaguars/logo/jaguarsLogo.svg.png); 
+}
+
+/* ========= CHIEFS ========== */
+
+.chiefs {
+    background-color: rgba(228,24,55,0.9);
+}
+
+.chiefBg {
+    background-image: url(../img/teams/afc/afcWest/kcChiefs/logo/chiefsLogo.svg.png); 
+}
+
+/* ========= CHARGERS ========== */
+
+.charg {
+    background-color: rgba(0,126,197,0.9);
+}
+
+.chargBg {
+    background-image: url(../img/teams/afc/afcWest/laChargers/logo/chargersLogo.svg.png); 
+}
+
+/* ========= RAMS ========== */
+
+.rams {
+    background-color: rgba(0,34,68,0.9);
+}
+
+.ramBg {
+    background-image: url(../img/teams/nfc/nfcWest/laRams/logo/ramsLogo.svg.png); 
+}
+
+/* ========= DOLPHINS ========== */
+
+.dolph {
+    background-color: rgba(0,142,151,0.9);
+}
+
+.dolphBg {
+    background-image: url(../img/teams/afc/afcEast/miaDolphins/logo/dolphinsLogo.svg.png); 
+}
+
+/* ========= VIKINGS ========== */
+
+.vikes {
+    background-color: rgba(79,46,132,0.9);
+}
+
+.vikBg {
+    background-image: url(../img/teams/nfc/nfcNorth/minVikings/logo/vikingsLogo.svg.png); 
+}
+
+/* ========= PATRIOTS ========== */
+
+.pats {
+    background-color: rgba(0,35,63,0.9);
+}
+
+.patBg {
+    background-image: url(../img/teams/afc/afcEast/nePatriots/logo/patriotsLogo.svg.png); 
+}
+
+/* ========= SAINTS ========== */
+
+.saints {
+    background-color: rgba(159,137,88,0.9);
+}
+
+.saintBg {
+    background-image: url(../img/teams/nfc/nfcSouth/noSaints/logo/saintsLogo.svg.png); 
+}
+
+/* ========= GIANTS ========== */
+
+.giants {
+    background-color: rgba(2,29,101,0.9);
+}
+
+.giantBg {
+    background-image: url(../img/teams/nfc/nfcEast/nyGiants/logo/giantsLogo.svg.png); 
+}
+
+/* ========= JETS ========== */
+
+.jets {
+    background-color: rgba(32,56,49,0.9);
+}
+
+.jetBg {
+    background-image: url(../img/teams/afc/afcEast/nyJets/logo/jetsLogo.svg.png); 
+}
+
+/* ========= RAIDERS ========== */
+
+.raid {
+    background-color: rgba(158,158,158,0.9);
+}
+
+.raidBg {
+    background-image: url(../img/teams/afc/afcWest/oakRaiders/logo/raidersLogo.svg.png); 
+}
+
+/* ========= EAGLES ========== */
+
+.eag {
+    background-color: rgba(0,76,84,0.9);
+}
+
+.eagBg {
+    background-image: url(../img/teams/nfc/nfcEast/phiEagles/logo/eaglesLogo.svg.png); 
+}
+
+/* ========= STEELERS ========== */
+
+.steel {
+    background-color: rgba(255,183,24,0.9);
+}
+
+.steelBg {
+    background-image: url(../img/teams/afc/afcNorth/pitSteelers/logo/steelersLogo.svg.png); 
+}
+
+/* ========= 49ERS ========== */
+
+.niners {
+    background-color: rgba(201,36,63,0.9);
+}
+
+.ninerBg {
+    background-image: url(../img/teams/nfc/nfcWest/sf49ers/logo/49ersLogo.svg.png); 
+}
+
+/* ========= SEAHAWKS ========== */
+
+.hawks {
+    background-color: rgba(0,41,91,0.9);
+}
+
+.hawkBg {
+    background-image: url(../img/teams/nfc/nfcWest/seaSeahawks/logo/seahawksLogo.svg.png); 
+}
+
+/* ========= BUCCANEERS ========== */
+
+.bucs {
+    background-color: rgba(214,3,3,0.9);
+}
+
+.bucBg {
+    background-image: url(../img/teams/nfc/nfcSouth/tbBuccaneers/logo/bucsLogo.svg.png); 
+}
+
+/* ========= TITANS ========== */
+
+.titans {
+    background-color: rgba(75,145,219,0.9);
+}
+
+.titBg {
+    background-image: url(../img/teams/afc/afcSouth/tenTitans/logo/titansLogo.svg.png); 
+}
+
+/* ========= REDSKINS ========== */
+
+.skins {
+    background-color: rgba(90,20,20,0.9);
+}
+
+.skinBg {
+    background-image: url(../img/teams/nfc/nfcEast/wasRedskins/logo/redskinsLogo.svg.png); 
+}
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================  MOBILE 1 ================== */
+
+@media only screen 
+and (min-width : 644px)
+{
+    
+    #navbar button:last-child {
+        border-right: none;
+    }
+    
+    .stickyNav {
+        width: 100vw;
+    }
+    
+    .stickyStats {
+        padding-top: 50px;
+    }
+    
+}
+
+/* ================  TABLETS ================== */
+
+@media only screen 
+and (min-width : 768px)
+{
+    
+    .stickyNav {
+        width: 90%;
+        max-width: 1400px;
+    }
+    
+    #statCont {
+        width: 90vw;
+        display: block;
+        margin: 0 auto;
+        padding: 0 0 5px;
+        margin-bottom: 50px;
+        max-width: 1400px;
+    }
+    
+    .tableIntros p:last-child {
+        text-align: center;
+        padding-top: 10px;
+    }
+}
+

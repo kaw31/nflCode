@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Map</title>
+    
+    <link href="css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="css/mapStyle.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="#">NFL Map</a>
+                    <a href="stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!--========= PAGE START ==============-->
+    
+    <div class="introCont">
+        <h2>NFL MAP</h2>
+
+        <p>Below is a map of USA, showing where all teams are located
+        <br><br>Click on any NFL Team icon on the map to find out more about them</p>
+    </div>
+    
+    
+    <section class="mainCont">
+  
+        <p class="scrollPrompt">SCROLL ACROSS on smaller screens or devices to view the rest of the map</p>
+        
+    <div class="mapCont">
+        <div class="mapParent animatedParent">
+            <img class="map" id="map" src="img/map/blue3dmap.png">
+            
+<!--========= TEAM LOGOS ==============-->
+            
+<!--            AFC TEAMS-->
+            
+<!--            AFC NORTH -->
+            
+            <!-- RAVENS -->
+            <a href="teamPages/afc/afcN/ravens.html"><img src="img/teams/afc/afcNorth/balRavens/logo/ravensLogo.svg.png" class="logo" id="ravens"></a>
+            <!-- BENGALS -->
+            <a href="teamPages/afc/afcN/bengals.html"><img src="img/teams/afc/afcNorth/cinBengals/logo/bengalsLogo.svg.png" class="logo" id="bengals"></a>
+            <!-- BROWNS -->
+            <a href="teamPages/afc/afcN/browns.html"><img src="img/teams/afc/afcNorth/cleBrowns/logo/brownsLogo.svg.png" class="logo" id="browns"></a>
+            <!-- STEELERS -->
+            <a href="teamPages/afc/afcN/steelers.html"><img src="img/teams/afc/afcNorth/pitSteelers/logo/steelersLogo.svg.png" class="logo" id="steelers"></a>
+            
+<!--            AFC EAST -->
+            <!-- BILLS -->
+            <a href="teamPages/afc/afcE/bills.html"><img src="img/teams/afc/afcEast/bufBills/logo/billsLogo.svg.png" class="logo" id="bills"></a>
+            <!-- DOLPHINS -->
+            <a href="teamPages/afc/afcE/dolphins.html"><img src="img/teams/afc/afcEast/miaDolphins/logo/dolphinsLogo.svg.png" class="logo" id="dolphins"></a>
+            <!-- PATRIOTS -->
+            <a href="teamPages/afc/afcE/patriots.html"><img src="img/teams/afc/afcEast/nePatriots/logo/patriotsLogo.svg.png" class="logo" id="pats"></a>
+            <!-- JETS -->
+            <a href="teamPages/afc/afcE/jets.html"><img src="img/teams/afc/afcEast/nyJets/logo/jetsLogo.svg.png" class="logo" id="jets"></a>
+            
+<!--            AFC SOUTH -->
+            
+            <!-- TEXANS -->
+            <a href="teamPages/afc/afcS/texans.html"><img src="img/teams/afc/afcSouth/houTexans/logo/texansLogo.svg.png" class="logo" id="texans"></a>
+            <!-- COLTS -->
+            <a href="teamPages/afc/afcS/colts.html"><img src="img/teams/afc/afcSouth/indColts/logo/coltsLogo.svg.png" class="logo" id="colts"></a>
+            <!-- JAGUARS -->
+            <a href="teamPages/afc/afcS/jags.html"><img src="img/teams/afc/afcSouth/jaxJaguars/logo/jaguarsLogo.svg.png" class="logo" id="jags"></a>
+            <!-- TITANS -->
+            <a href="teamPages/afc/afcS/titans.html"><img src="img/teams/afc/afcSouth/tenTitans/logo/titansLogo.svg.png" class="logo" id="titans"></a>
+            
+<!--            AFC WEST -->
+            
+            <!-- BRONCOS -->
+            <a href="teamPages/afc/afcW/broncos.html"><img src="img/teams/afc/afcWest/denBroncos/logo/broncosLogo.svg.png" class="logo" id="broncos"></a>
+            <!-- CHIEFS -->
+            <a href="teamPages/afc/afcW/chiefs.html"><img src="img/teams/afc/afcWest/kcChiefs/logo/chiefsLogo.svg.png" class="logo" id="chiefs"></a>
+            <!-- CHARGERS -->
+            <a href="teamPages/afc/afcW/chargers.html"><img src="img/teams/afc/afcWest/laChargers/logo/chargersLogo.svg.png" class="logo" id="chargers"></a>
+            <!-- RAIDERS -->
+            <a href="teamPages/afc/afcW/raiders.html"><img src="img/teams/afc/afcWest/oakRaiders/logo/raidersLogo.svg.png" class="logo" id="raiders"></a>
+            
+<!--            NFC TEAMS-->
+            
+<!--            NFC NORTH-->
+            
+            <!-- BEARS -->
+            <a href="teamPages/nfc/nfcN/bears.html"><img src="img/teams/nfc/nfcNorth/chiBears/logo/bearsLogo.svg.png" class="logo" id="bears"></a>
+            <!-- LIONS -->
+            <a href="teamPages/nfc/nfcN/lions.html"><img src="img/teams/nfc/nfcNorth/detLions/logo/lionsLogo.svg.png" class="logo" id="lions"></a>
+            <!-- PACKERS -->
+            <a href="teamPages/nfc/nfcN/packers.html"><img src="img/teams/nfc/nfcNorth/gbPackers/logo/packersLogo.svg.png" class="logo" id="packers"></a>
+            <!-- VIKINGS -->
+            <a href="teamPages/nfc/nfcN/vikings.html"><img src="img/teams/nfc/nfcNorth/minVikings/logo/vikingsLogo.svg.png" class="logo" id="vikes"></a>
+            
+<!--            NFC EAST-->
+            
+            <!-- COWBOYS -->
+            <a href="teamPages/nfc/nfcE/cowboys.html"><img src="img/teams/nfc/nfcEast/dalCowboys/logo/cowboysLogo.svg.png" class="logo" id="cowboys"></a>
+            <!-- GIANTS -->
+            <a href="teamPages/nfc/nfcE/giants.html"><img src="img/teams/nfc/nfcEast/nyGiants/logo/giantsLogo.svg.png" class="logo" id="giants"></a>
+            <!-- EAGLES -->
+            <a href="teamPages/nfc/nfcE/eagles.html"><img src="img/teams/nfc/nfcEast/phiEagles/logo/eaglesLogo.svg.png" class="logo" id="eagles"></a>
+            <!-- REDSKINS -->
+            <a href="teamPages/nfc/nfcE/redskins.html"><img src="img/teams/nfc/nfcEast/wasRedskins/logo/redskinsLogo.svg.png" class="logo" id="skins"></a>
+            
+<!--            NFC SOUTH-->
+            
+            <!-- FALCONS -->
+            <a href="teamPages/nfc/nfcS/falcons.html"><img src="img/teams/nfc/nfcSouth/atlFalcons/logo/falconsLogo.svg.png" class="logo" id="falcons"></a>
+            <!-- PANTHERS -->
+            <a href="teamPages/nfc/nfcS/panthers.html"><img src="img/teams/nfc/nfcSouth/carPanthers/logo/panthersLogo.svg.png" class="logo" id="panthers"></a>
+            <!-- SAINTS -->
+            <a href="teamPages/nfc/nfcS/saints.html"><img src="img/teams/nfc/nfcSouth/noSaints/logo/saintsLogo.svg.png" class="logo" id="saints"></a>
+            <!-- BUCCANEERS -->
+            <a href="teamPages/nfc/nfcS/bucs.html"><img src="img/teams/nfc/nfcSouth/tbBuccaneers/logo/bucsLogo.svg.png" class="logo" id="bucs"></a>
+            
+<!--            NFC WEST-->
+            
+            <!-- CARDINALS -->
+            <a href="teamPages/nfc/nfcW/cards.html"><img src="img/teams/nfc/nfcWest/ariCardinals/logo/cardsLogo.svg.png" class="logo" id="cards"></a>
+            <!-- RAMS -->
+            <a href="teamPages/nfc/nfcW/rams.html"><img src="img/teams/nfc/nfcWest/laRams/logo/ramsLogo.svg.png" class="logo" id="rams"></a>
+            <!-- SEAHAWKS -->
+            <a href="teamPages/nfc/nfcW/seahawks.html"><img src="img/teams/nfc/nfcWest/seaSeahawks/logo/seahawksLogo.svg.png" class="logo" id="seahawks"></a>
+            <!-- 49ERS -->
+            <a href="teamPages/nfc/nfcW/niners.html"><img src="img/teams/nfc/nfcWest/sf49ers/logo/49ersLogo.svg.png" class="logo" id="niners"></a>
+
+        </div>
+    </div>   
+        
+</section>
+    
+<script src="js/homeScript.js"></script>
+        
+</body>
+
+</html>

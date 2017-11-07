@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Patriots</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/pats.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcEast/nePatriots/logo/patsTitle.png">    
+  
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The New England Patriots are based in the greater Boston region in the state of Massachusetts. They were founded in 1959, and were an original member of the American Football League (AFL), who joined the NFL in the 1970 merger. The team changed its name from the original Boston Patriots after relocating to Foxborough in 1971. They now compete in the AFC East Division, and have a fierce rivalry with the New York Jets.
+            <br>
+            <br>The Patriots are the reigning Super Bowl Champions, having pulled off the greatest comeback in NFL history against the Atlanta Falcons in Superbowl LI, by overcoming a 25 point difference. They have become the most feared team under the guidance of Head Coach Bill Belichick and Quarterback Tom Brady, having won 5 Super Bowls since 2002, becoming what many consider to be the greatest dynasty in the modern era of the NFL.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Bill Belichick</h3>
+                    <p>The Patriots are the most feared team in the league. But they'll only flirt with another perfect regular season. New England's roster has been upgraded since its Super Bowl LI victory. Brandin Cooks, Dwayne Allen and Stephon Gilmore are all welcome additions. However, the Patriots have areas of concern just like every other team. Their ability to generate pressure is in question. The offensive line performed well last season, but Tom Brady's protection remains of the utmost importance. Bill Belichick's squad is the favorite to win yet another championship, but it is far from perfect. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>There is a ton of talent on both sides of the ball, but especially on offence. The Pats have one of the highest scoring offenses in the league, with star Quarterback Tom Brady at the helm of the ship. Brady has a luxury of weapons to choose from. Rob 'Gronk' Gronkowski remains the best tight end in the game, and is almost impossible to stop when he's healthy. The receiving group is as strong as any, with Julian Edelman, Brandin Cooks and Chris Hogan all amazing. Last season, the offense was ranked 4th in Yards per game, and 3rd in Points per game. The Patriots can score from anywhere on the field.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>The defence can't be underestimated either, as they manage to 'bend-not-break', rarely giving up many points. This was evident last season as they ranked 1st in Fewest Points allowed per game, and 8th in Fewest Yards allowed per game. Key linebacker Dont'a Hightower takes the reigns of the defence, whilst cornerback duo Malcolm Butler and Stephon Gilmore, plus safety Devin McCourty protect the secondary. The only issue this unit face is on the defensive line. New England doesn't have many recognised pass rush specialists. Trey Flowers seems like the only one who could make some noise. 
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Tom Brady, QB</h3>
+                        <p>Although he's now 40 years old, Tom Brady is still the face of the franchise for the Patriots, and probably also the entire NFL. He remains one of the best players in the league, and many believe him to be the greatest quarterback of all time, which is why he's commonly reffered to as the G.O.A.T. (Greatest of All Time). This was on show again last year, when he led the Pats and himself to a 5th Super Bowl ring. No other QB has had more success than Brady.
+                        <br><br>Age is just a number for last season's Super Bowl MVP, whose countless wins, yards and touchdowns continue to amaze. There seems to be no stopping him. No other QB has ever won 5 Super Bowl rings, and at this rate he may be adding a few more before he eventually retires and goes straight into the Hall of Fame.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcEast/nePatriots/players/brady.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>TE - Rob Gronkowski. WR - Julian Edelman. WR - Brandin Cooks. WR - Chris Hogan. LB - Dont'a Hightower. CB - Malcolm Butler. CB - Stephon Gilmore. S - Devin McCourty.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcEast/nePatriots/unis/patHome.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcEast/nePatriots/unis//patHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcEast/nePatriots/unis/patAway.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcEast/nePatriots/unis//patAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcEast/nePatriots/unis/patAlt.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcEast/nePatriots/unis//patAltJers.png">
+                </div>
+            </div>
+            <p>To get your Patriots gear, <a href="https://proshop.patriots.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Gilette Stadium</h2>
+            </div>
+                <p>Gillette Stadium was opened in 2002, and is located in Foxborough, Massachusetts, 28 miles southwest of downtown Boston. It's also home to the MLS New England Revolution soccer team. <br><br>Capacity: 65,878 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcEast/nePatriots/stadium/giletteCO.png">
+                <p class="stadLink">To find out more about Gilette Stadium and upcoming events, <a href="http://www.gillettestadium.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Boston</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Massachusetts</h4>
+                    <h4>Population: 617,594</h4>
+                    <p>Although the Patriots are located in Foxborough, which is within the Greater Boston region, they are still considered to represent Boston. Boston is the largest city in New England and the capital of the state of Massachusetts, located on the northeast coast of the United States. The metropolis is one of the oldest, most prosperous and culturally rich cities in the United States, having been founded in 1630. It is home to both the world-famous Harvard University and the equally eminent MIT.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcEast/nePatriots/map/patsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Boston, <a href="https://www.boston.gov/visiting-boston" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2001<br>(XXXVI)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2003<br>(XXXVIII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2004<br>(XXXIX)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2014<br>(XLIX)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2016<br>(LI)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcChamp.png">
+                        <h4 class="champHead">AFC Champions - 9</h4>
+                            <p class="postDates">1985, 1996, 2001, 2003, 2004, 2007, 2011, 2014, 2016</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">AFL East - 1</h4>
+                            <p class="postDates">1963</p>
+                        <h4 class="champHead">AFC East - 18</h4>
+                            <p class="postDates">1978, 1986, 1996, 1997, 2001, 2003, 2004, 2005, 2006, 2007, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 24</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1963, 1976, 1978, 1982, 1985, 1986, 1994, 1996, 1997, 1998, 2001, 2003, 2004, 2005, 2006, 2007, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 476 Losses: 383 Ties: 9 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 32 Losses: 19 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 508 Losses: 402 Ties: 9 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 4</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>John Hannah, G <em> - Class of 1991</em></p>
+                                <p>Mike Haynes, CB <em> - Class of 1997</em></p>
+                                <p>Nick Buoniconti, LB <em> - Class of 2001</em></p>
+                                <p>Andre Tippett, LB <em> - Class of 2008</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC EAST</h2></li>
+                <!--BILLS-->
+                <li><a id="bills" class="divLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <!--DOLPHINS-->
+                <li><a id="dolph" class="divLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <!--PATRIOTS-->
+                <li><a id="pats" class="divLogos" href="#">New England Patriots</a></li>
+                <!--JETS-->
+                <li><a id="jets" class="divLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Patriots &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.patriots.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcEast/nePatriots/logo/patriotsLogo.svg.png"></a>
+                        <a href="http://www.patriots.com/" target="_blank">New England Patriots Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/New_England_Patriots_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/New_England_Patriots_Gear" target="_blank">NFL Shop - Patriots</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/new-england-patriots/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/new-england-patriots/" target="_blank">Pro Football Hall of Fame - Patriots</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/newenglandpatriots/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/newenglandpatriots/" target="_blank">Facebook - Patriots</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/Patriots" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/Patriots" target="_blank">Twitter - Patriots</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/patriots/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/patriots/" target="_blank">Instagram - Patriots</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

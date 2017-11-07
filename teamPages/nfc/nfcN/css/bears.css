@@ -1,0 +1,150 @@
+body {
+    background: #1c3d54; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#1c3d54, #1c3d54, #c93500); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1c3d54, #1c3d54, #c93500); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1c3d54, #1c3d54, #c93500); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1c3d54, #1c3d54, #c93500); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ========= ROSTER ========== */
+
+.rosterBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/chiBears/players/fox1.jpg);
+    background-position: top;
+}
+
+/* ========= OFFENCE ========== */
+
+.offenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/chiBears/players/mitch2.jpg);
+    background-position: top;
+}
+
+/* ========= DEFENCE ========== */
+
+.defenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/chiBears/players/danny1.jpg);
+    background-position: top;
+}
+
+/* ========= MVP ========== */
+
+.mvpBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/chiBears/players/howard1.jpg);
+    background-position: top;
+}
+
+/* ========= UNIFORM ========== */
+
+.uniBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/chiBears/players/def1.jpg);
+    background-position: center;
+}
+
+/* ========= UNIS BUTTON ========== */
+
+.homeUniBtn {
+    border-radius: 10px 0 0 10px;
+}
+
+.awayUniBtn {
+    border-radius: 0 10px 10px 0;
+}
+
+/* ========= STADIUM ========== */
+
+.stadBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/chiBears/stadium/sold4.jpg);
+    background-position: center;
+}
+
+/* ========= CITY ========== */
+
+.cityBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/chiBears/city/chic1.jpg);
+    background-position: top;
+}
+
+/* ========= RECORDS ========== */
+
+.divFlex h4 {
+    margin: 20px 0 0;
+}
+
+/* ========= HEADINGS BG ========== */
+
+.rosterBg, .offenceBg, .defenceBg, .mvpBg, .uniBg, .stadBg, .cityBg {
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.headBgImgs {
+    height: 300px;
+}
+
+/* ========= DIV TEAM BG LOGOS ========== */
+
+#bears {
+    background-image: url(../../../../img/teams/nfc/nfcNorth/chiBears/logo/bearsLogo.svg.png);
+}
+
+#lions {
+    background-image: url(../../../../img/teams/nfc/nfcNorth/detLions/logo/lionsLogo.svg.png);
+}
+
+#pack {
+    background-image: url(../../../../img/teams/nfc/nfcNorth/gbPackers/logo/packersLogo.svg.png);
+}
+
+#vikes {
+    background-image: url(../../../../img/teams/nfc/nfcNorth/minVikings/logo/vikingsLogo.svg.png);
+}
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+    
+    .headBgImgs {
+        background-position: center;
+    }
+    
+     .mvpBg {
+        height: 500px;
+        flex: 1;
+        border-right: 2px solid white;
+    }
+    
+    .cityBg {
+        flex: 1;
+        height: 550px;
+        margin: 0;
+        border-right: 2px solid white;
+    }
+    
+}
+

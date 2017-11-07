@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Chiefs</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/chiefs.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcWest/kcChiefs/logo/chiefsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The team was founded in 1960 as the Dallas Texans and was a charter member of the American Football League (AFL). In 1963, the team relocated to Kansas City and assumed their current name. The Chiefs joined the NFL as a result of the merger in 1970. The team's  Super Bowl victory on January 11, 1970, remains the club's last championship game victory and appearance to date, and occurred in the final such competition prior to the leagues' merger coming into full effect. 
+            <br>
+            <br>The Chiefs have been very good for a few years now, but they almost seem to go unnoticed. They clinched the AFC West last season, but sadly went out in the divisional round of the playoffs to the Steelers. This team is built to win now. There's no question about that. Andy Reid has done excellent job of assembling a strong unit at every aspect of the game. This could be the year the Chiefs go all the way back to the promised land. Everyone better take notice this time around.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Andy Reid</h3>
+                    <p>The Chiefs have been the NFL's second-most successful team in recent seasons behind only the New England Patriots. This speaks to the job Andy Reid's coaching staff has done and the overall talent found on the roster. It's not a flashy group, yet the Chiefs are difficult to handle. Alex Smith is criminally underrated. Tyreek Hill will be a bigger part of the offense in his second season. The defense remains the league's most aggressive. The organisation may be looking toward its future when it traded up in the draft's first round to select Patrick Mahomes, but this is a team still capable of winning many games. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>The drafting of future QB Pat Mahomes could be exactly the fire current starter Alex Smith needed to prove the doubters wrong. Smith has unfairly been labelled as a "game manager", mainly because he prefers to control the ball without throwing too many risky passes. The offence has the potential to be very explosive this term. There seems to be playmakers everywhere you look, from last season's rookie x-factor sensation Tyreek Hill, to the second best tight end in the NFL, Travis Kelce. Hill especially has to be accounted for. He's almost a jack of all trades with his ability not only as a receiver, but also as a deadly return man.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>Kansas City has one of the best defences in the league, but they allowed far too many yards last year, especially when you consider the talent they possess. Importantly though, they managed to shut up shop, by being the leagues 7th best defence in terms of points allowed. They boast talent across the board. The secondary is led by star safety Eric Berry, and out on the corner is one of the league best young DBs in Marcus Peters, who has an uncanny knack for picking off quarterbacks. They also have a great linebacking group with stars Justin Houston and Tamba Hali constantly harrassing the opposing line.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Eric Berry, S</h3>
+                        <p>2015's Comeback player of the year Eric Berry is one of the league's best safeties. It's hard not to route for Berry, considering he battled and overcame cancer, and came back to still be the same dominant player that he was before. Berry has made the pro bowl 5 out of 7 seasons that he's played, which is remarkable considering he missed an entire year when he was battling cancer.
+                        <br><br>Berry, or "EB" as he's referred to by his teammates, is the heart and soul of not only the defence, but the whole team. His leadership and attitude is second to none, and he playes with more bite and intelligence than most. Berry is in his prime right now, so Chiefs will be hoping he can stay injury free and help the team push deeper into the playoffs.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcWest/kcChiefs/players/berry.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>QB - Alex Smith. RB - Kareem Hunt (R). WR - Tyreek Hill. TE - Travis Kelce. DE- Chris Jones. OLB - Tamba Hali. OLB - Justin Houston. LB - Derrick Johnson. CB - Marcus Peters.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcWest/kcChiefs/unis/chiefsHm.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcWest/kcChiefs/unis/chiefsHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcWest/kcChiefs/unis/chiefsAw.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcWest/kcChiefs/unis/chiefsAwJers.png">
+                </div>
+            </div>
+            <p>To get your Chiefs gear, <a href="http://shop.chiefs.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Arrowhead Stadium</h2>
+            </div>
+                <p>Arrowhead Stadium is located in Kansas City, Missouri. It was opened in 1972, and renovated in 2010. It's one of the most hostile environments in the NFL, and has some of the loudest and most passionate fans in all of sports. <br><br>Capacity: 76,416 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcWest/kcChiefs/stadium/arrowCO.png">
+                <p class="stadLink">To find out more about Arrowhead Stadium and upcoming events, <a href="http://www.chiefs.com/arrowhead/index.html" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Kansas City</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Missouri</h4>
+                    <h4>Population: 617,594</h4>
+                    <p>Kansas City sits on Missouri's western edge, straddling the border with Kansas. Although there's also another Kansas City on the other side of the border in Kansas, the Chiefs are officially located within Missouri. It's known for its barbecue, jazz heritage and fountains. Downtown, the American Jazz Museum shares a building with the Negro Leagues Baseball Museum in the historic 18th &amp; Vine Jazz District. The Nelson-Atkins Museum of Art, with giant shuttlecocks out front, houses nearly 40,000 works of art, from ancient to contemporary collections.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcWest/kcChiefs/map/chiefsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Kansas City, <a href="https://www.visitkc.com" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1969<br>(IV)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+               
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">AFL West - 2</h4>
+                            <p class="postDates">1962, 1966</p>
+                        <h4 class="champHead">AFC West - 7</h4>
+                            <p class="postDates">1971, 1993, 1995, 1997, 2003, 2010, 2016</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 19</h3>
+                        <h4 class="champHead">AFL - 4</h4>
+                            <p class="postDates">1962, 1966, 1968, 1969</p>
+                        <h4 class="champHead">NFL - 15</h4>
+                            <p class="postDates">1971, 1986, 1990, 1991, 1992, 1993, 1994, 1995, 1997, 2003, 2006, 2010, 2013, 2015, 2016</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 447 Losses: 408 Ties: 12 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 9 Losses: 16  </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 456 Losses: 424 Ties: 12 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 11</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Lamar Hunt, Founder/Owner <em> - Class of 1972</em></p>
+                                <p>Bobby Bell, LB/DE <em> - Class of 1983</em></p>
+                                <p>Willie Lanier, LB <em> - Class of 1986</em></p>
+                                <p>Len Dawson, QB <em> - Class of 1987</em></p>
+                                <p>Junious Buchanan, DT <em> - Class of 1990</em></p>
+                                <p>Jan Stenerud, K <em> - Class of 1991</em></p>
+                                <p>Hank Stram, Coach <em> - Class of 2003</em></p>
+                                <p>Emmitt Thomas, CB <em> - Class of 2008</em></p>
+                                <p>Derrick Thomas, LB <em> - Class of 2009</em></p>
+                                <p>Curley Culp, DT <em> - Class of 2013</em></p>
+                                <p>Will Shields, G <em> - Class of 2015</em></p>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC WEST</h2></li>
+                <!--BRONCOS-->
+                <li><a id="broncos" class="divLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <!--CHIEFS-->
+                <li><a id="chiefs" class="divLogos" href="#">Kansas City Chiefs</a></li>
+                <!--CHARGERS-->
+                <li><a id="chargers" class="divLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <!--RAIDERS-->
+                <li><a id="raid" class="divLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Chiefs &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.chiefs.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcWest/kcChiefs/logo/chiefsLogo.svg.png"></a>
+                        <a href="http://www.chiefs.com/" target="_blank">Kansas City Chiefs Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Kansas_City_Chiefs_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Kansas_City_Chiefs_Gear" target="_blank">NFL Shop - Chiefs</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/kansas-city-chiefs/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/kansas-city-chiefs/" target="_blank">Pro Football Hall of Fame - Chiefs</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/KansasCityChiefs/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/KansasCityChiefs/" target="_blank">Facebook - Chiefs</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/Chiefs" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/Chiefs" target="_blank">Twitter - Chiefs</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/chiefs/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/chiefs/" target="_blank">Instagram - Chiefs</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

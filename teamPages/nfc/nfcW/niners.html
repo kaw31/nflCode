@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL 49ers</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/niners.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcWest/sf49ers/logo/ninersTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The San Francisco 49ers are actually located in Santa Clara, California, in the heart of Silicon Valley, and around 40 miles southeast of San Francisco. Since 1988, the 49ers have been headquartered in Santa Clara. The team was founded in 1946 as a charter member of the All-America Football Conference (AAFC) and joined the NFL in 1949 when the leagues merged. The name "49ers" comes from the prospectors who arrived in Northern California in the 1849 Gold Rush.
+            <br>
+            <br>The 49ers were terrible last year, finishing 2-14. The entire staff has been revamped, with former NFL great John Lynch now serving as General Manager. Last years Super Bowl losing Offensive Co-ordinator for the Atlanta Falcons, Kyle Shanahan, has been appointed Head Coach. The young coach will be bringing his high powered offence with him to California. It'll be interesting to see how high powered it will be this time around considering there's no real starter at QB after the team decided to pass on all the top rookies in last years draft. One has a feeling it's going to be a rough year for the Niners.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Kyle Shanahan</h3>
+                    <p>General manager John Lynch and head coach Kyle Shanahan have a tall task in front of them: They're being asked to provide some stability to the league's least stable franchise. The dynamic duo by the Bay already revamped the roster, but the most important addition may be expected starting quarterback Brian Hoyer. The veteran provides a steadying presence and experience in Shanahan's scheme. This will help ease the transition, but he's definitely not the answer long term. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>This offence was awful last year. They finished 31st in total offence, and 32nd in pass offence. The only saving grace was that the running game actually managed to finish 4th in the league, with Carlos Hyde having had to carry the load for this team. The probelm is that Brian Hoyer is only a good back up, he's not a starter. New coach Kyle Shanahan is going to have his work cut out this year. Their best bet is tanking and hoping to find a franchise QB in next years draft. </p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>On the other side of the ball, things don't look much better. The Niners had the worst offence in football in total yards, rush yards and points allowed. A recipe for disaster. The only saving grace to this team is that they used both first round picks on excellent promising defenders in Soloman Thomas and Reuben Foster. Luckily this unit is very young, so hopefully with enough good coaching and experience this team can only get better. At least you hope so for the 49ers faithful. 
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>DeForest Buckner, DE</h3>
+                        <p>On a team lacking much talent on either side of the ball, it's not that easy to try and find their most valuable player. However, last year's first round pick DeForest Buckner showed enough promise that he may become the next big star at defensive end. Buckner had a ton of hype surrounding him coming out of Oregon, and the Niners fell in love with him, selecting him no.7 overall. 
+                        <br><br>Buckner had a solid rookie season, recording 6 sacks and 73 total tackles. He is a mountain of a man at 6ft 7" and over 300lbs. Not only does his size make him one of the most intimidating presences on defence, but the way he moves for his size is damn right scary. Someone that big shouldn't be as athletic as Buckner. The sky is the ceiling for this young man, and he's one of the few shinning lights that 49ers fans can look forward to this season.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcWest/sf49ers/players/buck.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>RB - Carlos Hyde. WR - Pierre Garcon. DE - Soloman Thomas (R). DE - Arik Armstead. LB - Reuben Foster (R). S - Eric Reid.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcWest/sf49ers/unis/ninersHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcWest/sf49ers/unis/ninersHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcWest/sf49ers/unis/ninersAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcWest/sf49ers/unis/ninersAwJers.png">
+                </div>
+            </div>
+            <p>To get your 49ers gear, <a href="http://www.shop49ers.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Levi's Stadium</h2>
+            </div>
+                <p>Levi's Stadium is one of the newer stadiums in the NFL, having only opened in 2014. It's located in Santa Clara, California, in the San Francisco Bay Area, approximately 40 miles from San Francisco. <br><br>Capacity: 68,500 </p>
+                <img id="stadCO" src="../../../img/teams/nfc/nfcWest/sf49ers/stadium/leviCO.png">
+                <p class="stadLink">To find out more about Levi's Stadium and upcoming events, <a href="http://www.levisstadium.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>San Francisco</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: California</h4>
+                    <h4>Population: 864,816</h4>
+                    <p>San Francisco, in northern California, is a hilly city on the tip of a peninsula surrounded by the Pacific Ocean and San Francisco Bay. It's known for its year-round fog, iconic Golden Gate Bridge, cable cars and colorful Victorian houses. The Financial District's Transamerica Pyramid is its most distinctive skyscraper. In the bay sits Alcatraz Island, site of the notorious former prison.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcWest/sf49ers/map/ninersMap.png">
+                </div>
+                <p class="cityLink">To find out more about San Francisco, <a href="http://www.sftravel.com/always-sf" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1981<br>(XVI)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1984<br>(XIX)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1988<br>(XXIII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1989<br>(XXIV)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1994<br>(XXIX)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/nfcChamp.png">
+                        <h4 class="champHead">NFC Champions - 6</h4>
+                            <p class="postDates">1981, 1984, 1988, 1989, 1994, 2012</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/nfcWestLogo.png">
+                        <h4 class="champHead">NFC West - 19</h4>
+                            <p class="postDates">1970, 1971, 1972, 1981, 1983, 1984, 1986, 1987, 1988, 1989, 1990, 1992, 1993, 1994, 1995, 1997, 2002, 2011, 2012</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides playFlex">
+                    <h3>Playoff Appearances</h3>
+                        <h4 class="champHead">AAFC - 1</h4>
+                            <p class="postDates">1949</p>
+                        <h4 class="champHead">NFL - 25</h4>
+                            <p class="postDates">1957, 1970, 1971, 1972, 1981, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 2001, 2002, 2011, 2012, 2013</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 560 Losses: 464 Ties: 16 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 31 Losses: 21 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 591 Losses: 485 Ties: 16 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 15</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Leo Nomellini, DT <em> - Class of 1969</em></p>
+                                <p>Joe Perry, FB <em> - Class of 1969</em></p>
+                                <p>Hugh McElhenny, HB <em> - Class of 1970</em></p>
+                                <p>Y.A. Tittle, QB <em> - Class of 1971</em></p>
+                                <p>Bob St. Clair, T <em> - Class of 1990</em></p>
+                                <p>Bill Walsh, Coach <em> - Class of 1993</em></p>
+                                <p>Jimmy Johnson, CB <em> - Class of 1994</em></p>
+                                <p>Joe Montana, QB <em> - Class of 2000</em></p>
+                                <p>Ronnie Lott, CB/S <em> - Class of 2000</em></p>
+                                <p>Dave Wilcox, LB <em> - Class of 2000</em></p>
+                                <p>Steve Young, QB <em> - Class of 2005</em></p>
+                                <p>Fred Dean, DE <em> - Class of 2008</em></p>
+                                <p>Jerry Rice, WR <em> - Class of 2010</em></p>
+                                <p>Charles Haley, DE <em> - Class of 2015</em></p>
+                                <p>Edward DeBartolo, Jr, Owner <em> - Class of 2016</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC WEST</h2></li>
+                <!--CARDS-->
+                <li><a id="cards" class="divLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <!--RAMS-->
+                <li><a id="rams" class="divLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <!--49ERS-->
+                <li><a id="niners" class="divLogos" href="#">San Francisco 49ers</a></li>
+                <!--SEAHAWKS-->
+                <li><a id="hawks" class="divLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest 49ers &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.49ers.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcWest/sf49ers/logo/49ersLogo.svg.png"></a>
+                        <a href="http://www.49ers.com/" target="_blank">San Francisco 49ers Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/San_Francisco_49ers_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/San_Francisco_49ers_Gear" target="_blank">NFL Shop - 49ers</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/san-francisco-49ers/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/san-francisco-49ers/" target="_blank">Pro Football Hall of Fame - 49ers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/SANFRANCISCO49ERS/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/SANFRANCISCO49ERS/" target="_blank">Facebook - 49ers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/49ers" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/49ers" target="_blank">Twitter - 49ers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/49ers/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/49ers/" target="_blank">Instagram - 49ers</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

@@ -1,0 +1,151 @@
+body {
+    background: #d60303; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#d60303, #d60303, #35312c); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#d60303, #d60303, #35312c); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#d60303, #d60303, #35312c); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#d60303, #d60303, #35312c); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ========= ROSTER ========== */
+
+.rosterBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcSouth/tbBuccaneers/players/dirk1.jpg);
+    background-position: top;
+}
+
+/* ========= OFFENCE ========== */
+
+.offenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcSouth/tbBuccaneers/players/evans1.jpg);
+    background-position: top;
+}
+
+/* ========= DEFENCE ========== */
+
+.defenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcSouth/tbBuccaneers/players/mccoy3.jpg);
+    background-position: top;
+}
+
+/* ========= MVP ========== */
+
+.mvpBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcSouth/tbBuccaneers/players/jameis2.jpeg);
+    background-position: top;
+}
+
+/* ========= UNIFORM ========== */
+
+.uniBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcSouth/tbBuccaneers/players/rost1.jpg);
+    background-position: top;
+}
+
+/* ========= UNIS BUTTON ========== */
+
+.homeUniBtn {
+    border-radius: 10px 0 0 10px;
+}
+
+.awayUniBtn {
+    border-radius: 0 10px 10px 0;
+}
+
+/* ========= STADIUM ========== */
+
+.stadBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcSouth/tbBuccaneers/stadium/ray1.jpg);
+    background-position: center;
+}
+
+/* ========= CITY ========== */
+
+.cityBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcSouth/tbBuccaneers/city/tampa3.jpg);
+    background-position: ;
+}
+
+/* ========= EXTRAS ========== */
+
+.links {
+    min-width: 338px;
+}
+
+
+/* ========= HEADINGS BG ========== */
+
+.rosterBg, .offenceBg, .defenceBg, .mvpBg, .uniBg, .stadBg, .cityBg {
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.headBgImgs {
+    height: 300px;
+}
+
+/* ========= DIV TEAM BG LOGOS ========== */
+
+#falc {
+    background-image: url(../../../../img/teams/nfc/nfcSouth/atlFalcons/logo/falconsLogo.svg.png);
+}
+
+#panth {
+    background-image: url(../../../../img/teams/nfc/nfcSouth/carPanthers/logo/panthersLogo.svg.png);
+}
+
+#saints {
+    background-image: url(../../../../img/teams/nfc/nfcSouth/noSaints/logo/saintsLogo.svg.png);
+}
+
+#bucs {
+    background-image: url(../../../../img/teams/nfc/nfcSouth/tbBuccaneers/logo/bucsLogo.svg.png);
+}
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+    
+    .headBgImgs {
+        background-position: center;
+    }
+    
+     .mvpBg {
+        height: 500px;
+        flex: 1;
+        border-right: 2px solid white;
+    }
+    
+    .cityBg {
+        flex: 1;
+        height: 550px;
+        margin: 0;
+        border-right: 2px solid white;
+    }
+    
+}
+

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Cowboys</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/cowboys.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcEast/dalCowboys/logo/cowboysTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Dallas Cowboys joined the NFL as an expansion team in 1960, and are based in the Dallas–Fort Worth metroplex. The Cowboys are often referred to as "America's Team" due to their huge popularity and following. The team's national following might best be represented by its NFL record of consecutive sell-outs. The Cowboys' streak of 190 consecutive sold-out regular and post-season games (home and away) began in 2002. The franchise has made it to the Super Bowl eight times, tied with the Pittsburgh Steelers, and the Denver Broncos for second most Super Bowl appearances in history, just behind the New England Patriots record nine Super Bowl appearances.
+            <br>
+            <br>Few people could have predicted or expected the excellent season the 'Boys had last year when franchise QB Tony Romo got injured at the beginning of the season. The reigns were left to 4th round rookie QB Dak Prescott, and boy did he exceed expectations. Dak prescott and fellow rookie RB Ezekiel Elliott led this team to an incredible 13-3 season, and only narrowly went home in a heartbreaking playoff loss to the Packers. Romo has now retired for the commentary booth, so this team is very much in Dak's hands now. If he can replicate his Rookie of the Year form, then there's plenty of hope that this franchise can go even further this time around.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Jason Garrett</h3>
+                    <p>Some regression should be expected from the Cowboys after last season's 13-3 campaign. How much remains in question. At the moment, Dallas' star running back Ezekiel Elliott's future remains up in the air, with him facing a possible suspension. More responsibility will fall on quarterback Dak Prescott as a result. Dallas is still dominant up front and loaded at the skill positions, though. As long as a reworked defence holds up and plays at or above last year's level, the Cowboys will be contenders for a second straight division title.</p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>Dallas has as much firepower on offence as any team in the league, having finished in the top 10 for yards, points and best of all, 2nd overall in rushing. The rushing attack was brilliant thanks largely to rookie sensation Ezekiel Elliott running behind the best offensive line in football, dubbed "The Great Wall of Dallas". If Elliott will miss any significant playing time, then the burden will fall on Dak to produce even more. He has plenty of weapons to aim at, specifically Cowboys legend Jason Witten, and top 5 receiving superstar Dez Bryant.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>Dallas has the league's best rushing defence last year, and a top 5 defence in points allowed. That was thanks largely for how long the Cowboys offence had time of possession, keeping the other team's offence waiting on the bench. This time around the Dallas D needs to improve their secondary as they only finished 26th in pass defence. They have a future great pass rusher in Demarcus Lawrence, and linebackers Sean Lee and Jaylon Smith suring things up in the middle. But all eyes will be on the secondary to see if they can improve their game.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Ezekiel Elliott, RB</h3>
+                        <p>Many felt that although Dak Prescott won offensive rookie of the year, Ezekiel 'Zeke' Elliott was in fact the better player. Without Zeke taking the pressure off Dak with all of his amazing runs, then there's no way Dak would have had the same production he had. Elliott led the league in rushing, an incredible feat considering he was just a rookie.
+                        <br><br>A lot will be expected from Elliott this time around, but there's still a big question mark surrounding his future, as he's facing a possible suspension. With the uncertainty looming around Zeke's availabilty, one has to wonder how productive he can be. As long as Zeke plays, he's the Cowboys most important player. His runs open up so many options to this attack, from controlling the clock, to taking pressure of Dak, but most importantly the danger of knowing Zeke can take it to the house on any given play.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcEast/dalCowboys/players/zeke.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>QB - Dak Prescott. TE - Jason Witten. WR - Dez Bryant. T - Tyron Smith. DE - Demarcus Lawrence. LB - Sean Lee. LB - Jaylon Smith.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button  class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcEast/dalCowboys/unis/cowboyHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcEast/dalCowboys/unis/cowboyHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcEast/dalCowboys/unis/cowboyAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcEast/dalCowboys/unis/cowboyAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcEast/dalCowboys/unis/cowboyAlt.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcEast/dalCowboys/unis/cowboyAltjers.png">
+                </div>
+            </div>
+            <p>To get your Cowboys gear, <a href="https://shop.dallascowboys.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>AT&amp;T Stadium</h2>
+            </div>
+                <p>AT&amp;T Stadium  is a retractable roof stadium opened in 2009, and is located 18 miles west of Dallas, in Arlington, Texas. It's often referred to as "Jerry World" after Dallas Cowboys owner Jerry Jones, who originally envisioned it as a large entertainment mecca.  It also has the world's 24th largest HD video screen, which hangs from the ceiling.<br><br>Capacity: 80,000 </p>
+                <img id="stadCO" src="../../../img/teams/nfc/nfcEast/dalCowboys/stadium/atCO.png">
+                <p class="stadLink">To find out more about AT&amp;T Stadium and upcoming events, <a href="http://attstadium.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Dallas</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Texas</h4>
+                    <h4>Population: 1,317,929</h4>
+                    <p>Dallas, a modern metropolis in north Texas, is a commercial and cultural hub of the region. Downtown’s Sixth Floor Museum at Dealey Plaza commemorates the site of President John F. Kennedy’s assassination in 1963. In the Arts District, the Dallas Museum of Art and the Crow Collection of Asian Art cover thousands of years of art. The sleek Nasher Sculpture Center showcases contemporary sculpture.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcEast/dalCowboys/map/cowboysMap.png">
+                </div>
+                <p class="cityLink">To find out more about Dallas, <a href="https://www.visitdallas.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1971<br>(VI)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1977<br>(XII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1992<br>(XXVII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1993<br>(XXVIII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1995<br>(XXX)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <h4 class="champHead">NFL Eastern - 2</h4>
+                            <p class="postDates">1966, 1967</p>
+                        <h4 class="champHead">NFC Champions - 8</h4>
+                            <p class="postDates">1970, 1971, 1975, 1977, 1978, 1992, 1993, 1995</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">NFL Capitol - 3</h4>
+                            <p class="postDates">1967, 1968, 1969</p>
+                        <h4 class="champHead">NFC East - 19</h4>
+                            <p class="postDates">1970, 1971, 1973, 1976, 1977, 1978, 1979, 1981, 1985, 1992, 1993, 1994, 1995, 1996, 1998, 2007, 2009, 2014, 2016</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 32</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1985, 1991, 1992, 1993, 1994, 1995, 1996, 1998, 1999, 2003, 2006, 2007, 2009, 2014, 2016</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 493 Losses: 367 Ties: 6 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 34 Losses: 27 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 527 Losses: 394 Ties: 6 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 16</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Bob Lilly, DT <em> - Class of 1980</em></p>
+                                <p>Roger Staubach <em> - Class of 1985</em></p>
+                                <p>Tom Landry, Coach <em> - Class of 1990</em></p>
+                                <p>Tex Schramm, Contributor <em> - Class of 1991</em></p>
+                                <p>Tony Dorsett, RB <em> - Class of 1994</em></p>
+                                <p>Randy White, DT <em> - Class of 1994</em></p>
+                                <p>Mel Renfro, CB/S <em> - Class of 1996</em></p>
+                                <p>Troy Aikman, QB <em> - Class of 2006</em></p>
+                                <p>Rayfield Wright, T <em> - Class of 2006</em></p>
+                                <p>Michael Irvin, WR <em> - Class of 2007</em></p>
+                                <p>Bob Hayes, WR <em> - Class of 2009</em></p>
+                                <p>Emmit Smith, RB <em> - Class of 2010</em></p>
+                                <p>Deion Sanders, CB/KR <em> - Class of 2011</em></p>
+                                <p>Larry Allen, G/T <em> - Class of 2013</em></p>
+                                <p>Charles Haley, DE/LB <em> - Class of 2015</em></p>
+                                <p>Jerry Jones, Owner/GM <em> - Class of 2017</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC EAST</h2></li>
+                <!--COWBOYS-->
+                <li><a id="cowboys" class="divLogos" href="#">Dallas Cowboys</a></li>
+                <!--GIANTS-->
+                <li><a id="giants" class="divLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <!--EAGLES-->
+                <li><a id="eagles" class="divLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <!--REDSKINS-->
+                <li><a id="skins" class="divLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Cowboys &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.dallascowboys.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcEast/dalCowboys/logo/cowboysLogo.svg.png"></a>
+                        <a href="http://www.dallascowboys.com/" target="_blank">Dallas Cowboys Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Dallas_Cowboys_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Dallas_Cowboys_Gear" target="_blank">NFL Shop - Cowboys</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/dallas-cowboys/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/dallas-cowboys/" target="_blank">Pro Football Hall of Fame - Cowboys</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/DallasCowboys/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/DallasCowboys/" target="_blank">Facebook - Cowboys</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/dallascowboys" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/dallascowboys" target="_blank">Twitter - Cowboys</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/dallascowboys/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/dallascowboys/" target="_blank">Instagram - Cowboys</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

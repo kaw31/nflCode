@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Packers</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/packers.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcNorth/gbPackers/logo/packersTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Breen Bay Packers are the third-oldest franchise in the NFL, dating back to 1919, and is the only non-profit, community-owned major league professional sports team based in the United States. The Packers is the last of the "small town teams" which were common in the NFL during the 1920s and 30s. Founded in 1919, the franchise traces its lineage to other semi-professional teams in Green Bay dating back to 1896. Between 1919 and 1920, the Packers competed against other semi-pro clubs from around Wisconsin and the Midwest, before joining the American Professional Football Association (APFA), the forerunner of today's NFL, in 1921. The Bears–Packers rivalry is one of the oldest in NFL history, dating back to 1921. Although Green Bay is by far the smallest major league professional sports market in North America, its local fan and media base extends 120 miles south into Milwaukee. The Vince Lombardi Trophy is named after the Packers' coach Lombardi, who guided them to their first two Super Bowls. 
+            <br>
+            <br>Last year the Pack were one game away from going back to another Super Bowl, but were blown away by the Atlanta Falcons. Prior to that game, in the divisional round of the playoffs, Aaron Rodgers pulled off one of the greatest late comeback wins with his heroic clutch throws beating the Cowboys. Green Bay is always in with a shout to win the Super Bowl, thanks to having arguably the best QB in the game in Rodgers. They have won the NFC North 5 out the last 6 years. It seems almost a guarantee that the Packers always make the playoffs thanks to Rodgers.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Mike McCarthy</h3>
+                    <p>Where there's Aaron Rodgers, there's a way. But the quarterback needs help. The running game should be improved with Ty Montgomery's full-time transition to running back and the additions of three runners in the draft. The defense cannot rank 31st against the pass for a second straight season, though. In an attempt to shore up the back line, the Packers added Davon House, Kevin King, Josh Jones and training camp star Josh Hawkins. If the defense can improve just enough to slow down opposing teams, then there's no reason that the Pack don't go all the way again.</p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>Regardless of the season this offence has been fine, as long as Aaron Rodgers stays healthy. Last year they finished in the top 10 for total yards, passing yards and points scored. Scarily for the the rest of the NFL, they will probably be even better this year if everyone can stay on the field. The Packers have one of the best receiving groups with playmakers everywhere you look.  Jordy Nelson, Randall Cobb, Davante Adams and Michael Bennett are all top players, and will give coverage units absolute nightmares. If the run game can improve behind a strong line, then watch out. </p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>The key to this unit is simple - stop the pass. They finished 31st in yards allowed, but in the top 10 for run defence. This unit must stop the pass. If they can achieve that, then this will be one of the most complete teams in the entire NFL. The pressure will be on rookie CB Kevin King and star safety Ha Ha Clinton-Dix. There is enough talent throughout the rest of the defence. Clay Matthews continues to be one of the most destructive players in the league, regardless of where you put him. Add in LB Nick Perry and DE Mike Daniels, and they should have enough talent to keep opposing QBs under duress. </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Aaron Rodgers, QB</h3>
+                        <p>There has been a constant debate over the last 5-10 years as to who's the best QB in the game, Aaron Rodgers or the Pats' Tom Brady. Brady may have more Super Bowl rings, but Rodgers may be the most complete QB the league has ever seen. Known as A-Rod, Rodgers has been league MVP twice, been to 6 pro bowls and won 2 Super Bowls. He'd have more if his defence had helped him out more over the years. 
+                        <br><br>What's crazy is that A-Rod may be even better outside the pocket than inside. Rodgers has an uncanny ability to extend plays and produce magic time and time again. He has got his team out of tricky situations on countless occassions, and has also become the king of the Hail Mary throw. It doesn't matter what the score is or how much time is left in the game, it seems like Rodgers almost always finds a way to pull off the impossible. </p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcNorth/gbPackers/players/arod.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>WR - Jordy Nelson. WR - Randall Cobb. TE - Martellus Bennett. DE - Mike Daniels. LB - Clay Matthews. S - Ha Ha Clinton-Dix.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button  class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcNorth/gbPackers/unis/packHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcNorth/gbPackers/unis/packHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcNorth/gbPackers/unis/packAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcNorth/gbPackers/unis/packAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcNorth/gbPackers/unis/packAlt.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcNorth/gbPackers/unis/packAltJers.png">
+                </div>
+            </div>
+            <p>To get your Packers gear, <a href="http://www.packersproshop.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Lambeau Field</h2>
+            </div>
+                <p>Lambeau Field opened in 1957, and was known as New City Stadium until it was renamed in 1965 in memory of Packers founder, player, and long-time head coach, Curly Lambeau. It's one of the most historic/iconic stadiums in the country, and is the oldest continually operating stadium in the NFL.<br><br>Capacity: 81,441 </p>
+                <img id="stadCO" src="../../../img/teams/nfc/nfcNorth/gbPackers/stadium/lambCO.png">
+                <p class="stadLink">To find out more about Lambeau Field and upcoming events, <a href="http://www.packers.com/lambeau-field/index.html" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Green Bay</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Wisconsin</h4>
+                    <h4>Population: 105,139</h4>
+                    <p>Green Bay is a city in the U.S. state of Wisconsin, and is the smallest city/location of all 32 teams. It's at the southern end of Green Bay, an arm of Lake Michigan. Lambeau Field is the home of the Green Bay Packers football team and the Green Bay Packers Hall of Fame. Locomotives, passenger rail cars and other artifacts are on display at the National Railroad Museum. The central Neville Public Museum showcases the art, history and science of the region.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcNorth/gbPackers/map/packMap.png">
+                </div>
+                <p class="cityLink">To find out more about Green Bay, <a href="https://www.greenbay.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1966<br>(I)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1967<br>(II)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1996<br>(XXXI)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2010<br>(XLV)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <h4 class="champHead">NFL Western - 6</h4>
+                            <p class="postDates">1960, 1961, 1962, 1965, 1966, 1967</p>
+                        <h4 class="champHead">NFC Champions - 3</h4>
+                            <p class="postDates">1996, 1997, 2010</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <div class="divFlex">
+                            <div>
+                                <h4 class="champHead">NFL West - 4</h4>
+                                <p class="postDates">1936, 1938, 1939, 1944</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">NFL Central - 1</h4>
+                                <p class="postDates">1967</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">NFC Central - 4</h4>
+                                <p class="postDates">1972, 1995, 1996, 1997</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">NFC North - 9</h4>
+                                <p class="postDates">2002, 2003, 2004, 2007, 2011, 2012, 2013, 2014, 2016</p>
+                            </div>
+                        </div>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 32</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1936, 1938, 1939, 1941, 1944, 1960, 1961, 1962, 1965, 1966, 1967, 1972, 1982, 1993, 1994, 1995, 1996, 1997, 1998, 2001, 2002, 2003, 2004, 2007, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 730 Losses: 553 Ties: 37 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 34 Losses: 22 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 764 Losses: 575 Ties: 37 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 24</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Earl Lambeau, Founder/Coach <em> - Class of 1963</em></p>
+                                <p>Robert Hubbard, T <em> - Class of 1963</em></p>
+                                <p>Don Hutson, E/DB <em> - Class of 1963</em></p>
+                                <p>Johnny McNally, HB <em> - Class of 1963</em></p>
+                                <p>Clarke Hinkle, FB <em> - Class of 1964</em></p>
+                                <p>Mike Michalske, G<em> - Class of 1964</em></p>
+                                <p>Arnie Herber, QB <em> - Class of 1966</em></p>
+                                <p>Vince Lombardi, Coach <em> - Class of 1971</em></p>
+                                <p>Tony Canadeo, HB <em> - Class of 1974</em></p>
+                                <p>Jim Taylor, FB <em> - Class of 1976</em></p>
+                                <p>Forrest Gregg, T <em> - Class of 1977</em></p>
+                                <p>Bart Starr, QB <em> - Class of 1977</em></p>
+                                <p>Ray Nitschke, LB <em> - Class of 1978</em></p>
+                                <p>Herb Adderley, CB <em> - Class of 1980</em></p>
+                                <p>Willie Davis, DE <em> - Class of 1981</em></p>
+                                <p>Jim Ringo, C <em> - Class of 1981</em></p>
+                                <p>Paul Hornung, HB <em> - Class of 1986</em></p>
+                                <p>Willie Wood, S <em> - Class of 1989</em></p>
+                                <p>Henry Jordan, DT <em> - Class of 1995</em></p>
+                                <p>James Lofton, WR <em> - Class of 2003</em></p>
+                                <p>Reggie White, DE <em> - Class of 2006</em></p>
+                                <p>Dave Robinson, LB <em> - Class of 2013</em></p>
+                                <p>Ron Wolf, VP/GM <em> - Class of 2015</em></p>
+                                <p>Brett Favre, QB <em> - Class of 2016</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC NORTH</h2></li>
+                <!--BEARS-->
+                <li><a id="bears" class="divLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <!--LIONS-->
+                <li><a id="lions" class="divLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <!--PACKERS-->
+                <li><a id="pack" class="divLogos" href="#">Green Bay Packers</a></li>
+                <!--VIKINGS-->
+                <li><a id="vikes" class="divLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Packers &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.packers.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcNorth/gbPackers/logo/packersLogo.svg.png"></a>
+                        <a href="http://www.packers.com/" target="_blank">Green Bay Packers Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Green_Bay_Packers_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Green_Bay_Packers_Gear" target="_blank">NFL Shop - Packers</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/green-bay-packers/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/green-bay-packers/" target="_blank">Pro Football Hall of Fame - Packers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/Packers/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/Packers/" target="_blank">Facebook - Packers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/packers" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/packers" target="_blank">Twitter - Packers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/packers/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/packers/" target="_blank">Instagram - Packers</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

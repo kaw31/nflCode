@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Bengals</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/bengals.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcNorth/cinBengals/logo/bengalsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>Bengals were founded in 1966 as a member of the American Football League (AFL) by former Cleveland Browns head coach Paul Brown. Due to the impending merger of the AFL and the NFL, which was scheduled to take full effect in the 1970 season, Brown agreed to join the AFL as its tenth and final franchise. The Bengals, like the other former AFL teams, were assigned to the AFC following the merger. 
+            <br>
+            <br>Their current head coach is Marvin Lewis, who has held the position since 2003 and is currently the second-longest tenured head coach in the NFL, behind the New England Patriots' Bill Belichick. Two years after becoming head coach, Lewis guided the Bengals to their first winning season and first division title in over a decade. After the acquisition of Andy Dalton as quarterback in 2011, the Bengals had made the playoffs each season until 2016, ranking highly among NFL teams in win totals. However, the team has remained unable to win in the postseason and have not won a playoff game since 1990.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Marvin Lewis</h3>
+                    <p>The Bengals need to prove they're the same team that made five straight postseason appearances before last year's forgettable performance. So much of the onus will be placed on Cincinnati's offensive line since left tackle Andrew Whitworth and right guard Kevin Zeitler left in free agency. If the line gives quarterback Andy Dalton adequate pass protection, the rest of the roster is talented enough to challenge for another division crown.</p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>Once again it will be QB Andy Dalton leading the troops. Although Dalton's been to 3 pro bowls since entering the league in 2011, he hasn't been able to repeat his regular season form into the playoffs. Dalton, known as the 'red rifle', needs to finally lead his team deep into the playoffs to prove he's the real deal. A stronger running attack with Gio Bernard and new rookie Joe Mixon should help the Bengal's cause.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>Cinci had a pretty average defence in terms of yards allowed last term, finishing 17th. However they were one of the better units when it came to points allowed, finishing 8th. There seems to be enough talent spread across the defence, with star defensive tackle Geno Atkins always a threat. Add in the ageless wonder Adam 'Pacman' Jones at corner and ferocious linebacker Vontaze Burfict into the mix, and the Bengals should have a stout group. 
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>A.J. Green, WR</h3>
+                        <p>A.J. Green is special. There's no two ways about it. He's been one of the top 5 receivers from the day he stepped into the league in 2011. The proof is in the fact that he's made the pro bowl in every one of his 6 seasons in the NFL. His size and catch radius is a huge reason for this. At 6ft 4" A.J. is one of the taller receivers in the game, and he uses all of that wingspan to his advantage. 
+                        <br><br>At 29 years old, A.J. is only just reaching his peak. A scary thought for opposing DBs. However last year he missed 6 games, so Bengal's fans will be hoping he can stay on the pitch this time around. If Green stays healthy then there is no reason to think he won't make his 7th straight pro bowl, and hopefully for Cincinnati, help the team make a Super Bowl run.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcNorth/cinBengals/players/green.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>QB - Andy Dalton. RB - Giovanni Bernard. TE - Tyler Eifert. DT - Geno Atkins. DE - Carlos Dunlap. LB - Vontaze Burfict. CB - Adam Jones.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button  class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcNorth/cinBengals/unis/bengalHm.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcNorth/cinBengals/unis/bengalHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcNorth/cinBengals/unis/bengalAw.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcNorth/cinBengals/unis/bengalAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcNorth/cinBengals/unis/bengalAlt.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcNorth/cinBengals/unis/bengalAltJers.png">
+                </div>
+            </div>
+            <p>To get your Bengals gear, <a href="http://shop.bengals.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Paul Brown Stadium</h2>
+            </div>
+                <p>Paul Brown Stadium is named after the team's founder Paul Brown, and was opened in 2000. It's nicknamed "The Jungle", an allusion not only to the namesake Bengal tiger's natural habitat, but also the Guns N' Roses song "Welcome to the Jungle". <br><br>Capacity: 65,515 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcNorth/cinBengals/stadium/paulbCO.png">
+                <p class="stadLink">To find out more about Paul Brown Stadium and upcoming events, <a href="http://www.bengals.com/stadium/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Cincinnati</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Ohio</h4>
+                    <h4>Population: 298,800</h4>
+                    <p>Cincinnati is a city in Ohio, on the Ohio River. The Over-the-Rhine district is known for its 19th-century architecture, including Findlay Market, which has food and craft vendors. To the north is the Cincinnati Zoo &amp; Botanical Garden. The Cincinnati Museum Center encompasses history, science and children's museums in the art deco Union Terminal. Works spanning 6,000 years are on display at the Cincinnati Art Museum.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcNorth/cinBengals/map/bengalsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Cincinnati, <a href="http://cincinnatiusa.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcChamp.png">
+                        <h4 class="champHead">AFC Champions - 2</h4>
+                            <p class="postDates">1981, 1988</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">AFL Central - 5</h4>
+                            <p class="postDates">1970, 1973, 1981, 1988, 1990</p>
+                        <h4 class="champHead">AFC North - 4</h4>
+                            <p class="postDates">2005, 2009, 2013, 2015</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 14</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1970, 1973, 1975, 1981, 1982, 1988, 1990, 2005, 2009, 2011, 2012, 2013, 2014, 2015</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 344 Losses: 408 Ties: 4 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 5 Losses: 14 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 349 Losses: 422 Ties: 4 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 1</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                    <p>Anthony Munoz, T <em> - Class of 1998</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC NORTH</h2></li>
+                <!--RAVENS-->
+                <li><a id="ravs" class="divLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <!--BENGALS-->
+                <li><a id="bengals" class="divLogos" href="#">Cincinnati Bengals</a></li>
+                <!--BROWNS-->
+                <li><a id="browns" class="divLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <!--STEELERS-->
+                <li><a id="steel" class="divLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Bengals &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.bengals.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcNorth/cinBengals/logo/bengalsLogo.svg.png"></a>
+                        <a href="http://www.bengals.com/" target="_blank">Cincinnati Bengals Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Cincinnati_Bengals_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Cincinnati_Bengals_Gear" target="_blank">NFL Shop - Bengals</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/cincinnati-bengals/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/cincinnati-bengals/" target="_blank">Pro Football Hall of Fame - Bengals</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/bengals/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/bengals/" target="_blank">Facebook - Bengals</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/Bengals" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/Bengals" target="_blank">Twitter - Bengals</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/bengals/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/bengals/" target="_blank">Instagram - Bengals</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

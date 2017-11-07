@@ -1,0 +1,343 @@
+body {
+    height: 100vh;
+    background: #05114a; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#05114a, #4872a7); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#05114a, #4872a7); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#05114a, #4872a7); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#05114a, #4872a7); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Cairo', sans-serif;
+    color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.introCont {
+    padding-top: 90px;
+}
+
+.introCont h2 {
+    text-align: center;
+    font-weight: 100;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 50px 20px;
+    text-align: center;
+}
+
+.mainCont {
+/*
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: -5px 3px 70px rgba(255,255,255,0.3);
+*/
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+.scrollPrompt {
+    font-size: 1em;
+    margin-bottom: 0;
+    padding-top: 30px;
+}
+
+/* ========= MAP ================ */
+
+.mapCont {
+    text-align: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0;
+}
+
+.mapParent {
+    position: relative;
+    display: inline;
+}
+
+.map {
+    width: 1000px;
+    padding: 0;
+}
+
+
+.logo {
+    height: 50px;
+}
+
+.logo:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* ========= LOGOS ================ */
+
+/* ========= AFC TEAMS ================ */
+
+/* ========= AFC NORTH ================ */
+
+#ravens {
+    position: absolute;
+    right: 110px;
+    bottom: 485px;
+    height: 50px;
+}
+
+#bengals {
+    position: absolute;
+    right: 230px;
+    bottom: 450px;
+    height: 45px;
+}
+
+#browns {
+    position: absolute;
+    right: 210px;
+    bottom: 500px;
+}
+
+#steelers {
+    position: absolute;
+    right: 160px;
+    bottom: 500px;
+    height: 45px;
+}
+
+
+/* ========= AFC EAST ================ */
+
+#bills {
+    position: absolute;
+    right: 170px;
+    bottom: 550px;
+}
+
+#dolphins {
+    position: absolute;
+    right: 60px;
+    bottom: 200px;
+}
+
+#pats {
+    position: absolute;
+    right: 65px;
+    bottom: 570px;
+}
+
+#jets {
+    position: absolute;
+    right: 100px;
+    bottom: 540px;
+}
+
+
+/* ========= AFC SOUTH ================ */
+
+#texans {
+    position: absolute;
+    left: 545px;
+    bottom: 215px;
+}
+
+#colts {
+    position: absolute;
+    right: 272px;
+    bottom: 470px;
+}
+
+#jags {
+    position: absolute;
+    right: 110px;
+    bottom: 270px;
+}
+
+#titans {
+    position: absolute;
+    right: 260px;
+    bottom: 380px;
+}
+
+
+/* ========= AFC WEST ================ */
+
+#broncos {
+    position: absolute;
+    left: 350px;
+    bottom: 430px;
+}
+
+#chiefs {
+    position: absolute;
+    left: 550px;
+    bottom: 420px;
+}
+
+#chargers {
+    position: absolute;
+    left: 100px;
+    bottom: 320px;
+}
+
+#raiders {
+    position: absolute;
+    left: 65px;
+    bottom: 460px;
+}
+
+
+
+/* ========= NFC TEAMS ================ */
+
+/* ========= NFC NORTH ================ */
+
+#bears {
+    position: absolute;
+    right: 315px;
+    bottom: 500px;
+}
+
+#lions {
+    position: absolute;
+    right: 240px;
+    bottom: 530px;
+}
+
+#packers {
+    position: absolute;
+    right: 330px;
+    bottom: 540px;
+}
+
+#vikes {
+    position: absolute;
+    left: 530px;
+    bottom: 545px;
+}
+
+
+/* ========= NFC EAST ================ */
+
+#cowboys {
+    position: absolute;
+    left: 500px;
+    bottom: 285px;
+}
+
+#giants {
+    position: absolute;
+    right: 62px;
+    bottom: 535px;
+    height: 40px;
+}
+
+#eagles {
+    position: absolute;
+    right: 110px;
+    bottom: 510px;
+}
+
+#skins {
+    position: absolute;
+    right: 120px;
+    bottom: 450px;
+}
+
+
+/* ========= NFC SOUTH ================ */
+
+#falcons {
+    position: absolute;
+    right: 190px;
+    bottom: 340px;
+}
+
+#panthers {
+    position: absolute;
+    right: 140px;
+    bottom: 390px;
+}
+
+#saints {
+    position: absolute;
+    right: 280px;
+    bottom: 240px;
+}
+
+#bucs {
+    position: absolute;
+    right: 120px;
+    bottom: 220px;
+}
+
+
+/* ========= NFC WEST ================ */
+
+#cards {
+    position: absolute;
+    left: 215px;
+    bottom: 315px;
+}
+
+#rams {
+    position: absolute;
+    left: 90px;
+    bottom: 350px;
+}
+
+#seahawks {
+    position: absolute;
+    left: 130px;
+    bottom: 620px;
+}
+
+#niners {
+    position: absolute;
+    left: 50px;
+    bottom: 425px;
+}
+
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================ TABLETS ================== */
+
+@media only screen 
+and (min-width : 768px) 
+/*and (max-width : 1024px)  */
+{
+    
+     .mainCont {
+/*        width: 90vw;*/
+        display: block;
+        margin: 0 auto;
+        padding: 0 0 5px;
+        margin-bottom: 50px;
+        max-width: 1400px;
+    }
+    
+}
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+ 
+
+    
+}
+
+
+
+
+
+

@@ -1,0 +1,327 @@
+/* ========= HEADER ========== */
+
+header {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(#1e5eaf, #000b40);
+    padding: 0px;
+    box-shadow: -5px 3px 70px rgba(255,255,255,0.3);
+    z-index: 10;
+}
+
+#nflLogo {
+    width: 55px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    padding: 2px;
+}
+
+#nflLogo:hover {
+    cursor: pointer;
+}
+
+h1 {
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 1.7em;
+    margin: 15px;
+    text-align: center;
+}
+
+/* ========= MENU BUTTON ========== */
+
+.dropbtn {
+    color: white;
+    padding: 10px;
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0,11,64,0.8);
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 5px 30px rgba(255,255,255,0.3);
+    right: 0;
+    z-index: 1;
+    transition: 0.3s;
+    width: 100vw;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.dropdown a:hover {
+    background-color: rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+
+.show {
+    display:block;
+}
+
+
+
+/* ========= TEAMS OVERLAY ========== */
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+/*    background: linear-gradient(rgba(5,17,74,0.9), rgba(72,114,167,0.9));*/
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+    margin-top: 30px;
+    overflow: scroll;
+}
+
+.overlay h2 {
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.overlay-content {
+    position: relative;
+    top: 6%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    font-size: 60px;
+}
+
+
+/* ========= TEAMS MODAL BG LOGOS ========== */
+
+.modalLogos {
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 20px 3px;
+}
+
+#cardsMod {
+    background-image: url(../img/teams/nfc/nfcWest/ariCardinals/logo/cardsLogo.svg.png);
+}
+
+#falcsMod {
+    background-image: url(../img/teams/nfc/nfcSouth/atlFalcons/logo/falconsLogo.svg.png);
+}
+
+#ravsMod {
+    background-image: url(../img/teams/afc/afcNorth/balRavens/logo/ravensLogo.svg.png);
+}
+
+#billsMod {
+    background-image: url(../img/teams/afc/afcEast/bufBills/logo/billsLogo.svg.png);
+}
+
+#panthMod {
+    background-image: url(../img/teams/nfc/nfcSouth/carPanthers/logo/panthersLogo.svg.png);
+}
+
+#bearsMod {
+    background-image: url(../img/teams/nfc/nfcNorth/chiBears/logo/bearsLogo.svg.png);
+}
+
+#bengMod {
+    background-image: url(../img/teams/afc/afcNorth/cinBengals/logo/bengalsLogo.svg.png);
+}
+
+#brownsMod {
+    background-image: url(../img/teams/afc/afcNorth/cleBrowns/logo/brownsLogo.svg.png);
+}
+
+#cowsMod {
+    background-image: url(../img/teams/nfc/nfcEast/dalCowboys/logo/cowboysLogo.svg.png);
+}
+
+#broncMod {
+    background-image: url(../img/teams/afc/afcWest/denBroncos/logo/broncosLogo.svg.png);
+}
+
+#lionsMod {
+    background-image: url(../img/teams/nfc/nfcNorth/detLions/logo/lionsLogo.svg.png);
+}
+
+#packMod {
+    background-image: url(../img/teams/nfc/nfcNorth/gbPackers/logo/packersLogo.svg.png);
+}
+
+#texMod {
+    background-image: url(../img/teams/afc/afcSouth/houTexans/logo/texansLogo.svg.png);
+}
+
+#coltsMod {
+    background-image: url(../img/teams/afc/afcSouth/indColts/logo/coltsLogo.svg.png);
+}
+
+#jagsMod {
+    background-image: url(../img/teams/afc/afcSouth/jaxJaguars/logo/jaguarsLogo.svg.png);
+}
+
+#chiefsMod {
+    background-image: url(../img/teams/afc/afcWest/kcChiefs/logo/chiefsLogo.svg.png);
+}
+
+#chargMod {
+    background-image: url(../img/teams/afc/afcWest/laChargers/logo/chargersLogo.svg.png);
+}
+
+#ramsMod {
+    background-image: url(../img/teams/nfc/nfcWest/laRams/logo/ramsLogo.svg.png);
+}
+
+#dolphMod {
+    background-image: url(../img/teams/afc/afcEast/miaDolphins/logo/dolphinsLogo.svg.png);
+}
+
+#vikesMod {
+    background-image: url(../img/teams/nfc/nfcNorth/minVikings/logo/vikingsLogo.svg.png);
+}
+
+#patsMod {
+    background-image: url(../img/teams/afc/afcEast/nePatriots/logo/patriotsLogo.svg.png);
+}
+
+#saintsMod {
+    background-image: url(../img/teams/nfc/nfcSouth/noSaints/logo/saintsLogo.svg.png);
+}
+
+#giantsMod {
+    background-image: url(../img/teams/nfc/nfcEast/nyGiants/logo/giantsLogo.svg.png);
+}
+
+#jetsMod {
+    background-image: url(../img/teams/afc/afcEast/nyJets/logo/jetsLogo.svg.png);
+}
+
+#raidMod {
+    background-image: url(../img/teams/afc/afcWest/oakRaiders/logo/raidersLogo.svg.png);
+}
+
+#eagMod {
+    background-image: url(../img/teams/nfc/nfcEast/phiEagles/logo/eaglesLogo.svg.png);
+}
+
+#steelMod {
+    background-image: url(../img/teams/afc/afcNorth/pitSteelers/logo/steelersLogo.svg.png);
+}
+
+#ninersMod {
+    background-image: url(../img/teams/nfc/nfcWest/sf49ers/logo/49ersLogo.svg.png);
+}
+
+#seaMod {
+    background-image: url(../img/teams/nfc/nfcWest/seaSeahawks/logo/seahawksLogo.svg.png);
+}
+
+#bucsMod {
+    background-image: url(../img/teams/nfc/nfcSouth/tbBuccaneers/logo/bucsLogo.svg.png);
+}
+
+#titMod {
+    background-image: url(../img/teams/afc/afcSouth/tenTitans/logo/titansLogo.svg.png);
+}
+
+#skinsMod {
+    background-image: url(../img/teams/nfc/nfcEast/wasRedskins/logo/redskinsLogo.svg.png);
+}
+
+/* ========= TEAMS SEARCH ========== */
+
+#myInput {
+  width: 300px;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+    text-align: center;
+}
+
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto 80px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+}
+
+#myUL li a {
+    margin-top: -1px; /* Prevent double borders */
+    padding: 12px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    width: 300px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 90px;
+}
+
+#myUL li  {
+    margin: 10px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+#myUL li:nth-child(odd)  {
+    background-color: rgba(255,255,255,0.5);
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+    cursor: pointer;
+}
+
+#myUL li:hover {
+    transform: scale(1.1);
+}

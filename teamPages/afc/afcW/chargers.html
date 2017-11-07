@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Chargers</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/chargers.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcWest/laChargers/logo/chargersTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Los Angeles Chargers were founded in 1959 and began play in  1960 as a charter member of the AFL. The team spent its first season in Los Angeles, before moving to San Diego in 1961 to become the San Diego Chargers.  The return of the Chargers to Los Angeles was announced for the 2017 season, just one year after the Rams had moved back to the city from St. Louis. The Chargers will play their home games at the StubHub Center until the opening in 2020 of the Los Angeles Stadium at Hollywood Park, which they will share with the Rams.
+            <br>
+            <br>This will be a very strange season for the Chargers, with there being so much unrest after their move away from San Diego. Life-long fans were disgusted at the franchise's decision to move to LA. Early indications suggest that this fan disapproval will continue for a while, after the team failed to sell out games in the preseason at the small StubHub Center. With the Rams having just moved back to LA, it'll be fascinating to see how long it takes the Chargers to adjust to their new home.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Anthony Lynn</h3>
+                    <p>The Chargers haven't been as bad as their record indicated the last two seasons, yet the organisation still faces plenty of adversity under the direction of new head coach Anthony Lynn. Of course, the entire franchise is adjusting to its new home in Los Angeles. The team will have new offensive and defensive schemes, too. Plus, the franchise's top two draft picks—Mike Williams and Forrest Lamp—are already dealing with long-term injury concerns. A .500 campaign may be too much to ask considering these circumstances. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>Ever since Hall of Fame running back LaDainian Tomlinson left the organisation, the Chargers have been heavily relying on their pass attack through longtime QB Philip Rivers. The team finished in the top 10 for points scored and passing yards thanks largely to Rivers and his favourite receiver Keenan Allen. Top ten pick Mike Williams should take some coverage away from Allen once he's healthy. The running game needs to improve, and early indications show RB Melvin Gordon could be in line for a breakthrough year.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>The Chargers had an above average defence last year, but need to stop opposing teams from scoring too many points. Last years Defensive Rookie of the Year Joey Bosa proved a revelation at defensive end, especially considering he sat out the first 4 games. Some experts have already compared him to a young J.J. Watt. Charger fans can only hope Bosa can emulate Watt. There are some other nice pieces to this unit, with star CB Casey Howard having quietly become one of the better corners in the game. Melvin Ingram has also turned into a game wrecker.  
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Philip Rivers, QB</h3>
+                        <p>Philip Rivers has been the face of the franchise ever since the Chargers drafted him in the golden QB draft in 2004 that also produced Eli Manning and Ben Roethlisberger. The 6 time pro bowler is renowned throughout the league for his fiery leadership and gunslinger mentality. Rivers isn't phased by anything that teams throw at him.
+                        <br><br>At 35 you have to wonder how much is left in the tank for Rivers. Some fans were worried that Rivers was going to leave the franchise in the summer, as reports said he wasn't too keen on moving his family to LA. But luckily for fans and teammates, Rivers has relocated and stayed with the rest of the team. The Chargers will need him to steady what is a very rocky ship at the moment.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcWest/laChargers/players/rivers.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>RB - Melvin Gordon. WR - Keenan Allen. TE - Hunter Henry. TE - Antonio Gates. DE - Joey Bosa. DE - Melvin Ingram. DT - Corey Liuget. CB - Casey Hayward.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button  class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcWest/laChargers/unis/chargHm.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcWest/laChargers/unis/chargHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcWest/laChargers/unis/chargAw.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcWest/laChargers/unis/chargAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcWest/laChargers/unis/chargAlt.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcWest/laChargers/unis/chargAltJers.png">
+                </div>
+            </div>
+            <p>To get your Chargers gear, <a href="http://shop.chargers.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>StubHub Center</h2>
+            </div>
+                <p>StubHub Center was opened in 2003 and is located 14 miles south of downtown LA. It's actually the home of the LA Galaxy MLS soccer team, and is only a temporary home for the Chargers until the  Los Angeles Stadium at Hollywood Park is finished in 2020, which they will then share with the Los Angeles Rams. <br><br>Capacity: 27,000 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcWest/laChargers/stadium/stubCO.png">
+                <p class="stadLink">To find out more about StubHub Center and upcoming events, <a href="http://www.stubhubcenter.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Los Angeles</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: California</h4>
+                    <h4>Population: 617,594</h4>
+                    <p>Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry. Near its iconic Hollywood sign, studios such as Paramount Pictures, Universal and Warner Brothers offer behind-the-scenes tours. On Hollywood Boulevard, TCL Chinese Theatre displays celebrities’ hand and footprints, the Walk of Fame honors thousands of luminaries and vendors sell maps to stars’ homes. LA is world renowned for the glitz and glamour of the movies, earning the nickname "Tinseltown".</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcWest/laChargers/map/chargerMap.png">
+                </div>
+                <p class="cityLink">To find out more about Los Angeles, <a href="https://www.discoverlosangeles.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcChamp.png">
+                        <h4 class="champHead">AFC Champions - </h4>
+                            <p class="postDates">1994</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">AFL West - 5</h4>
+                            <p class="postDates">1960, 1961, 1963, 1964, 1965</p>
+                        <h4 class="champHead">AFC West - 10</h4>
+                            <p class="postDates">1979, 1980, 1981, 1992, 1994, 2004, 2006, 2007, 2008, 2009</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 18</h3>
+                        <h4 class="champHead">AFL - 5</h4>
+                            <p class="postDates">1960, 1961, 1963, 1964, 1965</p>
+                        <h4 class="champHead">NFL - 13</h4>
+                            <p class="postDates">1979, 1980, 1981, 1982, 1992, 1994, 1995, 2004, 2006, 2007, 2008, 2009, 2013</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 426 Losses: 431 Ties: 11 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 11 Losses: 17 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 437 Losses: 448 Ties: 11 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 9</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Lance Alworth, F <em> - Class of 1978</em></p>
+                                <p>Ron Mix, T <em> - Class of 1979</em></p>
+                                <p>Sid Gillman, Coach <em> - Class of 1983</em></p>
+                                <p>Dan Fouts, QB <em> - Class of 1993</em></p>
+                                <p>Kellen Winslow, TE <em> - Class of 1995</em></p>
+                                <p>Charlie Joiner, WR <em> - Class of 1996</em></p>
+                                <p>Fred Dean, DE <em> - Class of 2008</em></p>
+                                <p>Lunior Seau <em> - Class of 2015</em></p>
+                                <p>LaDainian Tomlinson, RB <em> - Class of 2017</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC WEST</h2></li>
+                <!--BRONCOS-->
+                <li><a id="broncos" class="divLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <!--CHIEFS-->
+                <li><a id="chiefs" class="divLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <!--CHARGERS-->
+                <li><a id="chargers" class="divLogos" href="#">Los Angeles Chargers</a></li>
+                <!--RAIDERS-->
+                <li><a id="raid" class="divLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Chargers &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.chargers.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcWest/laChargers/logo/chargersLogo.svg.png"></a>
+                        <a href="http://www.chargers.com/" target="_blank">Los Angeles Chargers Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Los_Angeles_Chargers_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Los_Angeles_Chargers_Gear" target="_blank">NFL Shop - Chargers</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/los-angeles-chargers/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/los-angeles-chargers/" target="_blank">Pro Football Hall of Fame - Chargers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/chargers/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/chargers/" target="_blank">Facebook - Chargers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/Chargers" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/Chargers" target="_blank">Twitter - Chargers</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/chargers/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/chargers/" target="_blank">Instagram - Chargers</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

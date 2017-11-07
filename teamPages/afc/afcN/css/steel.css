@@ -1,0 +1,179 @@
+body {
+    background: #ffb718; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ffb718, #ffb718, #000000); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ffb718, #ffb718, #000000); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ffb718, #ffb718, #000000); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ffb718, #ffb718, #000000); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ========= ROSTER ========== */
+
+.rosterBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/pitSteelers/players/tomlin1.jpg);
+    background-position: ;
+}
+
+/* ========= OFFENCE ========== */
+
+.offenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/pitSteelers/players/ben2.jpg);
+    background-position: center;
+}
+
+/* ========= DEFENCE ========== */
+
+.defenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/pitSteelers/players/hey2.jpg);
+    background-position: ;
+}
+
+/* ========= MVP ========== */
+
+.mvpBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/pitSteelers/players/brown3.jpg);
+    background-position: center;
+}
+
+/* ========= UNIFORM ========== */
+
+.uniBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/pitSteelers/players/def3.jpg);
+    background-position: ;
+}
+
+/* ========= UNIS BUTTON ========== */
+
+.homeUniBtn {
+    border-radius: 10px 0 0 10px;
+}
+
+.awayUniBtn {
+    border-radius: 0 10px 10px 0;
+}
+
+/* ========= STADIUM ========== */
+
+.stadBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/pitSteelers/stadium/heinz1.jpg);
+    background-position: top;
+}
+
+/* ========= CITY ========== */
+
+.cityBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/pitSteelers/city/pitt1.jpg);
+    background-position: center;
+}
+
+/* ========= RECORDS ========== */
+
+.supBowls {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.trophy {
+    height: 80px;
+    padding: 0;
+    margin-top: 5px;
+}
+
+/* ========= HEADINGS BG ========== */
+
+.rosterBg, .offenceBg, .defenceBg, .mvpBg, .uniBg, .stadBg, .cityBg {
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.headBgImgs {
+    height: 300px;
+}
+
+/* ========= DIV TEAM BG LOGOS ========== */
+
+#ravs {
+    background-image: url(../../../../img/teams/afc/afcNorth/balRavens/logo/ravensLogo.svg.png);
+}
+
+#bengals {
+    background-image: url(../../../../img/teams/afc/afcNorth/cinBengals/logo/bengalsLogo.svg.png);
+}
+
+#browns {
+    background-image: url(../../../../img/teams/afc/afcNorth/cleBrowns/logo/brownsLogo.svg.png);
+}
+
+#steel {
+    background-image: url(../../../../img/teams/afc/afcNorth/pitSteelers/logo/steelersLogo.svg.png);
+}
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+@media only screen 
+and (min-width : 560px) 
+/*and (max-width : 1024px)  */
+{
+
+/* ========= REC ========== */
+    
+    .supBowls {
+        max-width: 100%;
+    }   
+    
+    .trophy {
+        height: 120px;
+        margin: 20px 0 0;
+    }
+    
+}
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+    
+    .headBgImgs {
+        background-position: center;
+    }
+    
+     .mvpBg {
+        height: 500px;
+        flex: 1;
+        border-right: 2px solid white;
+    }
+    
+    .uniBg, .stadBg {
+        background-position: top;
+    }
+    
+    .cityBg {
+        flex: 1;
+        height: 550px;
+        margin: 0;
+        border-right: 2px solid white;
+    }
+    
+}
+

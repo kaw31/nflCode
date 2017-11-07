@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Raiders</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/raiders.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcWest/oakRaiders/logo/raidersTitle.png">    
+  
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Oakland Raiders were founded in 1960, and are currently based in Oakland, California. However, NFL team owners voted nearly unanimously to approve the Raiders' application to relocate from Oakland to Las Vegas, Nevada. The Raiders plan to remain in Oakland through 2018 – and possibly 2019 – and relocate to Las Vegas in either 2019 or 2020, depending on the completion of the team's planned new stadium.
+            <br>
+            <br>It'll be strange when the Raiders eventually pack their bags and leave to "Sin City" Las Vegas. The Raiders have some of the most dedicated fans in Oakland, who will be devastated when the team leaves. But if you were to pick any team that fits the flambuoyancy and mentality of Vegas, then it'd defenitely be the Raiders. Luckily for Oakland fans, their current crop of players is stacked with talent, especially on offence. So hopefully the team can give it's residents a memorable leaving present before saying goodbye in the next couple of years.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Jack Del Rio</h3>
+                    <p>The end of the 2016 campaign didn't reflect the Raiders organisation's status within the league. Oakland is a legitimate Super Bowl contender with Derek Carr at quarterback and Khalil Mack terrorising opposing offenses. Now, add Marshawn Lynch into the mix. As long as his carries are closely monitored, Beast Mode adds a completely different component, and he should thrive behind a top-three offensive line. The defense is still a concern, but the unit has the ability to improve upon last year's 26th-ranked effort. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>The Raiders boast one of the best offenses in the entire NFL. They are loaded. Last year they finished in the top 10 for most categories. They finished 6th in rushing, and now they have added Oakland native and running back legend Marshawn Lynch, aka Beast Mode. Even Seahawks fans must be happy to see their former superstar come out of retirement to play for his hometown team. If he's anywhere near the old player he was, then look out. The offensive line is great, as are the receiving duo Amari Cooper and Michael Crabtree. They should be fun to watch.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>Oakland rely far too heavily on their superstar Kalil Mack. Mack is an absolute moster, who can lineup on the line or as a linebacker. He's the first ever player to be elected to the pro bowl at both defensive end and outside linebacker in the SAME year. The reigning Defensive Player of the Year is the defence's most productive player and gets most of the sacks. However, as good as Mack is, he can't do it all by himself. The Raiders have added a few nice pieces to this unit in the draft, especially in the secondary with CB Gareon Conley and S Obi Melifonwu.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Derek Carr, QB</h3>
+                        <p>A strong case could be made that defensive star Kalil Mack is the MVP for this team, but last seasons capitulation proves that Carr is the most important player for this team to have success. When Carr broke his leg right at the end of the season, you could feel Raider fans' hearts drop. All fight and momentum went out of the team heading into the playoffs, where they were easily dismantled by the Texans.
+                        <br><br>Carr is one of the best young QBs in the game. Some experts have predicted that he'll actually be the league MVP this year after an outstanding 2016 campaign. Considering all the pieces Carr has around him, it's easy to see why there is so much hype surronding him. Carr plays with a maturity beyond his years. The Raiders have definitely found their franchise QB for the next decade.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcWest/oakRaiders/players/carr.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>RB - Marshawn Lynch. WR - Amari Cooper. WR - Michael Crabtree. TE - Jared Cook Jr. DE/PLB - Kalil Mack. OLB - Bruce Irvin. CB - Gareon Conley (R).</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcWest/oakRaiders/unis/raidHm.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcWest/oakRaiders/unis/raidHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcWest/oakRaiders/unis/raidAw.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcWest/oakRaiders/unis/raidAwJers.png">
+                </div>
+            </div>
+            <p>To get your Raiders gear, <a href="https://www.raiderimage.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Oakland-Alameda County<br>Coliseum</h2>
+            </div>
+                <p>The Oakland–Alameda County Coliseum, often referred to as the Oakland Coliseum, is a multi-purpose stadium in Oakland, which is also home to the Oakland Athletics of Major League Baseball (MLB). It opened in 1966 and is the only remaining stadium in the United States that is shared by professional football and baseball teams. <br><br>Capacity: 63,132 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcWest/oakRaiders/stadium/colCO.png">
+                <p class="stadLink">To find out more about Oakland-Alameda County Coliseum and upcoming events, <a href="http://www.oraclearena.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Oakland</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: California</h4>
+                    <h4>Population: 420,005</h4>
+                    <p>Oakland is a city on the east side of San Francisco Bay, in California. Jack London Square has a statue of the writer, who frequented the area. Nearby, Old Oakland features restored Victorian architecture and boutiques. Near Chinatown, the Oakland Museum of California covers state history, nature and art. Uptown contains the art deco Fox and Paramount theaters, restaurants, bars and galleries.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcWest/oakRaiders/map/raidMap.png">
+                </div>
+                <p class="cityLink">To find out more about Oakland, <a href="https://www.visitoakland.com" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1976<br>(XI)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1980<br>(XV)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1983<br>(XVIII)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcChamp.png">
+                        <h4 class="champHead">AFC Champions - 4</h4>
+                            <p class="postDates">1976, 1980, 1983, 2002</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">AFL West - 3</h4>
+                            <p class="postDates">1967, 1968, 1969</p>
+                        <h4 class="champHead">AFC West - 12</h4>
+                            <p class="postDates">1970, 1972, 1973, 1974, 1975, 1976, 1983, 1985, 1990, 2000, 2001, 2002</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 22</h3>
+                        <h4 class="champHead">AFL - 3</h4>
+                            <p class="postDates">1967, 1968, 1969</p>
+                        <h4 class="champHead">NFL - 19</h4>
+                            <p class="postDates">1970, 1972, 1973, 1974, 1975, 1976, 1977, 1980, 1982, 1983, 1984, 1985, 1990, 1991, 1993, 2000, 2001, 2002, 2016</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 456 Losses: 401 Ties: 11 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 25 Losses: 19 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 481 Losses: 420 Ties: 11 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 16</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Jim Otto, C <em> - Class of 1980</em></p>
+                                <p>George Blanda, QB/K <em> - Class of 1981</em></p>
+                                <p>Willie Brown, CB <em> - Class of 1984</em></p>
+                                <p>Gene Upshaw, G <em> - Class of 1987</em></p>
+                                <p>Fred Biletnikoff, WR <em> - Class of 1988</em></p>
+                                <p>Art Shell, T <em> - Class of 1989</em></p>
+                                <p>Ted Hendricks, LB <em> - Class of 1990</em></p>
+                                <p>Al Davis, Coach/Owner <em> - Class of 1992</em></p>
+                                <p>Mike Haynes, CB <em> - Class of 1997</em></p>
+                                <p>Dave Casper, TE <em> - Class of 2002</em></p>
+                                <p>Howie Long, DE <em> - Class of 2000</em></p>
+                                <p>Marcus Allen, RB <em> - Class of 2003</em></p>
+                                <p>John Madden, Coach <em> - Class of 2006</em></p>
+                                <p>Ray Guy, P <em> - Class of 2014</em></p>
+                                <p>Tim Brown, WR/KR <em> - Class of 2015</em></p>
+                                <p>Ken Stabler, QB <em> - Class of 2016</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC WEST</h2></li>
+                <!--BRONCOS-->
+                <li><a id="broncos" class="divLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <!--CHIEFS-->
+                <li><a id="chiefs" class="divLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <!--CHARGERS-->
+                <li><a id="chargers" class="divLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <!--RAIDERS-->
+                <li><a id="raid" class="divLogos" href="#">Oakland Raiders</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Raiders &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.raiders.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcWest/oakRaiders/logo/raidersLogo.svg.png"></a>
+                        <a href="http://www.raiders.com/" target="_blank">Oakland Raiders Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Oakland_Raiders_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Oakland_Raiders_Gear" target="_blank">NFL Shop - Raiders</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/oakland-raiders/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/oakland-raiders/" target="_blank">Pro Football Hall of Fame - Raiders</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/Raiders/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/Raiders/" target="_blank">Facebook - Raiders</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/RAIDERS" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/RAIDERS" target="_blank">Twitter - Raiders</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/raiders/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/raiders/" target="_blank">Instagram - Raiders</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

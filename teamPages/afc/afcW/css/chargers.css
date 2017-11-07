@@ -1,0 +1,148 @@
+body {
+    background: #007ec5; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#001a3a, #001a3a, #007ec5); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#001a3a, #001a3a, #007ec5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#001a3a, #001a3a, #007ec5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#007ec5, #007ec5, #001a3a); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ========= ROSTER ========== */
+
+.rosterBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcWest/laChargers/players/lynn1.jpg);
+    background-position: top;
+}
+
+/* ========= OFFENCE ========== */
+
+.offenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcWest/laChargers/players/melv3.jpg);
+    background-position: top;
+}
+
+/* ========= DEFENCE ========== */
+
+.defenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcWest/laChargers/players/bosa1.jpg);
+    background-position: top;
+}
+
+/* ========= MVP ========== */
+
+.mvpBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcWest/laChargers/players/rivers1.jpg);
+    background-position: top;
+}
+
+/* ========= UNIFORM ========== */
+
+.uniBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcWest/laChargers/players/off1.jpg);
+    background-position: top;
+}
+
+/* ========= UNIS BUTTON ========== */
+
+.homeUniBtn {
+    border-radius: 10px 0 0 10px;
+}
+
+.altUniBtn {
+    border-radius: 0 10px 10px 0;
+}
+
+/* ========= STADIUM ========== */
+
+.stadBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcWest/laChargers/stadium/stub2.jpg);
+    background-position: center;
+}
+
+/* ========= CITY ========== */
+
+.cityBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcWest/laChargers/city/la4.jpg);
+    background-position: center;
+}
+
+/* ========= HEADINGS BG ========== */
+
+.rosterBg, .offenceBg, .defenceBg, .mvpBg, .uniBg, .stadBg, .cityBg {
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.headBgImgs {
+    height: 300px;
+}
+
+/* ========= DIV TEAM BG LOGOS ========== */
+
+#broncos {
+    background-image: url(../../../../img/teams/afc/afcWest/denBroncos/logo/broncosLogo.svg.png);
+}
+
+#chiefs {
+    background-image: url(../../../../img/teams/afc/afcWest/kcChiefs/logo/chiefsLogo.svg.png);
+}
+
+#chargers {
+    background-image: url(../../../../img/teams/afc/afcWest/laChargers/logo/chargersLogo.svg.png);
+}
+
+#raid {
+    background-image: url(../../../../img/teams/afc/afcWest/oakRaiders/logo/raidersLogo.svg.png);
+}
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+    
+    .headBgImgs {
+        background-position: center;
+    }
+    
+     .mvpBg {
+        height: 500px;
+        flex: 1;
+        border-right: 2px solid white;
+    }
+    
+    .uniBg {
+        background-position: top;
+    }
+    
+    .cityBg {
+        flex: 1;
+        height: 550px;
+        margin: 0;
+        border-right: 2px solid white;
+    }
+    
+}
+

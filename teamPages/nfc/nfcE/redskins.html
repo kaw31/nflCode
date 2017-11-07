@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Redskins</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/redskins.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcEast/wasRedskins/logo/skinsTitle.png">    
+  
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The team began play as the Boston Braves in 1932, based in Boston, before relocating to Washington, D.C., in 1937. The team is based in the Washington area, but their stadium is actually in Maryland, and their headquarters are in Virginia. Then again the capital of America isn't exactly the biggest place. The Redskins have played more than 1,000 games since 1932, and are one of only five franchises in the NFL to record over 600 regular season and postseason wins, reaching that mark in 2015. However, since their last Super Bowl victory following the end of the 1991 season, the Redskins have only won the NFC East three times, made five postseason appearances, and had nine seasons with a winning record.
+            <br>
+            <br>It doesn't help that the Redskins compete in arguably the toughest division in football. This year the NFC East doesn't have any weak teams. Even last year, Philly finished bottom with a 7-9 record. And that was the worst record, proving just how competitive the NFC East truly is. Most people feel like the Redskins will be this years bottom team in the division. So it'll be an uphill battle for the Skins to prove all the doubters wrong.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Jay Gruden</h3>
+                    <p>Two years ago, Washington sat atop the NFC East standings. Today, the organisation may be the worst in the division. Quarterback Kirk Cousins will play the season under a franchise tender with a possible eye toward his next move. The offense will try to replace both of its top wide receivers with the lone addition of Terrelle Pryor. On defense, Trent Murphy, who registered nine sacks last season, won't play this season after he suffered a torn ACL. The division is loaded, and Washington appears to have fallen behind each of its rivals.</p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>Washington's offence surprised a lot of people last year. They finished 2nd overall in pass yargs, and 3rd overall in total yards. No one was expecting that. A lot of that was thanks to QB Kirk Cousins. However this year it will be much tougher to emulate those numbers, with star receivers DeSean Jackson and Pierre Garcon having skipped town. It'll be up to newly acquired Terrelle Pryor and start tight end Jordan Reed to produce the goods this time around. Th running game has to improve, having finished only 21st in rush yards.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>The Redskins' defence needs to put up a better showing this season. They allowed far too many yards, finishing 28th in yards allowed. There is talent on paper to overcome this problem. Notably star cornerback Josh Norman is one of the best in the game. He loves to remind everyone too. Ryan Kerrigan has always been a great rusher for the team, and new 1st round pick Jonathan Allen could be the steal of the draft. This unit should be a lot stronger this year, but have it all to prove in one of the toughest divisions in the league.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Kirk Cousins, QB</h3>
+                        <p>Kirk Cousins had a breakthrough year last season, and the Redskins should be doing everything they can to tie him down to a new deal. They franchised tagged him in the offseason, a move they've done 2 years in a row which won't please Cousins. Many think he'll be gone at the end of the seasons, with San Francisco looking the likely destination, with his former OC Kyle Shannahan running things for the 49ers.
+                        <br><br>Washington hope this isn't the case, as Captain Kirk has proved himself to be one of the better QBs in the league. He may not be considered elite yet, but he's done more than enough to prove that you can build a franchise around him. He became famous for shouting "YOU LIKE THAT!" at reporters after a win. Pretty sure Skins fans loved it, and love Cousins... as long as he stays.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcEast/wasRedskins/players/kirk.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>WR - Terrelle Pryor Sr. TE - Jordan Reed. T - Trent Williams. DE - Jonathan Allen (R). OLB - Ryan Kerrigan. CB - Josh Norman.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button  class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcEast/wasRedskins/unis/skinsHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcEast/wasRedskins/unis/skinsHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcEast/wasRedskins/unis/skinsAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcEast/wasRedskins/unis/skinsAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcEast/wasRedskins/unis/skinsAlt.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcEast/wasRedskins/unis/skinsAltJers.png">
+                </div>
+            </div>
+            <p>To get your Redskins gear, <a href="https://store.redskins.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>FedEx Field</h2>
+            </div>
+                <p>FedEx Field was opened in 1997 and is located in Landover, Maryland, about 11 miles away from Washington, D.C. From 2004 until 2010, it had the largest stadium capacity in the NFL, at over 91,000, until it was reduced in 2011. <br><br>Capacity: 82,000 </p>
+                <img id="stadCO" src="../../../img/teams/nfc/nfcEast/wasRedskins/stadium/fedCO.png">
+                <p class="stadLink">To find out more about FedEx Field and upcoming events, <a href="http://www.redskins.com/fedexfield/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Washington, D.C.</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: District of Columbia</h4>
+                    <h4>Population: 681,170</h4>
+                    <p>Washington, DC, the U.S. capital, is a compact city on the Potomac River, bordering the states of Maryland and Virginia. It’s defined by imposing neoclassical monuments and buildings – including the iconic ones that house the federal government’s 3 branches: the Capitol, White House and Supreme Court. It's also home to iconic museums and performing-arts venues such as the Kennedy Center.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcEast/wasRedskins/map/skinsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Washington, DC, <a href="https://washington.org/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1982<br>(XVII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1987<br>(XXII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1991<br>(XXVI)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/nfcChamp.png">
+                        <h4 class="champHead">NFC Champions - 5</h4>
+                            <p class="postDates">1972, 1982, 1983, 1987, 1991</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">NFL East - 6</h4>
+                            <p class="postDates">1936, 1937, 1940, 1942, 1943, 1945</p>
+                        <h4 class="champHead">NFC East - 8</h4>
+                            <p class="postDates">1972, 1983, 1984, 1987, 1991, 1999, 2012, 2015</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 24</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1936, 1937, 1940, 1942, 1943, 1945, 1971, 1972, 1973, 1974, 1976, 1982, 1983, 1984, 1986, 1987, 1990, 1991, 1992, 1999, 2005, 2007, 2012, 2015</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 586 Losses: 572 Ties: 28 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 23 Losses: 19 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 609 Losses: 591 Ties: 28 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 19</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Sammy Baugh, RB <em> - Class of 1963</em></p>
+                                <p>George Marshall, Founder <em> - Class of 1963</em></p>
+                                <p>Bill Dudley, RB <em> - Class of 1963</em></p>
+                                <p>Cliff Battles, RB <em> - Class of 1968</em></p>
+                                <p>Wayne Millner, E <em> - Class of 1968</em></p>
+                                <p>Turk Edwards, T <em> - Class of 1969</em></p>
+                                <p>Ray Flaherty, Coach <em> - Class of 1976</em></p>
+                                <p>Sam Huff, LB <em> - Class of 1982</em></p>
+                                <p>Sonny Jurgensen, QB <em> - Class of 1983</em></p>
+                                <p>Bobby Mitchell, F <em> - Class of 1983</em></p>
+                                <p>Charley Taylor, WR <em> - Class of 1984</em></p>
+                                <p>Ken Houston, S <em> - Class of 1986</em></p>
+                                <p>John Riggins, RB <em> - Class of 1992</em></p>
+                                <p>Joe Gibbs, Coach <em> - Class of 1996</em></p>
+                                <p>George Allen, Coach <em> - Class of 2002</em></p>
+                                <p>Darrell Green, CB <em> - Class of 2008</em></p>
+                                <p>Art Monk, WR <em> - Class of 2008</em></p>
+                                <p>Russ Grimm, G <em> - Class of 2010</em></p>
+                                <p>Chris Hanburger, LB <em> - Class of 2011</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC EAST</h2></li>
+                <!--COWBOYS-->
+                <li><a id="cowboys" class="divLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <!--GIANTS-->
+                <li><a id="giants" class="divLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <!--EAGLES-->
+                <li><a id="eagles" class="divLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <!--REDSKINS-->
+                <li><a id="skins" class="divLogos" href="#">Washington Redskins</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Redskins &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.redskins.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcEast/wasRedskins/logo/redskinsLogo.svg.png"></a>
+                        <a href="http://www.redskins.com/" target="_blank">Washington Redskins Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Washington_Redskins_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Washington_Redskins_Gear" target="_blank">NFL Shop - Redskins</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/washington-redskins/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/washington-redskins/" target="_blank">Pro Football Hall of Fame - Redskins</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/redskins/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/redskins/" target="_blank">Facebook - Redskins</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/Redskins" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/Redskins" target="_blank">Twitter - Redskins</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/redskins/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/redskins/" target="_blank">Instagram - Redskins</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

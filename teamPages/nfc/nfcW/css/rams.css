@@ -1,0 +1,176 @@
+body {
+    background: #002244; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#002244, #002244, #b2985d); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#002244, #002244, #b2985d); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#002244, #002244, #b2985d); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#002244, #002244, #b2985d); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ========= ROSTER ========== */
+
+.rosterBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/laRams/players/mcvay3.jpg);
+    background-position: center;
+}
+
+/* ========= OFFENCE ========== */
+
+.offenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/laRams/players/todd2.jpg);
+    background-position: top;
+}
+
+/* ========= DEFENCE ========== */
+
+.defenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/laRams/players/quinn2.jpg);
+    background-position: top;
+}
+
+/* ========= MVP ========== */
+
+.mvpBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/laRams/players/don1.jpg);
+    background-position: top;
+}
+
+/* ========= UNIFORM ========== */
+
+.uniBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/laRams/players/off3.jpg);
+    background-position: center;
+}
+
+/* ========= UNIS BUTTON ========== */
+
+.homeUniBtn {
+    border-radius: 10px 0 0 10px;
+}
+
+.altUniBtn {
+    border-radius: 0 10px 10px 0;
+}
+
+/* ========= STADIUM ========== */
+
+.stadBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/laRams/stadium/col2.jpg);
+    background-position: center;
+}
+
+/* ========= CITY ========== */
+
+.cityBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcWest/laRams/city/la2.jpg);
+    background-position: top;
+}
+
+/* ========= RECORDS ========== */
+
+.divFlex {
+    height: 285px;
+    overflow-y: scroll;
+}
+
+/* ========= HEADINGS BG ========== */
+
+.rosterBg, .offenceBg, .defenceBg, .mvpBg, .uniBg, .stadBg, .cityBg {
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.headBgImgs {
+    height: 300px;
+}
+
+/* ========= DIV TEAM BG LOGOS ========== */
+
+#cards {
+    background-image: url(../../../../img/teams/nfc/nfcWest/ariCardinals/logo/cardsLogo.svg.png);
+}
+
+#rams {
+    background-image: url(../../../../img/teams/nfc/nfcWest/laRams/logo/ramsLogo.svg.png);
+}
+
+#niners {
+    background-image: url(../../../../img/teams/nfc/nfcWest/sf49ers/logo/49ersLogo.svg.png);
+}
+
+#hawks {
+    background-image: url(../../../../img/teams/nfc/nfcWest/seaSeahawks/logo/seahawksLogo.svg.png);
+}
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================ TABLETS ================== */
+
+@media only screen 
+and (min-width : 768px) 
+/*and (max-width : 1024px)  */
+{
+    
+    .confFlex, .divFlex  {
+        max-width: 800px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    
+    .confFlex div {
+        min-width: 300px;
+    }
+    
+}
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+    
+    .headBgImgs {
+        background-position: center;
+    }
+    
+     .mvpBg {
+        height: 500px;
+        flex: 1;
+        border-right: 2px solid white;
+    }
+    
+    .stadBg {
+        background-position: top;
+    }
+    
+    .cityBg {
+        flex: 1;
+        height: 550px;
+        margin: 0;
+        border-right: 2px solid white;
+    }
+    
+}
+

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Jaguars</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/jags.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcSouth/jaxJaguars/logo/jagsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Jacksonville Jaguars, along with the Carolina Panthers, joined the NFL as expansion teams for the 1995 season. This makes the Jaguars one of the youngest teams in the league. The team was purchased by Pakistani-born businessman Shahid Khan in 2011, and he's been trying to put together a successful team ever since.
+            <br>
+            <br>For years the Jaguars have been one of the worst teams in the league in terms of their record. They haven't had a winning season since 2007. It seems every year the Jaguars are picking early in the draft. This year however, it seems the Jags have got it right and actually have assembled a team that is capable of not only winning a few games, but really putting up a fight to win the division. There is a ton of talent on this team now, and it really is about time their fans had something to cheer about.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Doug Marrone</h3>
+                    <p>The Jaguars have added as many talented players in free agency and the draft as any franchise in the league, especially on defence. Yet they continue to fall flat when games count. The coaching staff is dealing with a mini crisis, too, since Blake Bortles' regression has led the team to question whether he's the right man for the job. You get the feeling that this year will be Bortles' last chance to prove whether he is good enough to lead this franchise forward. All the talent in the world means little if a team doesn't find any consistency from the game's most important position. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>Bortles' play has been too inconsistent the last few seasons, and threw far too many picks last year. If Bortles cleans up his mistakes, then this offence has the potential to be very dangerous. They have 2 excellent receivers in Allen Robinson and Allen Hurns. Every QBs best friend is a good running game, and first round pick Leonard Fournette, an old-school thumper, should give the Jags a lethal running game. Even though the Jags finished near the bottom in offence last year, all the pieces are now in place to have a great attack as long as Bortles plays well enough. </p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>The defence has all the potential to be special this year. On paper every aspect of the defence looks superb. They were already a top 5 pass defence last year, and only got stronger with the addition of CB A.J. Bouye to pair with last year's rookie sensation Jalen Ramsey. Add star DE Calais Campbell to an already stout defensive line which should be sending offensive lines into fits. Many fans have already dubbed them 'Sacksonville' for their ability to rush the quarterback. This defence should be fun to watch, and more importantly should keep games close enough to help the offence win games.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Jalen Ramsey, CB</h3>
+                        <p>The Jaguars hit a home run when they drafted Jalen Ramsey in the 2016 draft. Ramsey came into the league with huge hype, but experts weren't sure if he was better suited at playing corner or safety. Jacksonville decided to put him out as a corner, and he has excelled at the position, something most rookies struggle with.
+                        <br><br>It's safe to assume that Ramsey will be the next big shutdown corner in the league. He only turns 23 this season, so the sky really is the limit for the former Florida State superstar. Even at such a young age he's being asked to lineup against his opponent's number one recever, and he definitely doesn't look out of place. If his career continues how it's started, the Jaguars will have themselves a lockdown corner for the next decade.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcSouth/jaxJaguars/players/ramsey.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>QB - Blake Bortles. RB - Leonard Fournette (R). WR - Allen Robinson. WR - Allen Hurns. DE - Calais Campbell. DT - Malik Jackson. DE- Dante Fowler Jr., LB - Myles Jack. LB- Telvin Smith. CB - A.J. Bouye.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button  class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcSouth/jaxJaguars/unis/jagsHm.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcSouth/jaxJaguars/unis/jagsHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcSouth/jaxJaguars/unis/jagsAw.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcSouth/jaxJaguars/unis/jagsAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcSouth/jaxJaguars/unis/jagsAlt.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcSouth/jaxJaguars/unis/jagsAltJers.png">
+                </div>
+            </div>
+            <p>To get your Jaguars gear, <a href="http://shop.jaguars.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>EverBank Field</h2>
+            </div>
+                <p>EverBank Field was opened in 1995, and is located in downtown Jacksonville. It is also one of the venues used by the United States men's national soccer team. <br><br>Capacity: 64,428 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcSouth/jaxJaguars/stadium/everCO.png">
+                <p class="stadLink">To find out more about EverBank Field and upcoming events, <a href="http://www.jaguars.com/everbank-field/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Jacksonville</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Florida</h4>
+                    <h4>Population: 880,619</h4>
+                    <p>Jacksonville is a large city in northeastern Florida where the St. John’s River meets the Atlantic Ocean. A regional business center, it has many museums and cultural offerings. Swimming and surfing are popular at nearby barrier island beaches such as Jacksonville Beach and Neptune Beach. Championship golf courses in the area include Ponte Vedra Beach’s TPC Sawgrass, headquarters of the PGA Tour.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcSouth/jaxJaguars/map/jagsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Jacksonville, <a href="https://www.visitjacksonville.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <!-- ============  CONFERENCE  ============== -->
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcSouthLogo.png">
+                        <h4 class="champHead">AFC South - 2</h4>
+                            <p class="postDates">1998, 1999</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 6</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1996, 1997, 1998, 1999, 2005, 2007</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 155 Losses: 197 Ties: 0 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 5 Losses: 6 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 160 Losses: 203 Ties: 0 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC SOUTH</h2></li>
+                <!--TEXANS-->
+                <li><a id="tex" class="divLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <!--COLTS-->
+                <li><a id="colts" class="divLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <!--JAGUARS-->
+                <li><a id="jags" class="divLogos" href="#">Jacksonville Jaguars</a></li>
+                <!--TITANS-->
+                <li><a id="titan" class="divLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Jaguars &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.jaguars.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcSouth/jaxJaguars/logo/jaguarsLogo.svg.png"></a>
+                        <a href="http://www.jaguars.com/" target="_blank">Jacksonville Jaguars Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Jacksonville_Jaguars_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Jacksonville_Jaguars_Gear" target="_blank">NFL Shop - Jaguars</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/jacksonville-jaguars/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/jacksonville-jaguars/" target="_blank">Pro Football Hall of Fame - Jaguars</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Jaguars</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/jacksonvillejaguars/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/jacksonvillejaguars/" target="_blank">Facebook - Jaguars</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/Jaguars" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/Jaguars" target="_blank">Twitter - Jaguars</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/jaguars/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/jaguars/" target="_blank">Instagram - Jaguars</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

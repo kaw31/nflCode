@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Bears</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/bears.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcNorth/chiBears/logo/bearsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The franchise was founded in Decatur, Illinois, in 1919, and moved to Chicago in 1921. It is one of only two remaining franchises from the NFL's founding in 1920, along with the Arizona Cardinals, which was originally also in Chicago. The Bears have won one Super Bowl, and hold the NFL record for the most enshrinees in the Pro Football Hall of Fame and the most retired jersey numbers. The Bears have also recorded more victories than any other NFL franchise.
+            <br>
+            <br>The Bears finished bottom of the NFC North last season with a record of 3-13, which isn't surprising really, given the lack of talent across this team. Last year Jay Cutler retired, and then came out of retirement to join the Miami Dolphins. The NFL was shocked when the Bears traded up to move just one place from 3rd to 2nd in the draft. What was more surprising was that they then spent the pick on QB Mitchell Trubisky, after having just spent a lot of money on Mike Glennon. The future of Head Coach John Fox and the GM will be tied to the success of Trubisky. No pressure rookie.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: John Fox</h3>
+                    <p>Chicago's record this season is secondary to its quarterback competition. Mike Glennon is supposed to be the one-year bridge to Mitchell Trubisky. However, the Bears will be best served by starting the rookie and allowing him to grow as the face of the franchise. Trubisky's starting will signal one of two things. Either he performed so well during preseason, the coaching staff couldn't ignore his work. Or, Glennon is benched. With or without April's second overall pick at the helm, the Bears are a better team today than last season.</p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>No one is expecting much from the Bears this year. The quicker Trubisky can beat Mike Glenoon to the starting job, the quicker the Bears will find out if they've found the answer at QB. Glennon isn't the long term answer. He's a good backup QB, but that's about it. The problem for either QB is that there isn't much of a supporting cast in Chicago to help them out. Star wide receiver Alshon Jeffrey left in the offseason to the Eagles, meaning there aren't any recognisable names at receiver. At least they'll have a good running game with Jordan Howard.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>Chicago finished in the top 10 for pass defence last year, but they finished near the bottom for both rush yards and points allowed. The Bears have always seemed to have strong linebackers, and this years group isn't too shaby either, with Leonard Floyd, Danny Trevathan and Willie Young all good starters. In the secondary, the pressure will be on corner Prince Amukamara to produce. One player to watch out for is rookie Eddie Jackson. A ball-hawking safety who would have been drafted a lot higher than the 4th round had it not been for his injury.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Jordan Howard, RB</h3>
+                        <p>Every year there's a player who comes out of nowhere to become a superstar. Last season it was the turn of former Indiana rookie running back Jordan Howard. Howard was a 5th rounder who most people had never heard of. He wasn't expected to start, but went on to run for over 1,300 yards and 6 touchdowns, earning himself a trip to the pro bowl in his rookie season.
+                        <br><br>Howard is a bigger back at over 6ft 1" tall. He has a great combination of size, speed, and power. He possesses a never say die attitude and always finishes off his runs with a purpose. He's become the shining light on a roster that's lacking much firepower. The Bears will be riding on his back all year again with so much uncertainty surrounding their QB situation.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcNorth/chiBears/players/howard.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>QB - Mitchell Trubisky (R). TE - Zach Miller. G - Kyle Long. OLB - Leonard Floyd. MLB - Danny Travathan. CB - Prince Amukamara.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcNorth/chiBears/unis/bearsHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcNorth/chiBears/unis/bearsHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcNorth/chiBears/unis/bearsAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcNorth/chiBears/unis/bearsAwJers.png">
+                </div>
+            </div>
+            <p>To get your Bears gear, <a href="http://store.chicagobears.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Soldier Field</h2>
+            </div>
+                <p>Soldier Field opened in 1924 and the Chicago Bears moved there in 1971. In 2016, Soldier Field became the second-oldest stadium in the league when the LA Rams began playing temporarily at the Los Angeles Memorial Coliseum, which opened a year earlier than Soldier Field. <br><br>Capacity: 61,500 </p>
+                <img id="stadCO" src="../../../img/teams/nfc/nfcNorth/chiBears/stadium/soldCO1.png">
+                <p class="stadLink">To find out more about Soldier Field and upcoming events, <a href="https://soldierfield.net/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Chicago</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Illinois</h4>
+                    <h4>Population: 617,594</h4>
+                    <p>Chicago, on Lake Michigan in Illinois, is among the largest cities in the U.S. Known as the "Windy City", it's famed for its bold architecture, it has a skyline punctuated by skyscrapers such as the iconic John Hancock Center, 1,451-ft. Willis Tower (formerly the Sears Tower) and the neo-Gothic Tribune Tower. The city is also renowned for its museums, including the Art Institute of Chicago with its noted Impressionist and Post-Impressionist works.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcNorth/chiBears/map/bearsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Chicago, <a href="https://www.choosechicago.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1985<br>(XX)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <h4 class="champHead">NFL Western - 2</h4>
+                            <p class="postDates">1956, 1963</p>
+                        <h4 class="champHead">NFC Champions - 2</h4>
+                            <p class="postDates">1985, 2006</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <div class="divFlex">
+                            <div>
+                                <h4 class="champHead">NFL Western - 8</h4>
+                                <p class="postDates">1933, 1934, 1937, 1940, 1941, 1942, 1943, 1946</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">NFC Central - 7</h4>
+                                <p class="postDates">1984, 1985, 1986, 1987, 1988, 1990, 2001</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">NFC North - 3</h4>
+                                <p class="postDates">2005, 2006, 2010</p>
+                            </div>
+                        </div>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 26</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1932, 1933, 1934, 1937, 1940, 1941, 1942, 1943, 1946, 1950, 1956, 1963, 1977, 1979, 1984, 1985, 1986, 1987, 1988, 1990, 1991, 1994, 2001, 2005, 2006, 2010</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 744 Losses: 568 Ties: 42 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 17 Losses: 18 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 761 Losses: 586 Ties: 42 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 27</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>George Halas, Founder/Owner/Coach<em> - Class of 1963</em></p>
+                                <p>Bronko Nagurski, FB <em> - Class of 1963</em></p>
+                                <p>Harold Grange, HB <em> - Class of 1963</em></p>
+                                <p>Ed Healey, T <em> - Class of 1964</em></p>
+                                <p>William Lyman, T <em> - Class of 1964</em></p>
+                                <p>George Trafton, C <em> - Class of 1964</em></p>
+                                <p>John Driscoll, QB<em> - Class of 1965</em></p>
+                                <p>Dan Fortmann, G <em> - Class of 1965</em></p>
+                                <p>Sid Luckman, QB <em> - Class of 1965</em></p>
+                                <p>George McAfee, HB <em> - Class of 1966</em></p>
+                                <p>Clyde Turner, C/LB <em> - Class of 1966</em></p>
+                                <p>Joe Stydahar, T <em> - Class of 1967</em></p>
+                                <p>Bill Hewitt, E <em> - Class of 1971</em></p>
+                                <p>Bill George, LB <em> - Class of 1974</em></p>
+                                <p>George Connor, T/LB <em> - Class of 1975</em></p>
+                                <p>Gale Sayers, HB <em> - Class of 1977</em></p>
+                                <p>Dick Butkus, LB <em> - Class of 1979</em></p>
+                                <p>George Blanda, QB <em> - Class of 1981</em></p>
+                                <p>Doug Atkins, DE <em> - Class of 1982</em></p>
+                                <p>George Musso, T/G <em> - Class of 1982</em></p>
+                                <p>Mike Ditka, TE <em> - Class of 1988</em></p>
+                                <p>Stan Jones, T <em> - Class of 1991</em></p>
+                                <p>Walter Payton, HB <em> - Class of 1993</em></p>
+                                <p>Jim Finks, GM <em> - Class of 1995</em></p>
+                                <p>Mike Singletary, LB <em> - Class of 1998</em></p>
+                                <p>Dan Hampton, DE <em> - Class of 2002</em></p>
+                                <p>Richard Dent, DE <em> - Class of 2011</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC NORTH</h2></li>
+                <!--BEARS-->
+                <li><a id="bears" class="divLogos" href="#">Chicago Bears</a></li>
+                <!--LIONS-->
+                <li><a id="lions" class="divLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <!--PACKERS-->
+                <li><a id="pack" class="divLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <!--VIKINGS-->
+                <li><a id="vikes" class="divLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Bears &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.chicagobears.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcNorth/chiBears/logo/bearsLogo.svg.png"></a>
+                        <a href="http://www.chicagobears.com/" target="_blank">Chicago Bears Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Chicago_Bears_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Chicago_Bears_Gear" target="_blank">NFL Shop - Bears</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/chicago-bears/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/chicago-bears/" target="_blank">Pro Football Hall of Fame - Bears</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/ChicagoBears/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/ChicagoBears/" target="_blank">Facebook - Bears</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/ChicagoBears" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/ChicagoBears" target="_blank">Twitter - Bears</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/chicagobears/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/chicagobears/" target="_blank">Instagram - Bears</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

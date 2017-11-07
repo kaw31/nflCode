@@ -1,0 +1,213 @@
+body {
+    background: #1a352e; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#1a352e, #1a352e, #ffb613); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1a352e, #1a352e, #ffb613); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1a352e, #1a352e, #ffb613); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1a352e, #1a352e, #ffb613); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ========= ROSTER ========== */
+
+.rosterBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/gbPackers/players/mike2.jpg);
+    background-position: top;
+}
+
+/* ========= OFFENCE ========== */
+
+.offenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/gbPackers/players/jordy1.jpg);
+    background-position: top;
+}
+
+/* ========= DEFENCE ========== */
+
+.defenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/gbPackers/players/clay2.jpg);
+    background-position: top;
+}
+
+/* ========= MVP ========== */
+
+.mvpBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/gbPackers/players/arod4.jpg);
+    background-position: top;
+}
+
+/* ========= UNIFORM ========== */
+
+.uniBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/gbPackers/players/leap2.jpg);
+    background-position: center;
+}
+
+/* ========= UNIS BUTTON ========== */
+
+.homeUniBtn {
+    border-radius: 10px 0 0 10px;
+}
+
+.altUniBtn {
+    border-radius: 0 10px 10px 0;
+}
+
+/* ========= STADIUM ========== */
+
+.stadBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/gbPackers/stadium/lamb3.jpg);
+    background-position: center;
+}
+
+/* ========= CITY ========== */
+
+.cityBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/nfc/nfcNorth/gbPackers/city/gb4.jpg);
+    background-position: top;
+}
+
+/* ========= RECORDS ========== */
+
+.supBowls {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.trophy {
+    height: 80px;
+    padding: 0;
+    margin-top: 5px;
+}
+
+/* ========= RECORDS ========== */
+
+.supBowls {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* ========= RECORDS ========== */
+
+.divFlex h4 {
+    margin: 5px 0 0;
+}
+
+/* ========= HEADINGS BG ========== */
+
+.rosterBg, .offenceBg, .defenceBg, .mvpBg, .uniBg, .stadBg, .cityBg {
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.headBgImgs {
+    height: 300px;
+}
+
+/* ========= DIV TEAM BG LOGOS ========== */
+
+#bears {
+    background-image: url(../../../../img/teams/nfc/nfcNorth/chiBears/logo/bearsLogo.svg.png);
+}
+
+#lions {
+    background-image: url(../../../../img/teams/nfc/nfcNorth/detLions/logo/lionsLogo.svg.png);
+}
+
+#pack {
+    background-image: url(../../../../img/teams/nfc/nfcNorth/gbPackers/logo/packersLogo.svg.png);
+}
+
+#vikes {
+    background-image: url(../../../../img/teams/nfc/nfcNorth/minVikings/logo/vikingsLogo.svg.png);
+}
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================ LARGE MOBILES ================== */
+
+@media only screen 
+and (min-width : 480px) 
+/*and (max-width : 1024px)  */
+{
+
+/* ========= REC ========== */
+    
+    .supBowls {
+        max-width: 100%;
+    }   
+    
+    .trophy {
+        height: 120px;
+        margin: 20px 0 0;
+    }
+    
+}
+
+/* ================ TABLETS ================== */
+
+@media only screen 
+and (min-width : 768px) 
+/*and (max-width : 1024px)  */
+{
+    
+    .divFlex  {
+        max-width: 1000px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    
+    .divFlex h4 {
+        margin: 25px 0 0;
+    } 
+    
+}
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+    
+    .headBgImgs {
+        background-position: center;
+    }
+    
+     .mvpBg {
+        height: 500px;
+        flex: 1;
+        border-right: 2px solid white;
+    }
+    
+    .cityBg {
+        flex: 1;
+        height: 550px;
+        margin: 0;
+        border-right: 2px solid white;
+    }
+    
+      
+    
+}
+

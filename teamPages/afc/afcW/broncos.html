@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Broncos</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/broncos.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcWest/denBroncos/logo/broncosTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Denver Broncos are based in Denver, Colorado. The team began play in 1960 as a charter member of the American Football League (AFL) and joined the NFL as part of the merger in 1970. The Broncos were barely competitive during their 10-year run in the AFL and their first seven years in the NFL. They did not complete a winning season until 1973. Since 1975, however, the Broncos have become one of the NFL's more successful teams, having suffered only six losing seasons.
+            <br>
+            <br>Former Hall of Fame QB and Denver legend John Elway has been the Broncos GM for the last six years. Denver loves Elway. As a player he lead the team to 2 Super Bowls, and as a general manager he has got the team back to another 2 in the last 4 years. Elway managed to convince future Hall of Famer Peyton Manning to join the Broncos, which led them to those recent Super Bowls. He's now got a tough task to find Manning's successor, with a lot of uncertainty surrending the Broncos QB position. </p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Vance Joseph</h3>
+                    <p>The Broncos' new-look offensive line is the key to the team's season. Denver's defense still has the talent to remain among the league's best. But the offense needs all the help it can get since the quarterback situation is still suspect. Thus, it falls on the big boys up front to set the tone. The acquisitions of Ronald Leary, Menelik Watson and first-round pick Garett Bolles change the overall dynamic. By being able to consistently win up front, life becomes far easier for the quarterback. Even so, neither Trevor Siemian nor Paxton Lynch is going to lift this team toward elite status. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>It'll be intersting to see who wins the quarterback battle between Siemian or former first round pick Paxton Lynch. Last year Lynch sat through most of the season to give him time to learn and develop as a starting QB. If Siemian beats him to the starting job again, then one has to wonder whether Lynch was a wasted pick. Whoever ends up starting will have great receivers to throw to, with Demaryius Thomas and Emmanuel Sanders both pro bowl level receivers. The ground game must improve from last year, having only finished 27th in rushing yards.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>The Broncos defence is deadly. Last season Denver finished in the top 4 for both yards and points allowed. This was largely down to Denver having the number 1 pass defence. Dubbed as the "No Fly Zone", Denver has arguably the best secondary in the NFL. They have pro bowlers at either starting corner position in Aqib Talib and Chris Harris Jr. The great pass defence helps their rushers get to the QB for plenty of sacks. Star linebacker Von Miller is one of the best in the game, with youngster Shane Ray helping on the other side. The only area they need to improve is against the run. 
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Von Miller, OLB</h3>
+                        <p>Von Miller is arguably the best pass rushing linebacker in the game. Only Oakland's Kalil Mack is on his level. Miller has only missed one pro bowl since entering the league in 2011. His greatest achievement came when he helped his team win Super Bowl 50, and in doing so becoming the Super Bowl MVP.
+                        <br><br>Few players play with as much tenacity or ferocity as Miller. Offensive lines constantly have to double team Miller in any attempt to try and slow him down. He's a QBs biggest nightmare, and already has 73 career sacks. Miller is always a contender for Defensive Player of the Year, and if he can emulate his form from previous seasons, then there's no reason to think he can't lead this franchise to another Super Bowl.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcWest/denBroncos/players/vonmvp.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>RB - C.J. Anderson. WR - Demaryius Thomas. WR - Emmanuel Sanders. DE - Derek Wolfe. OLB - Shane Ray. CB - Aqib Talib. CB - Chris Harris Jr.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button  class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcWest/denBroncos/unis/broncHm.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcWest/denBroncos/unis/broncHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcWest/denBroncos/unis/broncAw.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcWest/denBroncos/unis/broncAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcWest/denBroncos/unis/broncAlt.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcWest/denBroncos/unis/broncAltJers.png">
+                </div>
+            </div>
+            <p>To get your Broncos gear, <a href="https://shop.denverbroncos.com" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Sports Authority Field<br>at Mile High</h2>
+            </div>
+                <p>Sports Authority Field at Mile High, commonly known as Mile High or Mile High Stadium, opened in 2001 and is located in Denver. Known for one of the loudest atmosphere's in the NFL, plus opposing teams often struggle to adapt due to the high altitude in Denver. <br><br>Capacity: 76,125 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcWest/denBroncos/stadium/mileCO.png">
+                <p class="stadLink">To find out more about Sports Authority Field at Mile High and upcoming events, <a href="http://www.sportsauthorityfieldatmilehigh.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Denver</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Colorado</h4>
+                    <h4>Population: 682,545</h4>
+                    <p>Denver, the capital of Colorado, is a metropolis dating to the Old West era. It's known as "The Mile-High City" due to the high altitude. Larimer Square, the city’s oldest block, features landmark 19th-century buildings. Museums include the Denver Art Museum, an ultramodern complex known for its collection of indigenous works, and the mansion of famed Titanic survivor Molly Brown. Denver is also a jumping-off point for ski resorts in the nearby Rocky Mountains.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcWest/denBroncos/map/broncoMap.png">
+                </div>
+                <p class="cityLink">To find out more about Denver, <a href="https://www.denver.org/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1997<br>(XXXII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1998<br>(XXXIII)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2015<br>(L)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcChamp.png">
+                        <h4 class="champHead">AFC Champions - 8</h4>
+                            <p class="postDates">1977, 1986, 1987, 1989, 1997, 1998, 2013, 2015</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcWestLogo.png">
+                        <h4 class="champHead">AFC West - 18</h4>
+                            <p class="postDates">1977, 1978, 1984, 1986, 1987, 1989, 1991, 1996, 1998, 2005, 2011, 2012, 2013, 2014, 2015</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 22</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1977, 1978, 1979, 1983, 1984, 1986, 1987, 1989, 1991, 1993, 1996, 1997, 1998, 2000, 2003, 2004, 2005, 2011, 2012, 2013, 2014, 2015</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 465 Losses: 393 Ties: 10 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 23 Losses: 19 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 488 Losses: 412 Ties: 10 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 5</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                    <p>John Elway, QB <em> - Class of 2004</em></p>
+                                    <p>Gary Zimmerman, T <em> - Class of 2008</em></p>
+                                    <p>Floyd Little, RB <em> - Class of 2010</em></p>
+                                    <p>Shannon Sharpe, TE <em> - Class of 2011</em></p>
+                                    <p>Terrell Davis, RB <em> - Class of 2017</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC WEST</h2></li>
+                <!--BRONCOS-->
+                <li><a id="broncos" class="divLogos" href="#">Denver Broncos</a></li>
+                <!--CHIEFS-->
+                <li><a id="chiefs" class="divLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <!--CHARGERS-->
+                <li><a id="chargers" class="divLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <!--RAIDERS-->
+                <li><a id="raid" class="divLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Broncos &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.denverbroncos.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcWest/denBroncos/logo/broncosLogo.svg.png"></a>
+                        <a href="http://www.denverbroncos.com/" target="_blank">Denver Broncos Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Denver_Broncos_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Denver_Broncos_Gear" target="_blank">NFL Shop - Broncos</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/denver-broncos/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/denver-broncos/" target="_blank">Pro Football Hall of Fame - Broncos</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/Broncos/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/Broncos/" target="_blank">Facebook - Broncos</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/Broncos" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/Broncos" target="_blank">Twitter - Broncos</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/broncos/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/broncos/" target="_blank">Instagram - Broncos</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

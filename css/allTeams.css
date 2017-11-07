@@ -1,0 +1,838 @@
+body {
+    height: 100vh;
+    font-family: 'Cairo', sans-serif;
+    color: white;
+    width: 100%;
+    text-align: justify;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ========= STICKY NAVBAR ========== */
+
+#navbar {
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 2;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none; 
+    font-size: 0.9em; 
+    width: 70px;
+    box-sizing: content-box;
+}
+
+#navbar a:not(:first-child) {
+    border-left: 2px solid white;
+}
+
+#navbar a:nth-child(5) {
+    border-left: none;
+}
+
+#navbar a:hover {
+    background-color: rgba(255,255,255,0.9);
+    color: black; 
+}
+
+#navbar a:active {
+    box-shadow: inset 0 0 20px black;
+}
+
+.stickyNav {
+    margin-top: 60px;
+    position: fixed;
+    top: 0;
+}
+
+.stickyTeam {
+    padding-top: 72px;
+}
+
+/* ========= MAIN CONTENT ========== */
+
+.mainCont {
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: -5px 3px 70px rgba(255,255,255,0.3);
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+h2 {
+    padding: 0 20px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: 100;
+    padding: 0 20px;
+}
+
+h4 {
+    font-size: 1.1em;
+    font-weight: 100;
+    padding: 0 20px;
+    margin: 10px 0;
+}
+
+p {
+    padding: 20px;
+}
+
+/* ========= BANNER ========== */
+
+#banner {
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+/*    padding-top: 10px;*/
+}
+
+/* ========= ANCHOR FOR LINKS ========== */
+
+.anchor {
+   display: block;
+   height: 131px; /* this is the height of your header */
+   margin-top: -131px; /* this is again negative value of the height of your header */
+   visibility: hidden;
+}
+
+/* ========= HEADINGS POS ========== */
+
+.rosterBg h2, .offenceBg h2, .defenceBg h2, .mvpBg h2, .uniBg h2, .stadBg h2, .cityBg h2 {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 40%;
+    text-shadow: 2px 2px 20px black;
+} 
+
+  .headBgImgs {
+        height: 300px;
+    }
+
+/* ========= MVP ========== */
+
+#mvp {
+    height: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* ========= UNIS BUTTON ========== */
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 1.1em;
+    font-family: 'Cairo', sans-serif;
+    text-transform: uppercase;
+    border: 1px solid white;
+    background-color: rgba(0,0,0,0.2);
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: rgba(255,255,255,0.7);
+    color: black;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: inset 0 0 20px black;
+    color: black;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}
+
+/* ========= UNI/JERSEYS ========== */
+
+.flexUnis {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+.unis, .jerseys {
+    height: 250px;
+}
+
+.uniforms p {
+    text-align: center;
+}
+
+.uniforms a {
+    text-decoration: none;
+    color: white;
+}
+
+.uniforms a:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ========= STADIUM ========== */
+
+#stadCO {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.stadLink {
+    text-align: center;
+}
+
+.stadLink a {
+    text-decoration: none;
+    color: white;
+}
+
+.stadLink a:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ========= CITY ========== */
+
+#stateMap {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.cityLink {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cityLink a {
+    text-decoration: none;
+    color: white;
+}
+
+.cityLink a:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ========= RECORDS ========== */
+
+.records {
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin: 0 auto 30px;
+}
+
+.records h2 {
+    padding-top: 20px;
+    margin: 0;
+}
+
+.recSlideCont {
+    margin: 0 40px;
+}
+
+.bowlFlex {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.trophy {
+    height: 120px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.bowlFlex p {
+    margin: 0;
+    padding: 10px;
+}
+
+.bowlFlex div {
+    width: 80px;
+}
+
+.champHead {
+    margin-top: 30px;
+}
+
+.postLogos {
+    width: 120px;
+}
+
+.postDates {
+    word-spacing: 5px;
+    line-height: 2em;
+    margin: 0;
+    padding: 5px;
+}
+
+#playTroph {
+    margin-bottom: 20px;
+}
+
+#sinceRec {
+    margin: 0;
+    padding: 0 0 20px;
+}
+
+.wLT {
+    word-spacing: 10px;
+    padding: 0 20px;
+    margin: 0;
+}
+
+.total {
+    margin-top: 40px;
+}
+
+.allTimeFlex {
+    display: flex;
+    justify-content: space-around;
+}
+
+#hof {
+    width: 100px;
+}
+
+.hofIntro {
+    margin: 0;
+    padding: 0;
+}
+
+.hofPlayers p {
+    padding: 0;
+}
+
+.hofFlex {
+    height: 160px;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
+button {
+    font-size: 3em;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.2)
+}
+
+.btnLeft {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    padding: 0;
+    margin: 0;
+}
+
+.btnRight {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    padding: 0;
+    margin: 0;
+}
+
+/* ========= DIVISION ========== */
+
+.division {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.division h2 {
+    margin: 30px 0 50px;
+}
+
+/* ========= DIV TEAM BG LOGOS ========== */
+
+.divLogos {
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 20px 10px;
+}
+
+/* ========= DIVISION TABLE ========== */
+
+.divLists {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto 20px;
+    width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: -5px 3px 70px rgba(0,0,0,0.3);
+}
+
+.divLists h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    height: 65px;
+    margin: 0;
+    padding: 20px;
+}
+
+.divLists li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    width: 300px;
+    height: 65px;
+    padding-top: 20px;
+    padding-left: 90px;
+}
+
+.divLists li  {
+    background-color: rgba(255,255,255,0.2);
+    
+}
+
+.divLists li:nth-child(even)  {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.divLists li a:hover {
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+}
+
+.divLists li:hover:not(:first-child) {
+    transform: scale(1.1);
+}
+
+/* ========= EXTRAS ========== */
+
+.extras {
+    text-align: center;
+}
+
+.extras h2 {
+    margin: 50px 0;
+}
+
+.extras h3 {
+    max-width: 440px;
+    display: block;
+    margin: 0 auto;
+}
+
+.allLinks {
+    margin: 40px auto 50px;
+}
+
+.links {
+    margin: 10px auto;
+    width: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.linkImgs {
+    width: 50px;
+    margin: 0 10px;
+}
+
+.smImgs {
+    width: 40px;
+    margin: 0 15px 0 15px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+}
+
+.links:hover {
+/*    transform: scale(1.1);*/
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+} 
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================  MOBILE 1 ================== */
+
+@media only screen 
+and (min-width : 456px)
+{
+    #navbar a:nth-child(4), #navbar a:nth-child(8) {
+        border-right: 2px solid white;
+    }
+}
+
+/* ================  MOBILE 2 ================== */
+
+@media only screen 
+and (min-width : 736px)
+{
+    
+    .stickyNav {
+        width: 100%;
+    }
+    
+    .stickyTeam {
+        padding-top: 36px;
+    }
+    
+    #navbar a:last-child {
+        border-right: none;
+    }  
+    
+    .anchor {
+        display: block;
+        height: 95px; 
+        margin-top: -95px; 
+        visibility: hidden;
+    }
+}
+
+/* ================ TABLETS ================== */
+
+@media only screen 
+and (min-width : 768px) 
+/*and (max-width : 1024px)  */
+{
+    
+    #navbar a {
+        width: 64px;
+    }
+    
+    .stickyNav {
+        width: 90vw;
+        max-width: 1400px;
+    }
+    
+    .mainCont {
+        width: 90vw;
+        display: block;
+        margin: 0 auto;
+        padding: 0 0 5px;
+        margin-bottom: 50px;
+        max-width: 1400px;
+    }
+    
+    .headBgImgs {
+        height: 300px;
+    }
+    
+/* ========= MVP ========== */
+    
+    .mvpCont {
+        display: flex;
+        text-align: left;
+        margin-top: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .mvpInfo {
+        width: 65%;
+    }
+    
+    .mvpImg {
+        width: 35%;
+    }
+    
+    #mvp {
+        margin-right: 20px;
+    }
+    
+/* ========= UNIS ========== */
+    
+    .unis, .jerseys {
+        height: 300px;
+    }
+    
+/* ========= STAD ========== */
+    
+    #stadCO, #stateMap {
+        width: 400px;
+    }
+    
+}
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+    
+     #navbar a {
+        width: 70px;
+    }
+    
+    .headBgImgs {
+        background-position: center;
+    }
+    
+/* ========= ROST ========== */
+    
+    .roster {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    
+    .rosterCont, .offenceCont, .defenceCont {
+        flex: 1;
+    }
+    
+    .rosterBg {
+        border-right: 1px solid white;
+    }
+    
+    .offenceBg {
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+    }
+    
+    .defenceBg {
+        border-left: 1px solid white;
+    }
+    
+    .offenceCont p, .defenceCont p {
+        margin-top: 60px;
+    }
+    
+/* ========= MVP ========== */
+    
+    .mvpBg {
+        height: 500px;
+        background-position: center;
+        flex: 1;
+    }
+    
+    .mvp {
+        display: flex;
+        height: 500px;
+    }
+    
+    .mvp h3 {
+        margin-top: 0;
+    }
+    
+    .mvpCont {
+        flex: 2;
+        margin-top: 0;
+    }
+    
+    .mvpInfo {
+        width: 60%;
+    }
+    
+    .otherPlayers {
+        margin: 0 0 10px;
+        padding: 0 20px;
+    }
+    
+/* ========= UNIS / STAD ========== */
+    
+    .middleCont {
+        display: flex;
+        margin-bottom: 50px;
+    }
+    
+    .uniBg {
+        border-right: 1px solid white;
+        margin-bottom: 40px;
+    }
+    
+    .uniforms, .stadium {
+        flex: 1;
+    }
+    
+    .unis, .jerseys {
+        height: 280px;
+    }
+    
+   .stadBg {
+        border-left: 1px solid white;
+    }
+    
+    #stadCO {
+        width: 400px;
+    }
+    
+/* ========= CITY ========== */
+    
+    .city {
+        display: flex;
+        height: 550px;
+    }
+    
+    .cityBg {
+        flex: 1;
+        height: 550px;
+        margin: 0;
+    }
+    
+    .cityCont {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+/*        border-top: 2px solid white;*/
+/*        background-color: rgba(0,0,0,0.2);*/
+/*        flex-wrap: wrap;*/
+    }
+    
+    .cityInfo{
+        flex: 1;
+    }
+    
+    .cityImg {
+        flex: 1;
+        align-items: center;
+    }
+    
+    #stateMap {
+        width: 300px;
+    }
+    
+    #stateMap:hover, #stadCO:hover {
+        transform: scale(1.2);
+        cursor: crosshair;
+    }
+    
+    .cityLink {
+        width: 100%;
+        margin: 0 0 10px;
+        padding: 10px;
+    }
+    
+/* ========= REC ========== */
+    
+    .records {
+        margin-top: 0;
+    }
+    
+    .records h2 {
+        margin-top: 0;
+    }
+    
+    .records h3 {
+        font-size: 1.4em;
+        margin-top: 40px;
+    }
+    
+    .bowlFlex {
+        margin-top: 30px;
+    }
+    
+    .supBowls p {
+        font-size: 1.1em;
+    }
+    
+    .postLogos {
+        margin-top: 30px;
+    }
+    
+    .champHead {
+        font-size: 1.3em;
+    }
+    
+    .postDates {
+        font-size: 1.1em;
+        max-width: 900px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .allTimeFlex h4, .total h4 {
+        font-size: 1.2em;
+    }
+    
+    .wLT {
+        font-size: 1.1em;
+    }
+    
+    .hofIntro {
+        font-size: 1.1em;
+    }
+    
+    .hofPlayers {
+        display: flex;
+        justify-content: center;
+        font-size: 1.1em;
+        flex-wrap: wrap;
+    }
+    
+    .hofPlayers p {
+        margin: 30px;
+    }
+    
+/* ========= DIV / EXT ========== */
+    
+    .extraFlex {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .division, .extras {
+        flex: 1;
+    }
+    
+    .extras h2 {
+        margin: 30px 0 50px
+    }
+    
+    .extras h3 {
+        max-width: 480px;
+    }
+    
+    .division p {
+        margin-top: 30px;
+    }
+    
+}

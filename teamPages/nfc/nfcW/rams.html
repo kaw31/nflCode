@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Rams</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/rams.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcWest/laRams/logo/ramsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The franchise began in 1936 as the Cleveland Rams, and only moved to Los Angeles, California, in 1946, making way for Paul Brown's Cleveland Browns of the All-America Football Conference. After the 1994 NFL season, the Rams left California and moved east to St. Louis, Missouri. Between 1999 and 2001 the team was known as "the Greatest Show on Turf", after they set all sorts of records and were the most entertaining team to watch, winning their only Super Bowl along the way in 1999. Sadly for St. Louis, the team moved back to LA in 2016, after 22 years away from home.
+            <br>
+            <br>The Rams can only get better than their 4-12 record from last season. Jared Goff needed a season to acclimatise to the NFL, but in his second season with new offensive guru Head Coach Sean McVay things should be looking up. The Rams have potentially one of the most exciting rosters to watch this year. There should be another great show in Tinseltown this year. </p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Sean McVay</h3>
+                    <p>Sean McVay may or may not be an "offensive expert," but his hire by the Rams organisation is a massive step in the right direction after it was stuck in neutral under the guidance of Jeff Fisher. McVay's relationship with second-year quarterback Jared Goff will dictate the team's success. Goff already showed signs of improvement during the preseason. Plus, coordinator Wade Phillips will make sure to get the most out of the Rams defense. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>So much will be riding on last seasons no.1 overall pick Jared Goff to produce this time around. The Rams had the worst offence in the league, finishing in the bottom two in every category. However there are reasons to be optimistic. Todd Gurley is one of the league's best backs, and they've added weapons for Goff in Sammy Watkins and rookie Cooper Kupp. Plus Tavon Austin and Robert Woods are two dynamic receivers. Surely Goff will be better in his second seasons.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>Although the offence was poor last season, the defence held its own and finished in the top 10 in total defence. They possess one of the best defensive lines, with Michael Brockers, Robert Quinn and Aaron Donald all great players. Trumaine Johnson has turned into one of the better corners in the NFL, and will be the star man in the secondary. Defensive Co-ordinator Wade Phillips always finds a way to field a strong defence, and this year won't be any different.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Aaron Donald, DT</h3>
+                        <p>Todd Gurley is definitely the teams offensive MVP, but the heart and soul of this team and defensive MVP is superstar DT Aaron Donald. Donald is the most dominant interior rusher and defensive tackle the league has seen since Hall of Famer Warren Sapp. Donald is a top 5 defender in the NFL, and has made the pro bowl in each of his 3 seasons, including winning rookie of the year in 2014. 
+                        <br><br>It's crazy to think that Donald is already the best DT in the game at just 26 years old. It'll almost be unfair if he keeps improving. Aaron is quite short at his position, but using that to his advantage to get low, gain leverage and absolutely bull rush his way through blockers. If Donald stays healthy and plays at the same level, he'll go down as one of the defensive greats.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcWest/laRams/players/don.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>QB - Jared Goff. RB - Todd Gurley. WR - Sammy Watkins. WR - Tavon Austin. DE - Robert Quinn. DT - Michael Brockers. LB - Alec Ogletree. CB - Trumaine Johnson.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button  class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcWest/laRams/unis/ramsHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcWest/laRams/unis/ramsHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcWest/laRams/unis/ramsAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcWest/laRams/unis/ramsAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcWest/laRams/unis/ramsAlt.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcWest/laRams/unis/ramsAltJers.png">
+                </div>
+            </div>
+            <p>To get your Rams gear, <a href="http://www.ramsfanshop.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>L.A. Memorial Coliseum</h2>
+            </div>
+                <p>The L.A. Memorial Coliseum opened in 1923, and is home to the USC Trojans college team and hosted the Olympics 3 times. The Coliseum was home to the Rams from 1946 to 1979, and is serving as their home stadium again until the completion of Los Angeles Stadium at Hollywood Park in Inglewood, which they'll share with the Chargers. <br><br>Capacity: 93,607 </p>
+                <img id="stadCO" src="../../../img/teams/nfc/nfcWest/laRams/stadium/colCO1.png">
+                <p class="stadLink">To find out more about L.A. Memorial Coliseum and upcoming events, <a href="http://www.lacoliseum.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Los Angeles</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: California</h4>
+                    <h4>Population: 3,976,322</h4>
+                    <p>Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry. Near its iconic Hollywood sign, studios such as Paramount Pictures, Universal and Warner Brothers offer behind-the-scenes tours. On Hollywood Boulevard, TCL Chinese Theatre displays celebrities’ hand- and footprints, the Walk of Fame honors thousands of luminaries and vendors sell maps to stars’ homes.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcWest/laRams/map/ramsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Los Angeles, <a href="https://www.discoverlosangeles.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1999<br>(XXXIV)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <div class="confFlex">
+                            <div>
+                                <h4 class="champHead">NFL National - 2</h4>
+                                <p class="postDates">1950, 1951</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">NFL Western - 1</h4>
+                                <p class="postDates">1955</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">NFC Champions - 3</h4>
+                                <p class="postDates">1979, 1999, 2001</p>
+                            </div>
+                        </div>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <div class="divFlex">
+                            <div>
+                                <h4 class="champHead">NFL West - 2</h4>
+                                <p class="postDates">1945, 1949</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">NFL Coastal - 2</h4>
+                                <p class="postDates">1967, 1969</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">NFC West - 11</h4>
+                                <p class="postDates">1945, 1949, 1950, 1951, 1952, 1955, 1967, 1969, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1983, 1984, 1985, 1986, 1988, 1989, 1999, 2000, 2001, 2003, 2004</p>
+                            </div>
+                        </div>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 27</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1963, 1976, 1978, 1982, 1985, 1986, 1994, 1996, 1997, 1998, 2001, 2003, 2004, 2005, 2006, 2007, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 544 Losses: 554 Ties: 21 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 19 Losses: 24 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 563 Losses: 577 Ties: 21 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 18</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Bob Waterfield, QB <em> - Class of 1965</em></p>
+                                <p>Dan Reeves, Owner <em> - Class of 1967</em></p>
+                                <p>Elroy Hirsch, HB/E <em> - Class of 1968</em></p>
+                                <p>Tom Fears, E<em> - Class of 1970</em></p>
+                                <p>Norm Van Brocklin, QB <em> - Class of 1971</em></p>
+                                <p>Ollie Matson, HB <em> - Class of 1972</em></p>
+                                <p>Deacon Jones, DE <em> - Class of 1980</em></p>
+                                <p>Merlin Olsen, DT <em> - Class of 1982</em></p>
+                                <p>Eric Dickerson, RB <em> - Class of 1999</em></p>
+                                <p>Tom Mack, G <em> - Class of 1999</em></p>
+                                <p>Jack Youngblood, DE <em> - Class of 2001</em></p>
+                                <p>Jackie Slater, T <em> - Class of 2001</em></p>
+                                <p>George Allen, Coach <em> - Class of 2002</em></p>
+                                <p>Marshall Faulk, RB <em> - Class of 2011</em></p>
+                                <p>Les Richter, LB <em> - Class of 2011</em></p>
+                                <p>Orlando Pace, T <em> - Class of 2016</em></p>
+                                <p>Kevin Greene, LB/DE <em> - Class of 2016</em></p>
+                                <p>Kurt Warner, QB <em> - Class of 2017</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC WEST</h2></li>
+                <!--CARDS-->
+                <li><a id="cards" class="divLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <!--RAMS-->
+                <li><a id="rams" class="divLogos" href="#">Los Angeles Rams</a></li>
+                <!--49ERS-->
+                <li><a id="niners" class="divLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <!--SEAHAWKS-->
+                <li><a id="hawks" class="divLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Rams &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.therams.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcWest/laRams/logo/ramsLogo.svg.png"></a>
+                        <a href="http://www.therams.com/" target="_blank">Los Angeles Rams Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Los_Angeles_Rams_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Los_Angeles_Rams_Gear" target="_blank">NFL Shop - Rams</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/los-angeles-rams/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/los-angeles-rams/" target="_blank">Pro Football Hall of Fame - Rams</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/Rams/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/Rams/" target="_blank">Facebook - Rams</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/RamsNFL" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/RamsNFL" target="_blank">Twitter - Rams</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/rams/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/rams/" target="_blank">Instagram - Rams</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

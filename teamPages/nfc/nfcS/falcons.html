@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Falcons</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/falcons.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcSouth/atlFalcons/logo/falconsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Atlanta Falcons are based in Atlanta Georgie. They joined the NFL in 1965 as an expansion team, after the NFL offered then-owner Rankin Smith a franchise to keep him from joining the rival American Football League (AFL). Known as the "Dirt Birds", the Falcons are one of the oldest teams not to have won a Super Bowl. They have only appeared in the big game twice, but lost both times.
+            <br>
+            <br>Speaking of Super Bowl losses, the Falcons suffered the most heartbreaking Super Bowl defeat in the history of the NFL last year when they were defeated 34-28. At one point in the second half the Falcons were up 28-3, and what looked like guaranteed victory. The Falcons let the pressure get to them, but even worse let the greatest QB of all time, Tom Brady, recover from the biggest Super Bowl defecit (25 points) in history. And in overtime the Pats put the final nail in the coffin to stop Atlanta getting it's hands on their first ever Lombardi trophy. The city and team is still trying to recover from that loss, and what many people called the biggest choke in sports history. It will be intriguing to see how the Falcons bounce back this year.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Dan Quinn</h3>
+                    <p>The only thing that can prevent the Falcons from returning to a Super Bowl is themselves. The team is constructed as well as any in the league. But the dreaded Super Bowl hangover looms. As long as head coach Dan Quinn can keep his team goal-oriented and looking ahead instead of behind, Atlanta will compete to represent the NFC in another Super Bowl. The offense and defense are intact and could show improvements with the continued development of multiple young contributors. Atlanta's championship window remains wide open, and February's collapse doesn't change that fact. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>Atlanta's offence was on fire last year. They finished 2nd in total yards, 3rd in passing, 5th in rushing, and 1st in points scored. It was insane. The Falcons seemed to destroy most defences they faced all year, and boy was it fun to watch. Most of the pieces are still in place, with the Falcons having some of the best skill position players in the game. Julio Jones is the best wide receiver in the game alongside the Steelers' Antonio Brown. Julio is an absolute beast. Add in star running back Devonta Freeman to lead a deadly rush attack. To top it all of they are led by the reigning league MVP Matt Ryan. Look out NFL.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>Statistically Atlanta didn't have a very good defence last year, having finished 25th in total defence. However, this unit performed when it mattered the most - in the playoffs. The group stronger the further the season went on. Sadly apart from when it mattered most, at the end of the Super Bowl. The Falcons defence was all over Tom Brady in the first half, but couldn't keep up in the second. Still, most defences can't keep up with Brady, and considering how young this defence is, they didn't do too bad. There's plenty to be optimstic about with Vic Beasley Jr having a breakout year, and other nice pieces like CB Robert Alford playing well.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Matt Ryan, QB</h3>
+                        <p>Some people would argue that WR Julio Jones is the team's MVP, but considering the year Matt Ryan had last year (he did win league MVP honours afterall) it'd be cruel not to put him as the Falcon's most valuable player. Known as Matty Ice for his cool demeanor under pressure, he finally delivered the goods by leading the most exciting offence last year.
+                        <br><br>It's not Ryan's fault that the Falcons didn't win the Super Bowl. He played as well as he could have, given the game's circumstances with the team trying to just run out the clock. At 32 Ryan is in his peak and should still have several good seasons left in him. He has a great supporting cast, so Falcon fans should be optimistic that Matty Ice can lead them back to the Super Bowl, and hopefully win it this time.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcSouth/atlFalcons/players/ryan.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>RB - Devonta Freeman. WR - Julio Jones. WR - Mohammad Sanu. DT - Jarrett Grady. OLB - Vic Beasley Jr. CB - Robert Alford.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button  class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcSouth/atlFalcons/unis/falcHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcSouth/atlFalcons/unis/falcHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcSouth/atlFalcons/unis/falcAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcSouth/atlFalcons/unis/falcAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcSouth/atlFalcons/unis/falcAlt.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcSouth/atlFalcons/unis/falcAltJers.png">
+                </div>
+            </div>
+            <p>To get your Falcons gear, <a href="http://shop.atlantafalcons.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Mercedes-Benz Stadium</h2>
+            </div>
+                <p>Mercedes-Benz Stadium is the newest NFL stadium, having just opened in 2017. It's a state of the art stadium with a retractable roof that opens in the same fashion as a camera lens. The spectacular stadium is also home to the Atlanta United FC MLS soccer team.<br><br>Capacity: 71,000 </p>
+                <img id="stadCO" src="../../../img/teams/nfc/nfcSouth/atlFalcons/stadium/mercCO.png">
+                <p class="stadLink">To find out more about Mercedes-Benz Stadium and upcoming events, <a href="http://mercedesbenzstadium.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Atlanta</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Georgia</h4>
+                    <h4>Population: 472,522</h4>
+                    <p>Atlanta is the capital of the U.S. state of Georgia. It played an important part in both the Civil War and the 1960s Civil Rights Movement. Atlanta History Center chronicles the city's past, and the Martin Luther King Jr. National Historic Site is dedicated to the African-American leader’s life and times. Downtown, Centennial Olympic Park, built for the 1996 Olympics, encompasses the massive Georgia Aquarium.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcSouth/atlFalcons/map/falcMap.png">
+                </div>
+                <p class="cityLink">To find out more about Atlanta, <a href="https://www.atlanta.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+   
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/nfcChamp.png">
+                        <h4 class="champHead">AFC Champions - 2</h4>
+                            <p class="postDates">1998, 2016</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">NFC West - 2</h4>
+                            <p class="postDates">1980, 1998</p>
+                        <h4 class="champHead">NFC South - 4</h4>
+                            <p class="postDates">2004, 2010, 2012, 2016</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 13</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1978, 1980, 1982, 1991, 1995, 1998, 2002, 2004, 2008, 2010, 2011, 2012, 2016</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 341 Losses: 437 Ties: 6 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 9 Losses: 13 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 350 Losses: 450 Ties: 6 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 2</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            
+                            <div class="hofPlayers">
+                                <p>Deion Sanders, CB/KR <em> - Class of 2011</em></p>
+                                <p>Claude Humphrey, DE <em> - Class of 2014</em></p>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC SOUTH</h2></li>
+                <!--FALCONS-->
+                <li><a id="falc" class="divLogos" href="#">Atlanta Falcons</a></li>
+                <!--PANTHERS-->
+                <li><a id="panth" class="divLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <!--SAINTS-->
+                <li><a id="saints" class="divLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <!--BUCS-->
+                <li><a id="bucs" class="divLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Falcons &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.atlantafalcons.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcSouth/atlFalcons/logo/falconsLogo.svg.png"></a>
+                        <a href="http://www.atlantafalcons.com/" target="_blank">Atlanta Falcons Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Atlanta_Falcons_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Atlanta_Falcons_Gear" target="_blank">NFL Shop - Falcons</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/atlanta-falcons/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/atlanta-falcons/" target="_blank">Pro Football Hall of Fame - Falcons</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/atlanta-falcons/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/atlanta-falcons/" target="_blank">Facebook - Falcons</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/AtlantaFalcons" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/AtlantaFalcons" target="_blank">Twitter - Falcons</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/atlantafalcons/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/atlantafalcons/" target="_blank">Instagram - Falcons</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

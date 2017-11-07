@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Colts</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/colts.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcSouth/indColts/logo/coltsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Colts have been a member club of the NFL since their founding in 1953 in Baltimore. The Colts were one of three NFL teams to join the teams of the AFL to form the AFC following the 1970 NFL merger. The Colts played in two Super Bowl games while they were based in Baltimore, before relocating to Indianapolis in 1984, where they have made another two Super Bowl appearances.
+            <br>
+            <br>The Colts used to dominate the AFC South for years, especially during the Peyton Manning/Tony Dungy days. When Indy drafted Andrew Luck as Manning's successor, everyone thought this domination would continue for another decade. However, things haven't been plain sailing, with the emergence of divsion rivals the Texans having claimed top spot for the last couple of years. The other two teams in the division, the Titans and Jaguars, have finally got competitive squads, so Indy have a huge challenge in what's become a very strong division.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Chuck Pagano</h3>
+                    <p>Even in a best-case scenario, a .500 record may be a bit hard to obtain this season for the Colts based on current issues found within the organisation. Andrew Luck's timetable to return from offseason shoulder surgery has yet to be established. The defense hasn't been able to slow down first-team offenses it faced during its preseason games. If poor quarterback play continues in Luck's absense and the same defensive effort is evident during the regular season, eight wins will be a pipe dream. Only a healthy Luck and improved supporting cast can save the campaign. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>No one knows when or even IF star man Andrew Luck will play this year. Following his shoulder surgery, it will be up to either Scott Tolzien or newly acquired Jacoby Brisset to steady the ship under center. There are still a few nice weapons on offence, with pro bowler T.Y. Hilton always a deep threat. Aging running back Frank Gore will have to carry the load for a unit that usually relies on its passing attack, but will need a steady running game until Luck's return. Last season the Colts finished top 5 in passing, but the season hinges on Luck being able to come back strong.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>The Colts need help on defence. They had one of the worst defensive units last year, finishing near the bottom in every category. They will be hoping first round pick Malik Hooker will live up to his hype as a ball-hawking safety, in order to help a secondary that allowed far too many passing yards. Veteran corner Vontae Davis will also be trying to shut things down at the back. The rest of the defence lacks many big name players, so it will be up to them to rally together as unit if they want any succes this year. </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Andrew Luck, QB</h3>
+                        <p>The Colts got very lucky when they managed to get Andrew Luck with the number 1 overall pick in the 2012 draft. Future Hall of Famer Peyton Manning ran the show for years in Indianapolis, before a season ending injury ended the Colt's season, and allowed them to acquire the highest rated QB to enter the league since none other than Peyton Manning.
+                        <br><br>Luck has lived up to the hype since his time in Indy. He's made several Pro Bowls, showing off his great arm talent, leadership and deceptive elusiveness every year. Luck has quickly established himself as one of the best quarterbacks in the game already. The key is for him to stay healthy. Colts fans will be praying for a speedy recovery from his shoulder surgery if their team is going to have any hope of competing this year.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcSouth/indColts/players/luck.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>RB - Frank Gore. WR - T.Y. Hilton. CB - Vontae Davis. S - Malik Hooker (R).</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcSouth/indColts/unis/coltHm.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcSouth/indColts/unis/coltHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcSouth/indColts/unis/coltAw.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcSouth/indColts/unis/coltAwJers.png">
+                </div>
+            </div>
+            <p>To get your Colts gear, <a href="https://shop.colts.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Lucas Oil Stadium</h2>
+            </div>
+                <p>Lucas Oil Stadium opened in 2008, and is a multi-purpose stadium in downtown Indianapolis. The stadium is often referred to as "The House That Manning Built", due to the success of the Colts during the tenure of Peyton Manning as their quarterback. <br><br>Capacity: 62,421 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcSouth/indColts/stadium/lucasCO2.png">
+                <p class="stadLink">To find out more about Lucas Oil Stadium and upcoming events, <a href="http://www.lucasoilstadium.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Indianapolis</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Indiana</h4>
+                    <h4>Population: 855,164</h4>
+                    <p>Indianapolis, is the capital and largest city of the U.S. state of Indiana. It is in the East North Central region of the Midwestern United States. Indianapolis is within a single-day drive of 70 percent of the nation's population, lending to one of its nicknames as the "Crossroads of America". The city is perhaps best known for annually hosting the world's largest single-day sporting event, the Indianapolis 500.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcSouth/indColts/map/coltsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Indianapolis, <a href="https://www.visitindy.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                <div class="recSlides supBowls">
+                    <h3>Super Bowls</h3>
+                    <div class="bowlFlex">
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>1970<br>(V)</p>
+                        </div>
+                        <div>
+                            <img class="trophy" src="../../../img/nflLogos/lomTrophy.png">
+                            <p>2006<br>(XLI)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <h4 class="champHead">NFL Western - 4</h4>
+                            <p class="postDates">1958, 1959, 1964, 1968</p>
+                        <h4 class="champHead">AFC Champions - 3</h4>
+                            <p class="postDates">1970, 2006, 2009</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <div class="divFlex">
+                            <div>
+                                <h4 class="champHead">NFL Coastal - 1</h4>
+                                <p class="postDates">1968</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">AFC East - 6</h4>
+                                <p class="postDates">1970, 1975, 1976, 1977, 1987, 1999</p>
+                            </div>
+                            <div>
+                                <h4 class="champHead">AFC South - 9</h4>
+                                <p class="postDates">2003, 2004, 2005, 2006, 2007, 2009, 2010, 2013, 2014</p>
+                            </div>
+                        </div>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 27</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1958, 1959, 1964, 1965, 1968, 1970, 1971, 1975, 1976, 1977, 1987, 1995, 1996, 1999, 2000, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2012, 2013, 2014</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 502 Losses: 441 Ties: 7 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 22 Losses: 23 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 524 Losses: 464 Ties: 7 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 13</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Art Donovan, DT <em> - Class of 1968</em></p>
+                                <p>Gino Marchetti, DE <em> - Class of 1972</em></p>
+                                <p>Raymond Berry, E <em> - Class of 1973</em></p>
+                                <p>Jim Parker, G/T <em> - Class of 1973</em></p>
+                                <p>Lenny Moore, F/RB <em> - Class of 1975</em></p>
+                                <p>Weeb Ewbank, Coach <em> - Class of 1978</em></p>
+                                <p>Johnny Unitas, QB <em> - Class of 1979</em></p>
+                                <p>Ted Hendricks, LB <em> - Class of 1990</em></p>
+                                <p>John Mackey, TE <em> - Class of 1992</em></p>
+                                <p>Eric Dickerson, RB <em> - Class of 1999</em></p>
+                                <p>Bill Polian, Contributor <em> - Class of 2015</em></p>
+                                <p>Tony Dungy, Coach <em> - Class of 2016</em></p>
+                                <p>Marvin Harrison, WR <em> - Class of 2016</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC SOUTH</h2></li>
+                <!--TEXANS-->
+                <li><a id="tex" class="divLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <!--COLTS-->
+                <li><a id="colts" class="divLogos" href="#">Indianapolis Colts</a></li>
+                <!--JAGUARS-->
+                <li><a id="jags" class="divLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <!--TITANS-->
+                <li><a id="titan" class="divLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Colts &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.colts.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcSouth/indColts/logo/coltsLogo.svg.png"></a>
+                        <a href="http://www.colts.com/" target="_blank">Indianapolis Colts Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Indianapolis_Colts_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Indianapolis_Colts_Gear" target="_blank">NFL Shop - Colts</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/indianapolis-colts/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/indianapolis-colts/" target="_blank">Pro Football Hall of Fame - Colts</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/colts/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/colts/" target="_blank">Facebook - Colts</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/colts" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/colts" target="_blank">Twitter - Colts</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/colts/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/colts/" target="_blank">Instagram - Colts</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

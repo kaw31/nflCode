@@ -1,0 +1,156 @@
+body {
+    background: #ff3d00; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ff3d00, #ff3d00, #321d00); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ff3d00, #ff3d00, #321d00); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ff3d00, #ff3d00, #321d00); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ff3d00, #ff3d00, #321d00); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ========= ROSTER ========== */
+
+.rosterBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/cleBrowns/players/hue2.jpg);
+    background-position: top;
+}
+
+/* ========= OFFENCE ========== */
+
+.offenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/cleBrowns/players/duke1.jpg);
+    background-position: top;
+}
+
+/* ========= DEFENCE ========== */
+
+.defenceBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/cleBrowns/players/myles1.jpg);
+    background-position: top;
+}
+
+/* ========= MVP ========== */
+
+.mvpBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/cleBrowns/players/thomas1.jpg);
+    background-position: top;
+}
+
+/* ========= UNIFORM ========== */
+
+.uniBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/cleBrowns/players/rost1.jpeg);
+    background-position: top;
+}
+
+/* ========= UNIS BUTTON ========== */
+
+.homeUniBtn {
+    border-radius: 10px 0 0 10px;
+}
+
+.altUniBtn {
+    border-radius: 0 10px 10px 0;
+}
+
+/* ========= STADIUM ========== */
+
+.stadBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/cleBrowns/stadium/firsten2.jpg);
+    background-position: center;
+}
+
+/* ========= CITY ========== */
+
+.cityBg {
+    background: 
+    linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+        url(../../../../img/teams/afc/afcNorth/cleBrowns/city/cleve2.jpg);
+    background-position: center;
+}
+
+/* ========= HEADINGS BG ========== */
+
+.rosterBg, .offenceBg, .defenceBg, .mvpBg, .uniBg, .stadBg, .cityBg {
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.headBgImgs {
+    height: 300px;
+}
+
+/* ========= DIV TEAM BG LOGOS ========== */
+
+#ravs {
+    background-image: url(../../../../img/teams/afc/afcNorth/balRavens/logo/ravensLogo.svg.png);
+}
+
+#bengals {
+    background-image: url(../../../../img/teams/afc/afcNorth/cinBengals/logo/bengalsLogo.svg.png);
+}
+
+#browns {
+    background-image: url(../../../../img/teams/afc/afcNorth/cleBrowns/logo/brownsLogo.svg.png);
+}
+
+#steel {
+    background-image: url(../../../../img/teams/afc/afcNorth/pitSteelers/logo/steelersLogo.svg.png);
+}
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+    
+    .headBgImgs {
+        background-position: center;
+    }
+    
+     .mvpBg {
+        height: 500px;
+        flex: 1;
+        border-right: 2px solid white;
+    }
+    
+    .stadBg {
+        background-position: top;
+    }
+    
+    .cityBg {
+        flex: 1;
+        height: 550px;
+        margin: 0;
+        border-right: 2px solid white;
+    }
+    
+    .divFlex  {
+        max-width: 680px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    
+}
+

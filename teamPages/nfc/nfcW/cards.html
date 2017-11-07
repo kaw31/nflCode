@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Cardinals</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/cards.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcWest/ariCardinals/logo/cardsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>The Cardinals were founded as the Morgan Athletic Club in 1898, and are the oldest continuously run professional football team in the United States. The team was established in Chicago in 1898 and joined the NFL as a charter member in 1920. Along with the Chicago Bears, the club is one of two NFL charter member franchises still in operation since the league's founding. The club then moved to St. Louis in 1960 and played in that city through 1987. Before the 1988 season, the team moved west to Tempe, Arizona, a college suburb east of Phoenix, and were known as the Phoenix Cardinals, before finally changing their name to the now Arizona Cardinals in 1994. The Crds are the oldest team to have never one a Super bowl, and have only ever appeared in one in 2008.
+            <br>
+            <br>The Cardinals had a fairly disappointing season last year, finishing with a record of 7-8-1, and missing out on the playoffs. The team is running out of time to make a Super Bowl run, with an aging offence. However, there is still enough talent throughout this team, and Bruce Arians is considered to be one of the better coaches in the league, so maybe they have enough juice left to put together a good run.</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Bruce Arians</h3>
+                    <p>The window to compete for a championship is quickly closing in the desert. It may be now or never for the Cardinals, who rely heavily on two veterans seemingly on the verge of retirement. Carson Palmer and Larry Fitzgerald both considered walking away from the game this past offseason. Head coach Bruce Arians must maximize their final year(s), and he can do so with running back David Johnson as the offensive focal point. The defense is also one of the league's most flexible with multiple hybrid defenders. Calais Campbell's departure in free agency shouldn't be overlooked, though. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>Arizona finished in the top 10 for total yards, passing yards and points scored. They just need to improve the running attack, having finished just 19th in rushing yards. Although the team has one of the best runners in the game in David Johnson, they rely far too heavily on him, and need to take some of the pressure off him. Carson Palmer is still productive in his twilight years, and has nice targets in franchise legend Larry Fitzgerald and John Brown. but you have to wonder how much is left for Palmer. The aging QB won't be the answer for much longer, so the team will definitely have to start planning for life without him sooner than later.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>The Crds have one of the best defences in the game, which was evidence with them finishing 2nd overall in total defence. They have one of the best secondaries in the league, with superstars at both corner in Patrick Peterson, and at safety in Tyrann Mathieu. They have a great core of linebacker with Karlos Dansby, Chandler jones, and rookie Haason Reddick. The big question mark will be who can replace their fromer star DE Calais Campbell, who jumped ship to the Jaguars. Robert Nkemdiche has been a disappointment so far, but cards fans will be hoping for a breakout year from the aggressive d-lineman.
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>David Johnson, RB</h3>
+                        <p>Although Larry Fitzgerald has been the face of the franchise for what seems like forever, he's no longer the teams best player, ever since David Johnson burst onto the scene. Johnsons came out of nowhere when the Cardinals decided to start him with 5 games to go in his rookie season two years ago. He exploded straight into stardom and hasn't looked back. Last year, in his second season, he was named 1st team All Pro and was selected to the pro bowl.
+                        <br><br>Johnson is one of the most exciting players in the game, and many already consider him to be the best running back in the league. It may be too early to crown him the game's best back, but he sure isn't far off. Johnson has so much speed and power, and is just as effective in the passing game as he is running. Whenever he has the ball in his hands, look out.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcWest/ariCardinals/players/johnson.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>QB - Carson Palmer. WR - Larry Fitzgerald. OLB - Chandler Jones. LB - Karlos Dansby. CB - Patrick Peterson. S - Tyrann Mathieu.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button  class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcWest/ariCardinals/unis/cardsHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcWest/ariCardinals/unis/cardsHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcWest/ariCardinals/unis/cardsAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcWest/ariCardinals/unis/cardsAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcWest/ariCardinals/unis/cardsAlt.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcWest/ariCardinals/unis/cardsAltJers.png">
+                </div>
+            </div>
+            <p>To get your Cardinals gear, <a href="http://shop.azcardinals.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>University of Phoenix Stadium</h2>
+            </div>
+                <p>University of Phoenix Stadium was opened in 2006 and is located in Glendale, Arizona, west of Phoenix. Not only is the roof retractable, but an opening on one side of the stadium allows the playing field to move to the exterior of the building, allowing the entire natural turf playing surface to be exposed to daylight and also allowing the floor of the stadium to be used for any other purpose.  <br><br>Capacity: 63,400 </p>
+                <img id="stadCO" src="../../../img/teams/nfc/nfcWest/ariCardinals/stadium/phoCO.png">
+                <p class="stadLink">To find out more about University of Phoenix Stadium and upcoming events, <a href="http://www.universityofphoenixstadium.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Phoenix</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Arizona</h4>
+                    <h4>Population: 1,615,017</h4>
+                    <p>Phoenix is the capital of the southwestern U.S. state of Arizona. Known for its year-round sun and warm temperatures, it anchors a sprawling, multicity metropolitan area known as the Valley of the Sun. It's known for high-end spa resorts, Jack Nicklaus–designed golf courses and vibrant nightclubs. Other highlights include the Desert Botanical Garden, displaying cacti and numerous native plants.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcWest/ariCardinals/map/cardsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Phoenix, <a href="https://www.visitphoenix.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+    
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/nfcChamp.png">
+                        <h4 class="champHead">NFC Champions - 1</h4>
+                            <p class="postDates">2008</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <div class="divFlex">
+                            <div>
+                            <h4 class="champHead">NFL West - 2</h4>
+                                <p class="postDates">1947, 1948</p>
+                            </div>
+                            <div>
+                            <h4 class="champHead">NFC East - 2</h4>
+                                <p class="postDates">1974, 1975</p>
+                            </div>
+                            <div>
+                            <h4 class="champHead">NFC West - 3</h4>
+                                <p class="postDates">2008, 2009, 2015</p>
+                            </div>
+                        </div>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 10</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1947, 1948, 1974, 1975, 1982, 1998, 2008, 2009, 2014, 2015</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 542 Losses: 732 Ties: 40 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 7 Losses: 9 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 549 Losses: 741 Ties: 40 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 13</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Ernie Nevers, FB <em> - Class of 1963</em></p>
+                                <p>Jimmy Conzelman, QB/Coach/Owner <em> - Class of 1964</em></p>
+                                <p>Guy Chamberlain, E/DE <em> - Class of 1965</em></p>
+                                <p>John Driscoll, QB <em> - Class of 1965</em></p>
+                                <p>Charles W. Bidwill, Sr. - Owner/Admin <em> - Class of 1967</em></p>
+                                <p>Charley Trippi, HB/QB <em> - Class of 1968</em></p>
+                                <p>Ollie Matson, HB <em> - Class of 1972</em></p>
+                                <p>Dick Lane, CB <em> - Class of 1974</em></p>
+                                <p>Larry Wilsom, S <em> - Class of 1978</em></p>
+                                <p>Jackie Smith, TE <em> - Class of 1994</em></p>
+                                <p>Dan Dierdorf, T <em> - Class of 1996</em></p>
+                                <p>Roger Wehrli, CB <em> - Class of 2007</em></p>
+                                <p>Aeneas Williams, CB/S <em> - Class of 2014</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC WEST</h2></li>
+                <!--CARDS-->
+                <li><a id="cards" class="divLogos" href="#">Arizona Cardinals</a></li>
+                <!--RAMS-->
+                <li><a id="rams" class="divLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <!--49ERS-->
+                <li><a id="niners" class="divLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <!--SEAHAWKS-->
+                <li><a id="hawks" class="divLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Cardinals &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.azcardinals.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcWest/ariCardinals/logo/cardsLogo.svg.png"></a>
+                        <a href="http://www.azcardinals.com/" target="_blank">Arizona Cardinals Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Arizona_Cardinals_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Arizona_Cardinals_Gear" target="_blank">NFL Shop - Cardinals</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/arizona-cardinals/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/arizona-cardinals/" target="_blank">Pro Football Hall of Fame - Cardinals</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/arizonacardinals/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/arizonacardinals/" target="_blank">Facebook - Cardinals</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/AZCardinals" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/AZCardinals" target="_blank">Twitter - Cardinals</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/AZCardinals/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/AZCardinals/" target="_blank">Instagram - Cardinals</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

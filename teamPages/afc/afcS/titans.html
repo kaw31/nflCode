@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Titans</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/titans.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/afc/afcSouth/tenTitans/logo/titanTitle1.png">    
+  
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>Previously known as the Houston Oilers, the team began play in 1960 in Houston, Texas, as a charter member of the AFL. The team relocated from Houston to Tennessee in 1997, and played at the Liberty Bowl Memorial Stadium in Memphis for one season. The club moved to Nashville in 1998 and played in Vanderbilt Stadium. For those two years, the team was known as the "Tennessee Oilers", but changed its name to "Titans" in 1999.
+            <br>
+            <br>The Titans came so close to clinching their first playoff spot since 2008, but sadly came undone in the end when star quarterback Marcus Mariota's season ended with an injury. The Titans have been a bit of a yo-yo team the last few years: either terrible or above average. But this year's group look the real deal, having turned to a more old-school style of smashmouth football to wear down opponents. Could this be their year to shine?</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Mike Mularkey</h3>
+                    <p>The Titans are poised for a breakout campaign. After a surprising 9-7 campaign last year under head coach Mike Mularkey, the team only added to the core of talent and turned a couple of weaknesses into strengths. They invested heavily into their secondary, and the team also beefed up its wide receiver corps with the additions of fifth overall pick Corey Davis, third-round pick Taywan Taylor and the signing of veteran Eric Decker. It seems like the Titans have everything in place to make a push for the playoffs. A changing of the guard could be expected in the AFC South.</p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>The Titans have one of the best groung attacks in the entire NFL, thanks largely to their star running back duo of DeMarco Murray and Derrick Henry. They grind down their opponents on the ground, and it's no surprise that they finished 3rd in the league in rushing. It helps that they possess one of the top 5 offensive lines in the game. The line is nasty and do a good job of keeping franchise quarterback Marcus Mariota upright. Mariota has quietly been improving every year, and this could be the year he really breaks through thanks to his new receving weapons.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>Similarily to their offence, the defence is great in the run game but not so much in the air. Tennessee had the second best run stopping defence last year, thanks to beasts like Jurrell Casey and Brian Orakpo. However they must improve on their pass defence. General manager Jon Robinson signed Logan Ryan and Johnathan Cyprien and drafted Adoree' Jackson in the first round to improve upon last year's 30th-ranked pass defence. If their new players manage to gel and stop any aerial assualts, then the Titans could end up having one of the better defensive units in the league.   
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Marcus Mariota, QB</h3>
+                        <p>Marcus Mariota has quickly become the face of the franchise for the Titans, although he only turns 23 this season. Known more for his running ability than his passing in college, Mariota has surprised the league at how poised he is under center. He seems to have the perfect balance of knowing when to sit in the pocket or when to take off if he needs.
+                        <br><br>The Titans almost made the post season last year, but when Mariota got injuerd right at the end of the season it killed any playoff hopes. Everything is in place for him to succeed with a strong supporting cast around him, so if he can build off a great 2016 campaign then Titans fans will be hoping to make their first playoff appearance since 2008.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/afc/afcSouth/tenTitans/players/marcus.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>RB - DeMarco Murray. RB - Derrick Henry. TE - Delanie Walker. T - Taylor Lewan. T - Jack Conklin. DE - Jurrell Cassey. OLB - Brian Orakpo. CB - Adoree Jackson (R).</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+                <button  class="tablinks altUniBtn" onclick="openUni(event, 'AltUni')">Alternate</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcSouth/tenTitans/unis/titanHm.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcSouth/tenTitans/unis/titanHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcSouth/tenTitans/unis/titanAw.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcSouth/tenTitans/unis/titanAwJers.png">
+                </div>
+            </div>
+            <div id="AltUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/afc/afcSouth/tenTitans/unis/titanAlt.png">
+                    <img class="jerseys" src="../../../img/teams/afc/afcSouth/tenTitans/unis/titanAltJers.png">
+                </div>
+            </div>
+            <p>To get your Titans gear, <a href="https://www.titanslockerroom.com" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Nissan Stadium</h2>
+            </div>
+                <p>Nissan Stadium, formerly known as LP Field, was opened in 1999. It is located on the east bank of the Cumberland River, directly across the river from downtown Nashville. <br><br>Capacity: 69,143 </p>
+                <img id="stadCO" src="../../../img/teams/afc/afcSouth/tenTitans/stadium/nissanCO.png">
+                <p class="stadLink">To find out more about Nissan Stadium and upcoming events, <a href="http://www.titansonline.com/stadium/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Nashville</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Tennessee</h4>
+                    <h4>Population: 617,594</h4>
+                    <p>Nashville is the capital of the state of Tennessee. It is known as the center of the country music industry, earning it the nickname "Music City, U.S.A." Legendary country music venues include the Grand Ole Opry House, home of the famous “Grand Ole Opry” stage and radio show. The Country Music Hall of Fame and Museum and historic Ryman Auditorium are Downtown, as is the District, featuring honky-tonks with live music and the Johnny Cash Museum, celebrating the singer's life.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/afc/afcSouth/tenTitans/map/titanMap.png">
+                </div>
+                <p class="cityLink">To find out more about Nashville, <a href="http://www.visitmusiccity.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+                
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <img class="postLogos" src="../../../img/nflLogos/afcChamp.png">
+                        <h4 class="champHead">AFC Champions - 1</h4>
+                            <p class="postDates">1999</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <div class="divFlex">
+                        <div>
+                        <h4 class="champHead">AFL East - 4</h4>
+                            <p class="postDates">1960, 1961, 1962, 1967</p>
+                        </div>
+                        <div>
+                        <h4 class="champHead">AFC Central - 3</h4>
+                            <p class="postDates">1991, 1993, 2000</p>
+                        </div>
+                        <div>
+                        <h4 class="champHead">AFC South - 2</h4>
+                            <p class="postDates">2002, 2008</p>
+                        </div>
+                        </div>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 21</h3>
+                        <h4 class="champHead">AFL - 5</h4>
+                            <p class="postDates">1960, 1961, 1962, 1967, 1969</p>
+                        <h4 class="champHead">NFL - 16</h4>
+                            <p class="postDates">1978, 1979, 1980, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1999, 2000, 2002, 2003, 2007, 2008</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 413 Losses: 449 Ties: 6 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 14 Losses: 19 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 427 Losses: 468 Ties: 6 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 8</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>George Blanda, QB/K <em> - Class of 1981</em></p>
+                                <p>Ken Houston, S <em> - Class of 1986</em></p>
+                                <p>Earl Campbell, RB <em> - Class of 1991</em></p>
+                                <p>Mike Munchak, G <em> - Class of 2001</em></p>
+                                <p>Elvin Bethea, DE, LB <em> - Class of 2003</em></p>
+                                <p>Warren Moon, QB <em> - Class of 2006</em></p>
+                                <p>Bruce Matthews, G/C/T <em> - Class of 2007</em></p>
+                                <p>Curley Culp, DT <em> - Class of 2013</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>AFC SOUTH</h2></li>
+                <!--TEXANS-->
+                <li><a id="tex" class="divLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <!--COLTS-->
+                <li><a id="colts" class="divLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <!--JAGUARS-->
+                <li><a id="jags" class="divLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <!--TITANS-->
+                <li><a id="titan" class="divLogos" href="#">Tennessee Titans</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Titans &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.titansonline.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/afc/afcSouth/tenTitans/logo/titansLogo.svg.png"></a>
+                        <a href="http://www.titansonline.com/" target="_blank">Tennessee Titans Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Tennessee_Titans_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Tennessee_Titans_Gear" target="_blank">NFL Shop - Titans</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/tennessee-titans/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/tennessee-titans/" target="_blank">Pro Football Hall of Fame - Titans</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/titans/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/titans/" target="_blank">Facebook - Titans</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/Titans" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/Titans" target="_blank">Twitter - Titans</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/titans/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/titans/" target="_blank">Instagram - Titans</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

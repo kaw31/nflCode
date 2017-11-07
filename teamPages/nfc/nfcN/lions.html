@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>NFL Lions</title>
+    
+    <link href="../../../css/normalizer.css" rel="stylesheet" type="text/css" >
+    
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    
+    <link href="css/animate.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/navHead.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/allTeams.css" rel="stylesheet" type="text/css" >
+    <link href="css/lions.css" rel="stylesheet" type="text/css" >
+</head>
+    
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../../index.html"><img src="../../../img/nflLogos/nflLogo.png" id="nflLogo" ></a>
+            <h1>NFL TEAM GUIDE</h1>
+            <div class="dropdown">
+                <button onclick="myMenu()" class="dropbtn">&#9776;</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../../teamsMap.html">NFL Map</a>
+                    <a href="../../../stats.html">Stats</a>
+                    <a onclick="openNav()">Teams</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--========= TEAMS MODAL ==============-->
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h2>Team Finder</h2>
+
+	        <input type="text" id="myInput" onkeyup="myTeams()" placeholder="Search for teams..." title="Type in a name">
+
+            <ul id="myUL">
+                <li><a id="cardsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/cards.html">Arizona Cardinals</a></li>
+                <li><a id="falcsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/falcons.html">Atlanta Falcons</a></li>
+                <li><a id="ravsMod" class="modalLogos" href="../../../teamPages/afc/afcN/ravens.html">Baltimore Ravens</a></li>
+                <li><a id="billsMod" class="modalLogos" href="../../../teamPages/afc/afcE/bills.html">Buffalo Bills</a></li>
+                <li><a id="panthMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/panthers.html">Carolina Panthers</a></li>
+                <li><a id="bearsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <li><a id="bengMod" class="modalLogos" href="../../../teamPages/afc/afcN/bengals.html">Cincinnati Bengals</a></li>
+                <li><a id="brownsMod" class="modalLogos" href="../../../teamPages/afc/afcN/browns.html">Cleveland Browns</a></li>
+                <li><a id="cowsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/cowboys.html">Dallas Cowboys</a></li>
+                <li><a id="broncMod" class="modalLogos" href="../../../teamPages/afc/afcW/broncos.html">Denver Broncos</a></li>
+                <li><a id="lionsMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/lions.html">Detroit Lions</a></li>
+                <li><a id="packMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <li><a id="texMod" class="modalLogos" href="../../../teamPages/afc/afcS/texans.html">Houston Texans</a></li>
+                <li><a id="coltsMod" class="modalLogos" href="../../../teamPages/afc/afcS/colts.html">Indianapolis Colts</a></li>
+                <li><a id="jagsMod" class="modalLogos" href="../../../teamPages/afc/afcS/jags.html">Jacksonville Jaguars</a></li>
+                <li><a id="chiefsMod" class="modalLogos" href="../../../teamPages/afc/afcW/chiefs.html">Kansas City Chiefs</a></li>
+                <li><a id="chargMod" class="modalLogos" href="../../../teamPages/afc/afcW/chargers.html">Los Angeles Chargers</a></li>
+                <li><a id="ramsMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/rams.html">Los Angeles Rams</a></li>
+                <li><a id="dolphMod" class="modalLogos" href="../../../teamPages/afc/afcE/dolphins.html">Miami Dolphins</a></li>
+                <li><a id="vikesMod" class="modalLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+                <li><a id="patsMod" class="modalLogos" href="../../../teamPages/afc/afcE/patriots.html">New England Patriots</a></li>
+                <li><a id="saintsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/saints.html">New Orleans Saints</a></li>
+                <li><a id="giantsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/giants.html">New York Giants</a></li>
+                <li><a id="jetsMod" class="modalLogos" href="../../../teamPages/afc/afcE/jets.html">New York Jets</a></li>
+                <li><a id="raidMod" class="modalLogos" href="../../../teamPages/afc/afcW/raiders.html">Oakland Raiders</a></li>
+                <li><a id="eagMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/eagles.html">Philadelphia Eagles</a></li>
+                <li><a id="steelMod" class="modalLogos" href="../../../teamPages/afc/afcN/steelers.html">Pittsburgh Steelers</a></li>
+                <li><a id="ninersMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/niners.html">San Francisco 49ers</a></li>
+                <li><a id="seaMod" class="modalLogos" href="../../../teamPages/nfc/nfcW/seahawks.html">Seattle Seahawks</a></li>
+                <li><a id="bucsMod" class="modalLogos" href="../../../teamPages/nfc/nfcS/bucs.html">Tampa Bay Buccaneers</a></li>
+                <li><a id="titMod" class="modalLogos" href="../../../teamPages/afc/afcS/titans.html">Tennessee Titans</a></li>
+                <li><a id="skinsMod" class="modalLogos" href="../../../teamPages/nfc/nfcE/redskins.html">Washington Redskins</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- ============ TEAM LOGO  ============== -->
+    
+        <img id="banner" src="../../../img/teams/nfc/nfcNorth/detLions/logo/lionsTitle.png">    
+    
+    
+    
+    <section class="mainCont">
+        
+        <div id="navbar">
+            <a href="#">Top</a>
+            <a href="#rosterPg">Roster</a>
+            <a href="#mvpPg">MVP</a>
+            <a href="#unisPg">Uniforms</a>
+            <a href="#stadPg">Stadium</a>
+            <a href="#cityPg">City</a>
+            <a href="#recPg">Records</a>
+            <a href="#divPg">Division</a>
+        </div>
+        
+        
+        
+<!-- ============  INTRO  ============== -->
+    <div id="teamCont">
+        <div class="intro">
+            <p>Originally based in Portsmouth, Ohio and called the Portsmouth Spartans, the team formally joined the NFL in 1930 and began play in the 1930 season. Despite success within the NFL, they could not survive in Portsmouth, which was then the NFL's smallest city. The team was purchased and relocated to Detroit for the 1934 season. The Lions are one of four current teams and the only NFC team to have not yet played in the Super Bowl, and also haven't won their division since 1993.
+            <br>
+            <br>The Lions went 9-7 last season, but went home early in the playoffs. Although the Lions have been a good team for the last few seasons, they need to push on and become a great team if they are going to make any noise in the playoffs. Detroit play in one of the toughest divisions in the league in the NFC North. It seems like the Packers have dominated the division in recent years under Aaron Rodgers. Could the Lions be the team to dethrone the Packers this time?</p>
+        </div>
+        
+<!-- ============  ROSTER  ============== -->
+    <span class="anchor" id="rosterPg"></span>
+        <div class="roster">
+            <div class="rosterCont">
+                <div class="rosterBg headBgImgs">
+                    <h2>Roster</h2>
+                </div>
+                    <h3>Head Coach: Jim Caldwell</h3>
+                    <p>The Lions are teetering on the precipice of becoming a very good team or a poor one. Last year's eight fourth-quarter comeback victories set an NFL record. The team backed into the playoffs after losing its final four contests. However, Detroit features quarterback Matthew Stafford, who has MVP potential, and multiple talented targets. Issues at left tackle and an inability to generate a pass rush are the two areas that could hold the franchise back. </p>
+            </div>
+            <div class="offenceCont">
+                <div class="offenceBg headBgImgs">
+                    <h2>OFFENCE</h2>
+                </div>
+                     <p>The Lions always have a lethal pass attack with Matthew Stafford running the show. They have some nice weapons for Stafford to target in Golden Tate, Marvin Jones and Eric Ebron. It's the running game that needs to wake up, having finished a poor 30th last year. It will be up to Ameer Abdullah and Theo Riddick to split the shift at running back, and hopefully become a two-headed monster. The offensive line is another question mark.</p> 
+            </div>
+            <div class="defenceCont">
+                <div class="defenceBg headBgImgs">
+                    <h2>DEFENCE</h2>
+                </div>
+                    <p>Detroit has an above average defence, which showed last year by finishing above the league average in most categories. There's a good mix of youth and experience. Vets like Haloti Ngata, Ziggy Ansah and Glover Quin will be relied upon a lot this year. With rookie Jarrad Davis and up-and-coming lockdown corner Darius Slay Jr breathing new life into this unit. Can they keep up with A-Rod and the Packers in this division though?
+                    </p>
+            </div>
+        </div>
+        
+        <span class="anchor" id="mvpPg"></span>
+            <div class="mvp">
+            <div class="mvpBg headBgImgs">
+                <h2>MVP</h2>
+            </div>
+                <div class="mvpCont">
+                    <div class="mvpInfo">
+                    <h3>Matthew Stafford, QB</h3>
+                        <p>Matthew Stafford has bags of talent. He probably has the biggest arm in the NFL right now. With just a flick of his wrist he can throw absolute bombs down the field. The former no.1 overall pick has been playing outstanding since his breakthrough season in 2011. It's criminal to think that Stafford has only been selected to one pro bowl. 
+                        <br><br>Stafford is known for his fourth quarter comeback victories. It seems like every other game he's dragging Detroit out of losing situations. Some have even dubbed him the Motown Miracle Worker because of it. Since his old favourite target Calvin Johnson retired, it's not been as easy for Stafford, but he's definitely proven that he's a top QB in this league. If he stays healthy, Detroit is always in with a chance.</p>
+                    </div>
+                    <div class="mvpImg">
+                        <img id="mvp" src="../../../img/teams/nfc/nfcNorth/detLions/players/staff.png">
+                    </div>
+                    <p class="otherPlayers">Other notable players: <em>WR - Golden Tate. TE - Eric Ebron. DT - Haloti Ngata. DE - Ezekiel 'Ziggy' Ansah. CB - Darius Slay. S - Glover Quin.</em></p>
+                </div>
+                
+            </div>
+            
+        
+        
+<!-- ============  UNIFORMS  ============== -->
+    <span class="anchor" id="unisPg"></span>
+    <div class="middleCont">
+        <div class="uniforms">
+            <div class="uniBg headBgImgs">
+                <h2>Uniforms</h2>
+            </div>
+            <div class="tab">
+                <button class="tablinks homeUniBtn" onclick="openUni(event, 'HomeUni')" id="defaultOpen">Home</button>
+                <button  class="tablinks awayUniBtn" onclick="openUni(event, 'AwayUni')">Away</button>
+            </div>
+            <div id="HomeUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcNorth/detLions/unis/lionsHm.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcNorth/detLions/unis/lionsHmJers.png">
+                </div>
+            </div>
+            <div id="AwayUni" class="tabcontent">
+                <div class="flexUnis">
+                    <img class="unis" src="../../../img/teams/nfc/nfcNorth/detLions/unis/lionsAw.png">
+                    <img class="jerseys" src="../../../img/teams/nfc/nfcNorth/detLions/unis/lionsAwJers.png">
+                </div>
+            </div>
+            <p>To get your Lions gear, <a href="http://shop.detroitlions.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+        
+<!-- ============  STADIUM  ============== -->
+    <span class="anchor" id="stadPg"></span>
+         <div class="stadium">
+            <div class="stadBg headBgImgs">
+                <h2>Ford Field</h2>
+            </div>
+                <p>Ford Field is a multi-purpose domed stadium located in Downtown Detroit, Michigan, and opened in 2002. The stadium's design incorporates a six-story former Hudson's warehouse, which was constructed in the 1920s. <br><br>Capacity: 65,000 </p>
+                <img id="stadCO" src="../../../img/teams/nfc/nfcNorth/detLions/stadium/fordCO.png">
+                <p class="stadLink">To find out more about Ford Field and upcoming events, <a href="https://www.fordfield.com/" target="_blank">CLICK HERE</a></p>
+        </div>
+    </div>
+<!-- ============  CITY  ============== -->
+    <span class="anchor" id="cityPg"></span>
+         <div class="city">
+            <div class="cityBg headBgImgs">
+                <h2>Detroit</h2>
+            </div>
+            <div class="cityCont">
+                <div class="cityInfo">
+                    <h4>State: Michigan</h4>
+                    <h4>Population: 672,795</h4>
+                    <p>Detroit is the largest city in the midwestern state of Michigan. Near Downtown, the neoclassical Detroit Institute of Arts is famed for the Detroit Industry Murals painted by Diego Rivera, and inspired by the city’s ties to the auto industry, giving it the nickname "Motor City." Detroit is also the birthplace of Motown Records, whose chart-topping history is on display at their original headquarters, Hitsville U.S.A.</p>
+                </div>
+                <div class="cityImg">
+                    <img id="stateMap" src="../../../img/teams/nfc/nfcNorth/detLions/map/lionsMap.png">
+                </div>
+                <p class="cityLink">To find out more about Detroit, <a href="https://visitdetroit.com/" target="_blank">CLICK HERE</a></p>
+            </div>
+        </div>
+    
+<!-- ============  RECORDS  ============== -->
+    <span class="anchor" id="recPg"></span>
+        <div class="records">
+            <h2>Records</h2>
+            <!-- ============  SUPER BOWLS  ============== -->
+            <div class="recSlideCont">
+
+                <!-- ============  CONFERENCE  ============== -->
+                <div class="recSlides">
+                    <h3>Conference Champions</h3>
+                        <h4 class="champHead">NFL National - 1</h4>
+                            <p class="postDates">1952</p>
+                        <h4 class="champHead">NFL Western - 3</h4>
+                            <p class="postDates">1953, 1954, 1957</p>
+                </div>
+                <!-- ============  DIVISION  ============== -->
+                <div class="recSlides">
+                    <h3>Division Champions</h3>
+                        <h4 class="champHead">NFL West - 1</h4>
+                            <p class="postDates">1935</p>
+                        <h4 class="champHead">NFC Central - 3</h4>
+                            <p class="postDates">1983, 1991, 1993</p>
+                </div>
+                <!-- ============  PLAYOFFS  ============== -->
+                <div class="recSlides">
+                    <h3>Playoff Appearances - 18</h3>
+                        <img class="postLogos" id="playTroph" src="../../../img/nflLogos/playoffs.png">
+                        <p class="postDates">1932, 1935, 1952, 1953, 1954, 1957, 1970, 1982, 1983, 1991, 1993, 1994, 1995, 1997, 1999, 2011, 2014, 2016</p>
+                </div>
+                <!-- ============  ALL TIME RECORDS  ============== -->
+                <div class="recSlides">
+                    <h3>All Time Record</h3>
+                        <p id="sinceRec">(Since end of 2016 Season)</p>
+                        <div class="allTimeFlex">
+                            <div>
+                                <h4>Regular Season</h4>
+                                <p class="wLT">Wins: 544 Losses: 631 Ties: 32 </p>
+                            </div>
+                            <div>
+                                <h4>Post Season</h4>
+                                <p class="wLT">Wins: 7 Losses: 13 </p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total</h4>
+                            <p class="wLT">Wins: 551 Losses: 654 Ties: 32 </p>
+                        </div>
+                </div>
+                <!-- ============  HOF  ============== -->
+                <div class="recSlides">
+                    <h3>Hall of Famers - 15</h3>
+                        <div>
+                            <img id="hof" src="../../../img/nflLogos/hofGoldLogo.png">
+                        </div>
+                        <div class="hofFlex">
+                            <div class="hofPlayers">
+                                <p>Earl Clark, QB <em> - Class of 1963</em></p>
+                                <p>Bill Dudley, HB <em> - Class of 1966</em></p>
+                                <p>Bobby Layne, QB <em> - Class of 1967</em></p>
+                                <p>Alex Wojciechowicz, C/LB <em> - Class of 1968</em></p>
+                                <p>Jack Christiansen, DB <em> - Class of 1970</em></p>
+                                <p>Joe Schmidt, LB <em> - Class of 1973</em></p>
+                                <p>Dick Lane, CB <em> - Class of 1974</em></p>
+                                <p>Yale Lary, DB <em> - Class of 1979</em></p>
+                                <p>Doak Walker, HB <em> - Class of 1986</em></p>
+                                <p>Lem Barney, CB <em> - Class of 1992</em></p>
+                                <p>Lou Creekmur, T/G <em> - Class of 1996</em></p>
+                                <p>Barry Sanders, HB <em> - Class of 2004</em></p>
+                                <p>Charlie Snaders, TE <em> - Class of 2007</em></p>
+                                <p>Dick Lebeau, CB <em> - Class of 2010</em></p>
+                                <p>Dick Stanfel, G <em> - Class of 2016</em></p>
+                            </div>
+                        </div>
+                </div>
+
+                        
+
+            </div>
+
+            <button class="slideBtn btnLeft" onclick="plusDivs(-1)">&#10094;</button>
+
+            <button class="slideBtn btnRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        
+<!-- ============  DIVISION  ============== -->
+    <span class="anchor" id="divPg"></span>
+        <div class="extraFlex">
+        <div class="division">
+            <h2>DIVISION</h2>
+            <ul class="divLists">
+                <li><h2>NFC NORTH</h2></li>
+                <!--BEARS-->
+                <li><a id="bears" class="divLogos" href="../../../teamPages/nfc/nfcN/bears.html">Chicago Bears</a></li>
+                <!--LIONS-->
+                <li><a id="lions" class="divLogos" href="#">Detroit Lions</a></li>
+                <!--PACKERS-->
+                <li><a id="pack" class="divLogos" href="../../../teamPages/nfc/nfcN/packers.html">Green Bay Packers</a></li>
+                <!--VIKINGS-->
+                <li><a id="vikes" class="divLogos" href="../../../teamPages/nfc/nfcN/vikings.html">Minnesota Vikings</a></li>
+            </ul>
+            <p>Click on any team to find out more about them</p>
+        </div>
+        
+<!-- ============  EXTRA LINKS  ============== -->
+        
+        <div class="extras">
+            <h2>Extra Links</h2>
+                <h3>For all your latest Lions &amp; NFL info and merchandise, click on the following links:</h3>
+                <div class="allLinks">
+                    <div class="links">
+                        <a href="http://www.detroitlions.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/teams/nfc/nfcNorth/detLions/logo/lionsLogo.svg.png"></a>
+                        <a href="http://www.detroitlions.com/" target="_blank">Detroit Lions Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.nflshop.com/Detroit_Lions_Gear" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nfl-shop.png"></a>
+                        <a href="http://www.nflshop.com/Detroit_Lions_Gear" target="_blank">NFL Shop - Lions</a>
+                    </div>
+                    <div class="links">
+                        <a href="http://www.profootballhof.com/teams/detroit-lions/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/hofColLogo.png"></a>
+                        <a href="http://www.profootballhof.com/teams/detroit-lions/" target="_blank">Pro Football Hall of Fame - Lions</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nfl.com" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflLogo.png"></a>
+                        <a href="https://www.nfl.com" target="_blank">NFL Official Website</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.nflpa.com/" target="_blank">
+                        <img class="linkImgs" src="../../../img/nflLogos/nflPA1.png"></a>
+                        <a href="https://www.nflpa.com/" target="_blank">NFL Players Association</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/DetroitLions/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/fb.png"></a>
+                        <a href="https://www.facebook.com/DetroitLions/" target="_blank">Facebook - Lions</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://twitter.com/Lions" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/twitter.png"></a>
+                        <a href="https://twitter.com/Lions" target="_blank">Twitter - Lions</a>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.instagram.com/detroitlionsnfl/" target="_blank">
+                        <img class="linkImgs smImgs" src="../../../img/socialMedia/insta.png"></a>
+                        <a href="https://www.instagram.com/detroitlionsnfl/" target="_blank">Instagram - Lions</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+    
+<script src="../../../js/homeScript.js"></script>
+<script src="../../../js/teamsScript.js"></script>
+    
+</body>
+    
+</html>

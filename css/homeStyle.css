@@ -1,0 +1,290 @@
+body {
+    height: 100vh;
+    background: #05114a; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#05114a, #4872a7); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#05114a, #4872a7); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#05114a, #4872a7); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#05114a, #4872a7); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Cairo', sans-serif;
+    color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ================ TEAM BG LOGOS ================== */
+
+.divLogos {
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 20px 10px;
+}
+
+#cards {
+    background-image: url(../img/teams/nfc/nfcWest/ariCardinals/logo/cardsLogo.svg.png);
+}
+
+#falc {
+    background-image: url(../img/teams/nfc/nfcSouth/atlFalcons/logo/falconsLogo.svg.png);
+}
+
+#ravs {
+    background-image: url(../img/teams/afc/afcNorth/balRavens/logo/ravensLogo.svg.png);
+}
+
+#bills {
+    background-image: url(../img/teams/afc/afcEast/bufBills/logo/billsLogo.svg.png);
+}
+
+#panth {
+    background-image: url(../img/teams/nfc/nfcSouth/carPanthers/logo/panthersLogo.svg.png);
+}
+
+#bears {
+    background-image: url(../img/teams/nfc/nfcNorth/chiBears/logo/bearsLogo.svg.png);
+}
+
+#beng {
+    background-image: url(../img/teams/afc/afcNorth/cinBengals/logo/bengalsLogo.svg.png);
+}
+
+#browns {
+    background-image: url(../img/teams/afc/afcNorth/cleBrowns/logo/brownsLogo.svg.png);
+}
+
+#cows {
+    background-image: url(../img/teams/nfc/nfcEast/dalCowboys/logo/cowboysLogo.svg.png);
+}
+
+#bronc {
+    background-image: url(../img/teams/afc/afcWest/denBroncos/logo/broncosLogo.svg.png);
+}
+
+#lions {
+    background-image: url(../img/teams/nfc/nfcNorth/detLions/logo/lionsLogo.svg.png);
+}
+
+#pack {
+    background-image: url(../img/teams/nfc/nfcNorth/gbPackers/logo/packersLogo.svg.png);
+}
+
+#tex {
+    background-image: url(../img/teams/afc/afcSouth/houTexans/logo/texansLogo.svg.png);
+}
+
+#colts {
+    background-image: url(../img/teams/afc/afcSouth/indColts/logo/coltsLogo.svg.png);
+}
+
+#jags {
+    background-image: url(../img/teams/afc/afcSouth/jaxJaguars/logo/jaguarsLogo.svg.png);
+}
+
+#chiefs {
+    background-image: url(../img/teams/afc/afcWest/kcChiefs/logo/chiefsLogo.svg.png);
+}
+
+#charg {
+    background-image: url(../img/teams/afc/afcWest/laChargers/logo/chargersLogo.svg.png);
+}
+
+#rams {
+    background-image: url(../img/teams/nfc/nfcWest/laRams/logo/ramsLogo.svg.png);
+}
+
+#dolph {
+    background-image: url(../img/teams/afc/afcEast/miaDolphins/logo/dolphinsLogo.svg.png);
+}
+
+#vikes {
+    background-image: url(../img/teams/nfc/nfcNorth/minVikings/logo/vikingsLogo.svg.png);
+}
+
+#pats {
+    background-image: url(../img/teams/afc/afcEast/nePatriots/logo/patriotsLogo.svg.png);
+}
+
+#saints {
+    background-image: url(../img/teams/nfc/nfcSouth/noSaints/logo/saintsLogo.svg.png);
+}
+
+#giant {
+    background-image: url(../img/teams/nfc/nfcEast/nyGiants/logo/giantsLogo.svg.png);
+}
+
+#jets {
+    background-image: url(../img/teams/afc/afcEast/nyJets/logo/jetsLogo.svg.png);
+}
+
+#raid {
+    background-image: url(../img/teams/afc/afcWest/oakRaiders/logo/raidersLogo.svg.png);
+}
+
+#eag {
+    background-image: url(../img/teams/nfc/nfcEast/phiEagles/logo/eaglesLogo.svg.png);
+}
+
+#steel {
+    background-image: url(../img/teams/afc/afcNorth/pitSteelers/logo/steelersLogo.svg.png);
+}
+
+#niners {
+    background-image: url(../img/teams/nfc/nfcWest/sf49ers/logo/49ersLogo.svg.png);
+}
+
+#sea {
+    background-image: url(../img/teams/nfc/nfcWest/seaSeahawks/logo/seahawksLogo.svg.png);
+}
+
+#bucs {
+    background-image: url(../img/teams/nfc/nfcSouth/tbBuccaneers/logo/bucsLogo.svg.png);
+}
+
+#titan {
+    background-image: url(../img/teams/afc/afcSouth/tenTitans/logo/titansLogo.svg.png);
+}
+
+#skins {
+    background-image: url(../img/teams/nfc/nfcEast/wasRedskins/logo/redskinsLogo.svg.png);
+}
+
+/* ========= INTRO ========== */
+
+.homeIntro {
+    padding-top: 90px;
+}
+
+.homeIntro h2 {
+    text-align: center;
+    font-weight: 100;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 50px 20px;
+    text-align: center;
+}
+
+.mainCont {
+/*
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: -5px 3px 70px rgba(255,255,255,0.3);
+*/
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+/* ========= DIVISIONS ========== */
+
+.confLogo {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.divFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.divLists {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+    width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: -5px 3px 70px rgba(0,0,0,0.3);
+}
+
+.divLists h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    height: 65px;
+    margin: 0;
+    padding: 20px;
+}
+
+.divLists li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    width: 300px;
+    height: 65px;
+    padding-top: 20px;
+    padding-left: 90px;
+}
+
+.divLists li  {
+    background-color: rgba(255,255,255,0.2);
+    
+}
+
+.divLists li:nth-child(even)  {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.divLists li a:hover {
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+}
+
+.divLists li:hover:not(:first-child) {
+    transform: scale(1.1);
+}
+
+/* ============================================
+
+                MEDIA QUERIES 
+
+================================================ */
+
+/* ================ TABLETS ================== */
+
+@media only screen 
+and (min-width : 768px) 
+/*and (max-width : 1024px)  */
+{
+    
+     .mainCont {
+/*        width: 90vw;*/
+        display: block;
+        margin: 0 auto;
+        padding: 0 0 5px;
+        margin-bottom: 50px;
+        max-width: 1400px;
+    }
+ 
+    .divFlex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 800px;
+        margin: 0 auto 50px;
+    }
+    
+}
+
+/* ================ DESKTOPS ================= */
+
+@media only screen and (min-width: 1025px)
+{
+ 
+    .confFlex {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
